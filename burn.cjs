@@ -5,17 +5,18 @@ const { Connection, Keypair, PublicKey } = require("@solana/web3.js");
 const { getOrCreateAssociatedTokenAccount, burn } = require("@solana/spl-token");
 const fs = require("fs");
 const path = require("path");
+const { Keypair } = require('@solana/web3.js');
 
-const RPC = "https://api.mainnet-beta.solana.com";
+// Load from environment
+const secretArray = JSON.parse(process.env.BURNER_KEY);
+const keypair = Keypair.fromSecretKey(new Uint8Array(secretArray));
+
+const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
 const connection = new Connection(RPC, "confirmed");
 
 // === USER SETTINGS ===
-const secretKey = Uint8Array.from([
-  125, 47, 49, 21, 223, 179, 32, 161, 137, 165, 172, 215, 179, 185, 100, 217,
-  199, 251, 216, 5, 36, 245, 205, 150, 41, 230, 234, 143, 32, 240, 34, 183,
-  156, 24, 242, 156, 168, 75, 189, 7, 43, 39, 181, 105, 61, 42, 68, 128,
-  28, 199, 107, 56, 212, 95, 163, 215, 85, 117, 233, 7, 132, 16, 119, 25
-]);
+
+
 const wallet = Keypair.fromSecretKey(secretKey);
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 const AMOUNT_TO_BURN = 10 * 1e9;
