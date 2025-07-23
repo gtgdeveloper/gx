@@ -1,11 +1,11 @@
 
 // burn.cjs — burns 10 GTG every minute using real token supply
 
-const { Connection, Keypair, PublicKey } = require("@solana/web3.js");
+// const { Connection, Keypair, PublicKey } = require("@solana/web3.js");
 const { getOrCreateAssociatedTokenAccount, burn } = require("@solana/spl-token");
 const fs = require("fs");
 const path = require("path");
-const { Keypair } = require('@solana/web3.js');
+//const { Keypair } = require('@solana/web3.js');
 
 // Load from environment
 const secretArray = JSON.parse(process.env.BURNER_KEY);
