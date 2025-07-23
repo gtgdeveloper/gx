@@ -8,7 +8,7 @@
     "bonus": "node bonus7.js"
   },
   "dependencies": {
+    "@solana/web3.js": "^1.98.2",
     "express": "^4.18.2"
   }
 }
-
