@@ -69,4 +69,4 @@ async function main() {
 
 // Run immediately, then every 60 seconds
 main();
-setInterval(main, 60 * 1000);
+//setInterval(main, 60 * 1000);
