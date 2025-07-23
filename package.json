@@ -1,0 +1,14 @@
+{
+  "name": "gtg-automation",
+  "scripts": {
+    "start": "node server.js",
+    "holders": "node holders.js",
+    "burn": "node burn.cjs",
+    "airdrop": "node airdrop.js",
+    "bonus": "node bonus7.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+
