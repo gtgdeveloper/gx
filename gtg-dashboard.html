@@ -2,50 +2,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GTG Dashboard</title>
+  <meta charset="UTF-8">
+  <title>GTG Token Dashboard</title>
+  <script src="https://unpkg.com/@solana/web3.js@1.93.3/lib/index.iife.min.js"></script>
   <style>
     body {
-      font-family: sans-serif;
-      background: #111;
-      color: #eee;
-      padding: 2rem;
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      text-align: center;
     }
-    h1, h2 {
-      color: #0ff;
-    }
-    .stat {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
-    .label {
-      color: #aaa;
-    }
-    .value {
-      color: #fff;
-      font-weight: bold;
-    }
+    h1 { color: #333; }
+    p { font-size: 1.2em; }
   </style>
 </head>
 <body>
   <h1>GTG Token Dashboard</h1>
   <h2>Live Supply</h2>
-  <div class="stat">
-    <span class="label">Outstanding:</span>
-    <span class="value" id="outstandingSupply">Loading...</span>
-  </div>
-  <div class="stat">
-    <span class="label">Burned:</span>
-    <span class="value" id="burnedAmount">Loading...</span>
-  </div>
+  <p><strong>Outstanding:</strong> <span id="outstandingSupply">Loading...</span></p>
+  <p><strong>Burned:</strong> <span id="burnedAmount">Loading...</span></p>
 
-  <script type="module">
-    import { Connection, PublicKey } from "https://unpkg.com/@solana/web3.js@1.93.3/lib/index.iife.js";
+  <script>
+    const { Connection, PublicKey } = window.solanaWeb3;
 
-    const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
+    const RPC = "https://api.mainnet-beta.solana.com"; // Use public RPC
     const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
-
     const connection = new Connection(RPC, "confirmed");
 
     async function fetchSupply() {
@@ -54,10 +35,14 @@
         const outstanding = parseFloat(supplyInfo.value.amount) / 1e9;
         const burned = 1_000_000_000 - outstanding;
 
-        document.getElementById("outstandingSupply").textContent = outstanding.toLocaleString("en-US", { maximumFractionDigits: 9 });
-        document.getElementById("burnedAmount").textContent = burned.toLocaleString("en-US", { maximumFractionDigits: 9 });
+        document.getElementById("outstandingSupply").textContent =
+          outstanding.toLocaleString("en-US", { maximumFractionDigits: 9 });
+        document.getElementById("burnedAmount").textContent =
+          burned.toLocaleString("en-US", { maximumFractionDigits: 9 });
       } catch (err) {
         console.error("❌ Failed to fetch token supply:", err);
+        document.getElementById("outstandingSupply").textContent = "Error";
+        document.getElementById("burnedAmount").textContent = "Error";
       }
     }
 
