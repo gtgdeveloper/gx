@@ -1,15 +1,16 @@
+
 const express = require("express");
-const path = require("path");
 const app = express();
+const path = require("path");
 
+app.use(express.static("public"));
 
-app.use(express.static(__dirname));
+// Explicitly serve data directory if needed
+app.use("/data", express.static(path.join(__dirname, "data")));
 
-
-// Serve dashboard at root
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'gtg-dashboard.html'));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "gtg-dashboard.html"));
 });
 
-const PORT = process.env.PORT || 10000;
-app.listen(PORT, () => console.log(`Dashboard live on port ${PORT}`));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
