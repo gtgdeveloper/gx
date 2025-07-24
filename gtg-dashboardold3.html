@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>GTG Token Dashboard 33</title>
+<script src="https://unpkg.com/@solana/web3.js@1.93.3/lib/index.iife.min.js"></script>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    h1 { color: #333; }
+    p { font-size: 1.2em; }
+  </style>
+</head>
+<body>
+<h1>GTG Token Dashboard 33</h1>
+<h2>Live Supply</h2>
+<p><strong>Outstanding:</strong> <span id="outstandingSupply">Loading...</span></p>
+<p><strong>Burned:</strong> <span id="burnedAmount">Loading...</span></p>
+<script>
+    const { Connection, PublicKey } = window.solanaWeb3;
+
+    const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4"; // Use public RPC
+    const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
+    const connection = new Connection(RPC, "confirmed");
+
+    async function fetchSupply() {
+      try {
+        const supplyInfo = await connection.getTokenSupply(GTG_MINT);
+        const outstanding = parseFloat(supplyInfo.value.amount) / 1e9;
+        const burned = 1_000_000_000 - outstanding;
+
+        document.getElementById("outstandingSupply").textContent =
+          outstanding.toLocaleString("en-US", { maximumFractionDigits: 9 });
+        document.getElementById("burnedAmount").textContent =
+          burned.toLocaleString("en-US", { maximumFractionDigits: 9 });
+      } catch (err) {
+        console.error("❌ Failed to fetch token supply:", err);
+        document.getElementById("outstandingSupply").textContent = "Error";
+        document.getElementById("burnedAmount").textContent = "Error";
+      }
+    }
+
+    fetchSupply();
+  </script>
+</body>
+</html>
