@@ -57,15 +57,19 @@ async function hasUsdcTokenAccount(ownerPubkey) {
   // Filter to only those who can receive USDC
   const validHolders = [];
   for (const h of holders) {
-    try {
-      const pubkey = new PublicKey(h.owner);
-      if (await hasUsdcTokenAccount(pubkey)) {
-        validHolders.push(h);
-      }
-    } catch (e) {
-      continue;
+  try {
+    const pubkey = new PublicKey(h.owner);
+    if (await hasUsdcTokenAccount(pubkey)) {
+      validHolders.push(h);
     }
+  } catch (e) {
+    // skip invalid pubkey
   }
+
+  // Add delay to avoid RPC rate limits
+  await delay(200);
+}
+
 
   console.log(`✅ Found ${validHolders.length} eligible holders`);
 
