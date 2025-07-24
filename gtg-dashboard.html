@@ -1,191 +1,67 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<title>GTG Burn/Airdrop/Bonus 100 DAYS MADNESS!!! Start July 25 ends Oct.5</title>
-<style>
-    body { font-family: Arial, sans-serif; padding: 2em; background: #000000; color: #ff69b4; }
-    h1 { color: #ff69b4; }
-    .card { background: white; padding: 1em; margin: 1em 0; border-radius: 8px; box-shadow: 0 2px 5px 
-rgba(0,0,0,0.1); }
-    .holders, .bonus { max-height: 800px; overflow-y: auto; } /* increased height */
-    table { width: 100%; border-collapse: collapse; }
-    th, td { padding: 8px 12px; border-bottom: 1px solid #ff69b4; font-size: 0.95em; }
-    .highlight { font-weight: bold; color: #16a085; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GTG Dashboard</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #111;
+      color: #eee;
+      padding: 2rem;
+    }
+    h1, h2 {
+      color: #0ff;
+    }
+    .stat {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .label {
+      color: #aaa;
+    }
+    .value {
+      color: #fff;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-<h1><img alt="GTG Logo" src="GTG-LOGO.gif" style="height: 150px; vertical-align: middle; margin-right: 15px;"/>GTG Burn/Airdrop/Bonus 100 DAYS MADNESS!!! Start July 25 ends Oct.5</h1>
-<p><a href="https://dexscreener.com/solana/c9wcbqrepm4axbnrc4j1rjjn5zxjjbydb2rw9inajli5" style="font-size: 1.2em; color: #2980b9;" target="_blank">👉 To buy GTG tokens, click here</a></p>
-<div class="card">
-<h2>Supply Overview</h2>
-<p><strong>Original Supply:</strong> 1,000,000,000 GTG</p>
-<p><strong>Current Supply:</strong> <span id="currentSupply">Loading...</span> GTG</p>
-<p><strong>Tokens Burned:</strong> <span id="burned">Loading...</span> GTG</p>
-<p><strong>GTG Price:</strong> <span id="price">Loading...</span> USD</p>
-<p><strong>Market Cap:</strong> <span id="marketCap">Loading...</span> USD</p>
-</div>
-<div class="card">
-<h2>Upcoming Events</h2>
-<p><strong>Burn:</strong> 166,667 GTG every 4 hours — that’s 1,000,000 GTG burned daily.</p>
-<p><strong>Airdrop:</strong> 166,667 GTG every 4 hours — 1,000,000 GTG daily to wallets with ≥ 20,000 GTG.</p>
-<p><strong>Bonus:</strong> $100 USDC paid daily — $50 first prize, $20 second prize, $9 third prize, and $3 prizes (4th to 10th).</p>
-<p><em>These values are fixed. Every cycle is another chance to benefit!</em></p>
-</div>
+  <h1>GTG Token Dashboard</h1>
+  <h2>Live Supply</h2>
+  <div class="stat">
+    <span class="label">Outstanding:</span>
+    <span class="value" id="outstandingSupply">Loading...</span>
+  </div>
+  <div class="stat">
+    <span class="label">Burned:</span>
+    <span class="value" id="burnedAmount">Loading...</span>
+  </div>
 
+  <script type="module">
+    import { Connection, PublicKey } from "https://unpkg.com/@solana/web3.js@1.93.3/lib/index.iife.js";
 
+    const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
+    const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 
+    const connection = new Connection(RPC, "confirmed");
 
-<div class="card"><h2>Next Events</h2><p><strong>Next Burn:</strong> <span id="nextBurn">Loading...</span><br/><em>We will burn <span id="nextBurnAmount">Loading...</span> GTG tokens</em></p><p><strong>Next Airdrop:</strong> <span id="nextAirdrop">Loading...</span><br/><em>We will distribute <span id="nextAirdropAmount">Loading...</span> GTG tokens</em></p><p><strong>Next Bonus:</strong> <span id="nextBonus">Loading...</span></p></div><div class="card">
-<h2>Last Bonus Winners</h2>
-<div class="bonus">
-<table>
-<thead>
-<tr><th>Rank</th><th>Wallet</th><th>Amount</th><th>Tx</th></tr>
-</thead>
-<tbody id="bonusTable"></tbody>
-</table>
-</div>
-</div>
-<div class="card">
-<h2>Last Airdrop Payouts</h2>
-<div class="bonus">
-<table>
-<thead>
-<tr><th>Wallet</th><th>Amount</th><th>Time</th><th>Tx</th></tr>
-</thead>
-<tbody id="airdropTable"></tbody>
-</table>
-</div>
-</div>
-<div class="card">
-<h2>Eligible Wallets (≥ 20,000 GTG) will receive the next bonus payout</h2>
-<div class="holders">
-<table>
-<thead>
-<tr><th>Wallet</th><th>Balance</th></tr>
-</thead>
-<tbody id="holdersTable"></tbody>
-</table>
-</div>
-</div>
-<script>
-    async function fetchJSON(file) {
+    async function fetchSupply() {
       try {
-        const res = await fetch(file);
-        if (!res.ok) throw new Error(`Failed to load ${file}`);
-        return await res.json();
-      } catch (e) {
-        console.error("Error loading", file, e);
-        return [];
+        const supplyInfo = await connection.getTokenSupply(GTG_MINT);
+        const outstanding = parseFloat(supplyInfo.value.amount) / 1e9;
+        const burned = 1_000_000_000 - outstanding;
+
+        document.getElementById("outstandingSupply").textContent = outstanding.toLocaleString("en-US", { maximumFractionDigits: 9 });
+        document.getElementById("burnedAmount").textContent = burned.toLocaleString("en-US", { maximumFractionDigits: 9 });
+      } catch (err) {
+        console.error("❌ Failed to fetch token supply:", err);
       }
     }
 
-    async function fetchCoingeckoPrice() {
-      try {
-        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=getthegirl&vs_currencies=usd');
-        const data = await res.json();
-        const price = data.getthegirl?.usd;
-        if (!price || isNaN(price)) throw new Error("Invalid price");
-        return price;
-      } catch (e) {
-        console.error("Failed to fetch GTG price:", e);
-        return 0;
-      }
-    }
-
-    function getNextEvent(hourInterval) {
-      const now = new Date();
-      const next = new Date(now);
-      next.setUTCHours(Math.floor(now.getUTCHours() / hourInterval) * hourInterval + hourInterval, 0, 0, 0);
-      return next.toLocaleString();
-    }
-
-    async function updateDashboard() {
-      const cacheBust = `?_=${Date.now()}`;
-      const [burnLog, holders, bonusLog, distributionLog, price] = await Promise.all([
-        fetchJSON("/data/burn-log.json" + cacheBust),
-        fetchJSON("/data/gtg-holders.json" + cacheBust),
-        fetchJSON("/data/bonus-log.json" + cacheBust),
-        fetchJSON("/data/distribution.json" + cacheBust),
-        fetchCoingeckoPrice()
-      ]);
-
-      let supply = 1_000_000_000;
-      if (Array.isArray(burnLog)) {
-        if (burnLog.length > 0 && burnLog[burnLog.length - 1].outstanding) {
-          supply = burnLog[burnLog.length - 1].outstanding;
-        }
-      } else if (burnLog && burnLog.outstanding) {
-        supply = burnLog.outstanding;
-      }
-
-      const burned = 1_000_000_000 - supply;
-      const marketCap = supply * price;
-
-      document.getElementById("currentSupply").textContent = supply.toLocaleString("en-US");
-      document.getElementById("burned").textContent = burned.toLocaleString("en-US");
-      document.getElementById("price").textContent = `$${price.toFixed(8)}`;
-      document.getElementById("marketCap").textContent = `$${marketCap.toLocaleString("en-US", { 
-minimumFractionDigits: 2 })}`;
-      document.getElementById("nextBurn").textContent = getNextEvent(4);
-      document.getElementById("nextAirdrop").textContent = getNextEvent(4);
-      document.getElementById("nextBonus").textContent = getNextEvent(24);
-      // Estimated projections (static or replace with dynamic calculation if needed)
-      const estimatedBurnAmount = 500000; // example static value
-      const estimatedAirdropAmount = 1667; // match airdrop.js
-
-      document.getElementById("nextBurnAmount").textContent = estimatedBurnAmount.toLocaleString("en-US");
-      document.getElementById("nextAirdropAmount").textContent = estimatedAirdropAmount.toLocaleString("en-US");
-
-
-      const holdersTable = document.getElementById("holdersTable");
-      holdersTable.innerHTML = "";
-
-      const eligible = holders.filter(h => parseFloat(h.amount) >= 20000);
-      console.log("Total holders loaded:", holders.length);
-      console.log("Eligible holders (≥ 20k):", eligible.length);
-
-      eligible.forEach(({ owner, amount }) => {
-        const row = document.createElement("tr");
-        row.innerHTML = `<td>${owner}</td><td>${parseFloat(amount).toLocaleString("en-US")}</td>`;
-        holdersTable.appendChild(row);
-      });
-
-      const bonusTable = document.getElementById("bonusTable");
-      bonusTable.innerHTML = "";
-      bonusLog.forEach(({ rank, recipient, amount, tx }) => {
-        const row = document.createElement("tr");
-        row.innerHTML = `
-          <td>${rank}</td>
-          <td>${recipient}</td>
-          <td>${amount}</td>
-          <td><a href="https://solscan.io/tx/${tx}" target="_blank" rel="noopener noreferrer">View</a></td>
-        `;
-        bonusTable.appendChild(row);
-      });
-      const airdropTable = document.getElementById("airdropTable");
-      airdropTable.innerHTML = "";
-
-      distributionLog
-        .slice(-20)
-        .reverse()
-        .forEach(({ owner, amount, tx, timestamp }) => {
-          const row = document.createElement("tr");
-          row.innerHTML = `
-            <td>${owner}</td>
-            <td>${amount.toLocaleString("en-US", { minimumFractionDigits: 3 })}</td>
-            <td>${new Date(timestamp).toLocaleString()}</td>
-            <td><a href="https://solscan.io/tx/${tx}" target="_blank" rel="noopener noreferrer">View</a></td>
-          `;
-          airdropTable.appendChild(row);
-        });
-
-    }
-
-    updateDashboard();
-    setInterval(updateDashboard, 60000);
+    fetchSupply();
   </script>
 </body>
 </html>
