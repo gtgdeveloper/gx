@@ -4,15 +4,15 @@ const { getOrCreateAssociatedTokenAccount, transfer } = require("@solana/spl-tok
 const fs = require("fs");
 const path = require("path");
 
-const RPC = "https://api.mainnet-beta.solana.com";
+const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
 const connection = new Connection(RPC, "confirmed");
 const MINT = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
 const HOLDERS_FILE = path.join(__dirname, "gtg-holders.json");
 const BONUS_LOG_FILE = path.join(__dirname, "bonus-log.json");
 const BONUS_FAILED_FILE = path.join(__dirname, "bonus-failed.json");
 
-const secretKey = Uint8Array.from(JSON.parse(fs.readFileSync("repair.json")));
-const wallet = Keypair.fromSecretKey(secretKey);
+const secretArray = JSON.parse(process.env.BURNER_KEY);
+const wallet = Keypair.fromSecretKey(new Uint8Array(secretArray));
 
 const prizes = [
   { rank: 1, amount: 5.0 },
