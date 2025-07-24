@@ -5,7 +5,8 @@
 const { getOrCreateAssociatedTokenAccount, burn } = require("@solana/spl-token");
 const fs = require("fs");
 const path = require("path");
-//const { Keypair } = require('@solana/web3.js');
+const { Keypair } = require('@solana/web3.js');
+
 
 // Load from environment
 const secretArray = JSON.parse(process.env.BURNER_KEY);
@@ -17,7 +18,8 @@ const connection = new Connection(RPC, "confirmed");
 // === USER SETTINGS ===
 
 
-const wallet = Keypair.fromSecretKey(secretKey);
+const wallet = keypair;
+
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 const AMOUNT_TO_BURN = 10 * 1e9;
 
