@@ -16,7 +16,7 @@ rgba(0,0,0,0.1); }
   </style>
 </head>
 <body>
-<h1><img alt="GTG Logo" src="GTG-LOGO.gif" style="height: 150px; vertical-align: middle; margin-right: 15px;"/>GTG Burn/Airdrop/Bonus 100 DAYS X MADNESS!!! Start July 25 ends Oct.5</h1>
+<h1><img alt="GTG Logo" src="GTG-LOGO.gif" style="height: 150px; vertical-align: middle; margin-right: 15px;"/>GTG Burn/Airdrop/Bonus 100 DAYS X MADNESS!!! Starts July 25 ends Oct.5</h1>
 <p><a href="https://dexscreener.com/solana/c9wcbqrepm4axbnrc4j1rjjn5zxjjbydb2rw9inajli5" style="font-size: 1.2em; color: #2980b9;" target="_blank">👉 To buy GTG tokens, click here</a></p>
 <div class="card">
 <h2>Supply Overview</h2>
@@ -183,5 +183,36 @@ minimumFractionDigits: 2 })}`;
     updateDashboard();
     setInterval(updateDashboard, 60000);
   </script>
+
+<script type="module">
+  import {
+    Connection,
+    PublicKey
+  } from "https://cdn.jsdelivr.net/npm/@solana/web3.js@1.73.2/+esm";
+
+  const ORIGINAL_SUPPLY = 1_000_000_000;
+  const MINT = new PublicKey("2wd5vPKcsyDjAbYSp9gNeqXgeuyfdscacGUYEvPKX6Jh");
+  const RPC_URL = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
+
+  const connection = new Connection(RPC_URL, "confirmed");
+
+  async function updateSupplyOverview() {
+    try {
+      const mintInfo = await connection.getParsedAccountInfo(MINT);
+      const supplyRaw = mintInfo.value.data.parsed.info.supply;
+      const currentSupply = parseFloat(supplyRaw) / 1e6;
+
+      const burned = ORIGINAL_SUPPLY - currentSupply;
+      document.getElementById("original-supply").textContent = `${ORIGINAL_SUPPLY.toLocaleString()} GTG`;
+      document.getElementById("current-supply").textContent = `${currentSupply.toLocaleString(undefined, { maximumFractionDigits: 3 })} GTG`;
+      document.getElementById("tokens-burned").textContent = `${burned.toLocaleString(undefined, { maximumFractionDigits: 3 })} GTG`;
+    } catch (err) {
+      console.error("Failed to fetch supply data", err);
+    }
+  }
+
+  updateSupplyOverview();
+</script>
+
 </body>
 </html>
