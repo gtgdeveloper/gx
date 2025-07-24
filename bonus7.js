@@ -3,6 +3,7 @@ const { getOrCreateAssociatedTokenAccount, transfer } = require("@solana/spl-tok
 const fs = require("fs");
 const path = require("path");
 
+// Setup RPC and constants
 const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
 const connection = new Connection(RPC, "confirmed");
 const MINT = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
@@ -11,14 +12,16 @@ const HOLDERS_FILE = path.join(__dirname, "data", "gtg-holders.json");
 const BONUS_LOG_FILE = path.join(__dirname, "bonus-log.json");
 const BONUS_FAILED_FILE = path.join(__dirname, "bonus-failed.json");
 
+// Load secret key from env and create wallet
 const secretArray = JSON.parse(process.env.BURNER_KEY);
 const wallet = Keypair.fromSecretKey(new Uint8Array(secretArray));
 
+// Define prizes
 const prizes = [
-  { rank: 1, amount: 1.0 },
-  { rank: 2, amount: 1.0 },
-  { rank: 3, amount: 0.5 },
-  { rank: 4, amount: 0.357 },
+  { rank: 1, amount: 0.1 },
+  { rank: 2, amount: 0.1 },
+  { rank: 3, amount: 0.1 },
+  { rank: 4, amount: 0.1 },
   { rank: 5, amount: 0.357 },
   { rank: 6, amount: 0.357 },
   { rank: 7, amount: 0.357 },
@@ -27,6 +30,7 @@ const prizes = [
   { rank: 10, amount: 0.357 }
 ];
 
+// Shuffle array (Fisher-Yates)
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -35,46 +39,19 @@ function shuffle(array) {
   return array;
 }
 
+// Delay utility
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function hasUsdcTokenAccount(ownerPubkey) {
-  try {
-    const accounts = await connection.getTokenAccountsByOwner(ownerPubkey, {
-      mint: MINT,
-    });
-    return accounts.value.length > 0;
-  } catch {
-    return false;
-  }
-}
-
+// Main function
 (async () => {
+  // Load all holders
   let holders = JSON.parse(fs.readFileSync(HOLDERS_FILE));
-  console.log(`🔍 Checking ${holders.length} holders for valid USDC accounts...`);
-
-  // Filter to only those who can receive USDC
-  const validHolders = [];
-  for (const h of holders) {
-  try {
-    const pubkey = new PublicKey(h.owner);
-    if (await hasUsdcTokenAccount(pubkey)) {
-      validHolders.push(h);
-    }
-  } catch (e) {
-    // skip invalid pubkey
-  }
-
-  // Add delay to avoid RPC rate limits
-  await delay(200);
-}
-
-
-  console.log(`✅ Found ${validHolders.length} eligible holders`);
+  console.log(`🔍 Loaded ${holders.length} holders`);
 
   // Shuffle and pick top 10
-  const winners = shuffle(validHolders).slice(0, 10);
+  const winners = shuffle(holders).slice(0, 10);
 
   const log = [];
   const failed = [];
@@ -103,7 +80,7 @@ async function hasUsdcTokenAccount(ownerPubkey) {
         recipientPubkey
       );
 
-      const amountInUSDC = Math.round(amount * 1_000_000);
+      const amountInUSDC = Math.round(amount * 1_000_000); // Convert to micro units
 
       const sig = await transfer(
         connection,
@@ -134,10 +111,11 @@ async function hasUsdcTokenAccount(ownerPubkey) {
       });
     }
 
-    // Delay 5 seconds between transfers
+    // Wait 5 seconds between each transfer
     await delay(5000);
   }
 
+  // Save logs
   fs.writeFileSync(BONUS_LOG_FILE, JSON.stringify(log, null, 2));
   fs.writeFileSync(BONUS_FAILED_FILE, JSON.stringify(failed, null, 2));
   console.log("✅ Bonus winners saved to bonus-log.json");
