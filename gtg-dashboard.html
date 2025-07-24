@@ -8,14 +8,16 @@
     body { font-family: Arial, sans-serif; padding: 20px; background: #f7f7f7; }
     h1 { color: #333; }
     #stats { margin-top: 20px; }
-    .holders-section { margin-top: 40px; }
+    .holders-section, .winners-section { margin-top: 40px; }
     ul { list-style-type: none; padding: 0; }
     li { margin-bottom: 5px; }
     .error { color: red; }
+    .tx-link { font-size: 0.9em; color: #555; }
   </style>
 </head>
 <body>
   <h1>GTG Token Dashboard</h1>
+
   <div id="stats">
     <p><strong>Outstanding:</strong> <span id="outstanding">Loading...</span></p>
     <p><strong>Burned:</strong> <span id="burned">Loading...</span></p>
@@ -24,6 +26,11 @@
   <div class="holders-section">
     <h2>Top GTG Holders (&gt; 20,000 GTG)</h2>
     <ul id="holders">Loading...</ul>
+  </div>
+
+  <div class="winners-section">
+    <h2>Latest Bonus Winners</h2>
+    <ul id="winners">Loading...</ul>
   </div>
 
   <script src="https://unpkg.com/@solana/web3.js@1.93.3/lib/index.iife.js"></script>
@@ -69,8 +76,29 @@
       }
     }
 
+    async function fetchBonusWinners() {
+      try {
+        const res = await fetch("/bonus-log.json");
+        const data = await res.json();
+        const winnersList = document.getElementById("winners");
+        winnersList.innerHTML = "";
+
+        data.forEach(w => {
+          const li = document.createElement("li");
+          li.innerHTML = `#${w.rank}: ${w.recipient.slice(0, 6)}...${w.recipient.slice(-4)} won <strong>${w.amount}</strong> USDC 
+            <a class="tx-link" href="https://solscan.io/tx/${w.tx}" target="_blank">[tx]</a>`;
+          winnersList.appendChild(li);
+        });
+      } catch (err) {
+        document.getElementById("winners").innerHTML = "<li class='error'>Failed to load bonus winners.</li>";
+        console.error("❌ Failed to fetch bonus winners:", err);
+      }
+    }
+
     fetchSupply();
     fetchTopHolders();
+    fetchBonusWinners();
   </script>
 </body>
 </html>
+
