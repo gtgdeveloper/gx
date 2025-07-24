@@ -1,6 +1,6 @@
 
 const { Connection, Keypair, PublicKey } = require("@solana/web3.js");
-const { getOrCreateAssociatedTokenAccount, transfer } = require("@solana/spl-token");
+const { getOrCreateAssociatedTokenAccount } = require("@solana/spl-token");
 const fs = require("fs");
 const path = require("path");
 
@@ -8,9 +8,9 @@ const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acb
 const connection = new Connection(RPC, "confirmed");
 const MINT = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
 const HOLDERS_FILE = path.join(__dirname, "data", "gtg-holders.json");
-
 const BONUS_LOG_FILE = path.join(__dirname, "bonus-log.json");
 const BONUS_FAILED_FILE = path.join(__dirname, "bonus-failed.json");
+const BONUS_SKIPPED_FILE = path.join(__dirname, "bonus-skipped.json");
 
 const secretArray = JSON.parse(process.env.BURNER_KEY);
 const wallet = Keypair.fromSecretKey(new Uint8Array(secretArray));
@@ -28,7 +28,6 @@ const prizes = [
   { rank: 10, amount: 0.357 }
 ];
 
-// Fisher-Yates shuffle
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -37,14 +36,28 @@ function shuffle(array) {
   return array;
 }
 
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 (async () => {
-  let holders = JSON.parse(fs.readFileSync(HOLDERS_FILE));
+  let allHolders = JSON.parse(fs.readFileSync(HOLDERS_FILE));
+  const validHolders = [];
 
-  // Shuffle and take the top 10
-  holders = shuffle(holders).slice(0, 10);
+  for (const h of allHolders) {
+    try {
+      const pubkey = new PublicKey(h.owner);
+      await getOrCreateAssociatedTokenAccount(connection, wallet, MINT, pubkey);
+      validHolders.push(h);
+    } catch (_) {
+      continue;
+    }
+  }
 
+  const holders = shuffle(validHolders).slice(0, 10);
   const log = [];
   const failed = [];
+  const skipped = [];
 
   const senderTokenAccount = await getOrCreateAssociatedTokenAccount(
     connection,
@@ -68,7 +81,7 @@ function shuffle(array) {
       const recipientPubkey = new PublicKey(recipient);
 
       if (!PublicKey.isOnCurve(recipientPubkey)) {
-        throw new Error(`Recipient public key is off-curve (cannot receive SPL tokens)`);
+        throw new Error("Recipient public key is off-curve (cannot receive SPL tokens)");
       }
 
       const recipientTokenAccount = await getOrCreateAssociatedTokenAccount(
@@ -94,13 +107,16 @@ function shuffle(array) {
 
     } catch (error) {
       console.error(`❌ Failed to send ${amount} USDC to ${recipient}:`);
-      console.error(error.message || error);
+      console.error(error);
       failed.push({ rank, recipient, amount, error: error.message || error.toString() });
     }
+
+    await delay(1000); // wait 1 second between transfers
   }
 
   fs.writeFileSync(BONUS_LOG_FILE, JSON.stringify(log, null, 2));
   fs.writeFileSync(BONUS_FAILED_FILE, JSON.stringify(failed, null, 2));
+  fs.writeFileSync(BONUS_SKIPPED_FILE, JSON.stringify(skipped, null, 2));
   console.log("✅ Bonus winners saved to bonus-log.json");
   console.log("⚠️ Failed transfers saved to bonus-failed.json");
 })();
