@@ -16,8 +16,8 @@ const secretArray = JSON.parse(process.env.BURNER_KEY);
 const wallet = Keypair.fromSecretKey(new Uint8Array(secretArray));
 
 const prizes = [
-  { rank: 1, amount: 5.0 },
-  { rank: 2, amount: 2.0 },
+  { rank: 1, amount: 1.0 },
+  { rank: 2, amount: 1.0 },
   { rank: 3, amount: 0.5 },
   { rank: 4, amount: 0.357 },
   { rank: 5, amount: 0.357 },
