@@ -3,45 +3,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GTG Token Dashboard</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #111; color: #eee; padding: 2rem; }
-    h1 { color: #4FC3F7; }
-    .supply, .burned, .holders { margin-bottom: 2rem; }
-    ul { list-style: none; padding: 0; }
-    li { margin: 4px 0; }
+    body { font-family: Arial, sans-serif; margin: 2rem; background: #111; color: #eee; }
+    h1 { color: #0f0; }
+    .section { margin-bottom: 2rem; }
+    ul { list-style: none; padding-left: 0; }
+    li { margin: 0.3em 0; }
   </style>
 </head>
 <body>
   <h1>GTG Token Dashboard</h1>
-  <div class="supply">Outstanding: <span id="supply">Loading...</span></div>
-  <div class="burned">Burned: <span id="burned">Loading...</span></div>
-  <div class="holders">
-    <h2>Top Holders (&gt; 20K)</h2>
+  <div class="section">
+    <h2>Live Supply</h2>
+    <p>Outstanding: <span id="supply">Loading...</span></p>
+    <p>Burned: <span id="burned">Loading...</span></p>
+  </div>
+  <div class="section">
+    <h2>Top Holders (&gt; 20k)</h2>
     <ul id="holders">Loading...</ul>
   </div>
 
-  <script type="module">
-    import * as solanaWeb3 from 'https://unpkg.com/@solana/web3.js@1.93.3/lib/index.iife.js';
-
-    const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
-const customRpc = 'https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4';
-const connection = new solanaWeb3.Connection(customRpc, 'confirmed');
-
-
-    const GTG_MINT = new solanaWeb3.PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
+  <script src="https://unpkg.com/@solana/web3.js@1.93.3/lib/index.iife.min.js"></script>
+  <script>
+    const connection = new solanaWeb3.Connection(
+      'https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4',
+      'confirmed'
+    );
 
     async function fetchSupply() {
       try {
-        const supplyInfo = await connection.getTokenSupply(GTG_MINT);
-        const outstanding = parseFloat(supplyInfo.value.amount) / 1e9;
-        const burned = 1_000_000_000 - outstanding;
-
-        document.getElementById("supply").textContent = outstanding.toLocaleString("en-US", { maximumFractionDigits: 9 });
-        document.getElementById("burned").textContent = burned.toLocaleString("en-US", { maximumFractionDigits: 9 });
+        const supplyInfo = await connection.getTokenSupply(
+          new solanaWeb3.PublicKey('4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon')
+        );
+        const supply = parseFloat(supplyInfo.value.amount) / 1e9;
+        const burned = 1000000000 - supply;
+        document.getElementById("supply").textContent = supply.toLocaleString();
+        document.getElementById("burned").textContent = burned.toLocaleString();
       } catch (err) {
-        document.getElementById("supply").textContent = "Error";
-        document.getElementById("burned").textContent = "Error";
         console.error("❌ Failed to fetch token supply:", err);
       }
     }
@@ -49,19 +49,17 @@ const connection = new solanaWeb3.Connection(customRpc, 'confirmed');
     async function fetchHolders() {
       try {
         const res = await fetch("/data/gtg-holders.json");
-        const holders = await res.json();
-        const list = document.getElementById("holders");
-        list.innerHTML = "";
-        holders
-          .filter(h => h.amount >= 20000)
-          .forEach(h => {
-            const li = document.createElement("li");
-            li.textContent = `${h.owner.slice(0, 6)}...${h.owner.slice(-4)} — ${h.amount.toLocaleString()} GTG`;
-            list.appendChild(li);
-          });
+        const data = await res.json();
+        const holdersList = document.getElementById("holders");
+        holdersList.innerHTML = "";
+        data.filter(h => h.amount >= 20000).forEach(h => {
+          const li = document.createElement("li");
+          li.textContent = `${h.owner.slice(0,6)}...${h.owner.slice(-4)} — ${h.amount.toLocaleString()} GTG`;
+          holdersList.appendChild(li);
+        });
       } catch (err) {
-        document.getElementById("holders").textContent = "Error loading holders";
-        console.error("❌ Failed to fetch holders:", err);
+        console.error("Failed to load holders:", err);
+        document.getElementById("holders").textContent = "Error loading holders.";
       }
     }
 
