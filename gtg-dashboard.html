@@ -1,45 +1,33 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GTG Token Dashboard</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; background: #f7f7f7; }
+<meta charset="utf-8"/>
+<title>GTG Token Dashboard</title>
+<script src="https://unpkg.com/@solana/web3.js@1.93.3/lib/index.iife.min.js"></script>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      text-align: center;
+    }
     h1 { color: #333; }
-    #stats { margin-top: 20px; }
-    .holders-section, .winners-section { margin-top: 40px; }
-    ul { list-style-type: none; padding: 0; }
-    li { margin-bottom: 5px; }
-    .error { color: red; }
-    .tx-link { font-size: 0.9em; color: #555; }
+    p { font-size: 1.2em; }
   </style>
 </head>
 <body>
-  <h1>GTG Token Dashboard 2</h1>
+<h1>GTG Token Dashboard</h1>
+<h2>Live Supply</h2>
+<p><strong>Outstanding:</strong> <span id="outstandingSupply">Loading...</span></p>
+<p><strong>Burned:</strong> <span id="burnedAmount">Loading...</span></p>
+<script>
+    const { Connection, PublicKey } = window.solanaWeb3;
 
-  <div id="stats">
-    <p><strong>Outstanding:</strong> <span id="outstanding">Loading...</span></p>
-    <p><strong>Burned:</strong> <span id="burned">Loading...</span></p>
-  </div>
-
-  <div class="holders-section">
-    <h2>Top GTG Holders (&gt; 20,000 GTG)</h2>
-    <ul id="holders">Loading...</ul>
-  </div>
-
-  <div class="winners-section">
-    <h2>Latest Bonus Winners</h2>
-    <ul id="winners">Loading...</ul>
-  </div>
-
-  <script src="https://unpkg.com/@solana/web3.js@1.93.3/lib/index.iife.js"></script>
-  <script>
-    const connection = new solanaWeb3.default.Connection(
-      "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4",
-      "confirmed"
-    );
-    const GTG_MINT = new solanaWeb3.default.PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
+    const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4"; // Use public RPC
+    const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
+    const connection = new Connection(RPC, "confirmed");
 
     async function fetchSupply() {
       try {
@@ -47,58 +35,18 @@
         const outstanding = parseFloat(supplyInfo.value.amount) / 1e9;
         const burned = 1_000_000_000 - outstanding;
 
-        document.getElementById("outstanding").textContent = outstanding.toLocaleString("en-US", { maximumFractionDigits: 9 });
-        document.getElementById("burned").textContent = burned.toLocaleString("en-US", { maximumFractionDigits: 9 });
+        document.getElementById("outstandingSupply").textContent =
+          outstanding.toLocaleString("en-US", { maximumFractionDigits: 9 });
+        document.getElementById("burnedAmount").textContent =
+          burned.toLocaleString("en-US", { maximumFractionDigits: 9 });
       } catch (err) {
-        document.getElementById("outstanding").textContent = "Error";
-        document.getElementById("burned").textContent = "Error";
         console.error("❌ Failed to fetch token supply:", err);
-      }
-    }
-
-    async function fetchTopHolders() {
-      try {
-        const res = await fetch("/data/gtg-holders.json");
-        const holders = await res.json();
-        const holdersList = document.getElementById("holders");
-        holdersList.innerHTML = "";
-
-        holders.forEach(h => {
-          if (h.amount >= 20000) {
-            const li = document.createElement("li");
-            li.textContent = `${h.owner.slice(0, 6)}...${h.owner.slice(-4)} — ${parseFloat(h.amount).toLocaleString()} GTG`;
-            holdersList.appendChild(li);
-          }
-        });
-      } catch (err) {
-        document.getElementById("holders").innerHTML = "<li class='error'>Failed to load top holders.</li>";
-        console.error("❌ Failed to fetch holders list:", err);
-      }
-    }
-
-    async function fetchBonusWinners() {
-      try {
-        const res = await fetch("/bonus-log.json");
-        const data = await res.json();
-        const winnersList = document.getElementById("winners");
-        winnersList.innerHTML = "";
-
-        data.forEach(w => {
-          const li = document.createElement("li");
-          li.innerHTML = `#${w.rank}: ${w.recipient.slice(0, 6)}...${w.recipient.slice(-4)} won <strong>${w.amount}</strong> USDC 
-            <a class="tx-link" href="https://solscan.io/tx/${w.tx}" target="_blank">[tx]</a>`;
-          winnersList.appendChild(li);
-        });
-      } catch (err) {
-        document.getElementById("winners").innerHTML = "<li class='error'>Failed to load bonus winners.</li>";
-        console.error("❌ Failed to fetch bonus winners:", err);
+        document.getElementById("outstandingSupply").textContent = "Error";
+        document.getElementById("burnedAmount").textContent = "Error";
       }
     }
 
     fetchSupply();
-    fetchTopHolders();
-    fetchBonusWinners();
   </script>
 </body>
 </html>
-
