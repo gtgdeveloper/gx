@@ -1,16 +1,15 @@
-
 const { Connection, Keypair, PublicKey } = require("@solana/web3.js");
-const { getOrCreateAssociatedTokenAccount } = require("@solana/spl-token");
+const { getOrCreateAssociatedTokenAccount, transfer } = require("@solana/spl-token");
 const fs = require("fs");
 const path = require("path");
 
 const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
 const connection = new Connection(RPC, "confirmed");
 const MINT = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
+
 const HOLDERS_FILE = path.join(__dirname, "data", "gtg-holders.json");
 const BONUS_LOG_FILE = path.join(__dirname, "bonus-log.json");
 const BONUS_FAILED_FILE = path.join(__dirname, "bonus-failed.json");
-const BONUS_SKIPPED_FILE = path.join(__dirname, "bonus-skipped.json");
 
 const secretArray = JSON.parse(process.env.BURNER_KEY);
 const wallet = Keypair.fromSecretKey(new Uint8Array(secretArray));
@@ -40,24 +39,41 @@ function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-(async () => {
-  let allHolders = JSON.parse(fs.readFileSync(HOLDERS_FILE));
-  const validHolders = [];
+async function hasUsdcTokenAccount(ownerPubkey) {
+  try {
+    const accounts = await connection.getTokenAccountsByOwner(ownerPubkey, {
+      mint: MINT,
+    });
+    return accounts.value.length > 0;
+  } catch {
+    return false;
+  }
+}
 
-  for (const h of allHolders) {
+(async () => {
+  let holders = JSON.parse(fs.readFileSync(HOLDERS_FILE));
+  console.log(`🔍 Checking ${holders.length} holders for valid USDC accounts...`);
+
+  // Filter to only those who can receive USDC
+  const validHolders = [];
+  for (const h of holders) {
     try {
       const pubkey = new PublicKey(h.owner);
-      await getOrCreateAssociatedTokenAccount(connection, wallet, MINT, pubkey);
-      validHolders.push(h);
-    } catch (_) {
+      if (await hasUsdcTokenAccount(pubkey)) {
+        validHolders.push(h);
+      }
+    } catch (e) {
       continue;
     }
   }
 
-  const holders = shuffle(validHolders).slice(0, 10);
+  console.log(`✅ Found ${validHolders.length} eligible holders`);
+
+  // Shuffle and pick top 10
+  const winners = shuffle(validHolders).slice(0, 10);
+
   const log = [];
   const failed = [];
-  const skipped = [];
 
   const senderTokenAccount = await getOrCreateAssociatedTokenAccount(
     connection,
@@ -71,18 +87,10 @@ function delay(ms) {
 
   for (let i = 0; i < prizes.length; i++) {
     const { rank, amount } = prizes[i];
-    const recipient = holders[i]?.owner;
+    const recipient = winners[i]?.owner;
 
     try {
-      if (!recipient || typeof recipient !== "string" || recipient.length < 32) {
-        throw new Error(`Invalid recipient address at rank ${rank}: ${recipient}`);
-      }
-
       const recipientPubkey = new PublicKey(recipient);
-
-      if (!PublicKey.isOnCurve(recipientPubkey)) {
-        throw new Error("Recipient public key is off-curve (cannot receive SPL tokens)");
-      }
 
       const recipientTokenAccount = await getOrCreateAssociatedTokenAccount(
         connection,
@@ -103,20 +111,31 @@ function delay(ms) {
       );
 
       console.log(`✅ Sent ${amount} USDC to ${recipient} (rank ${rank}) | Tx: ${sig}`);
-      log.push({ rank, recipient, amount, tx: sig });
-
+      log.push({
+        timestamp: new Date().toISOString(),
+        rank,
+        recipient,
+        amount,
+        tx: sig,
+        status: "success"
+      });
     } catch (error) {
-      console.error(`❌ Failed to send ${amount} USDC to ${recipient}:`);
-      console.error(error);
-      failed.push({ rank, recipient, amount, error: error.message || error.toString() });
+      console.error(`❌ Failed to send ${amount} USDC to ${recipient}: ${error.message || error}`);
+      failed.push({
+        timestamp: new Date().toISOString(),
+        rank,
+        recipient,
+        amount,
+        error: error.message || error.toString()
+      });
     }
 
-    await delay(1000); // wait 1 second between transfers
+    // Delay 5 seconds between transfers
+    await delay(5000);
   }
 
   fs.writeFileSync(BONUS_LOG_FILE, JSON.stringify(log, null, 2));
   fs.writeFileSync(BONUS_FAILED_FILE, JSON.stringify(failed, null, 2));
-  fs.writeFileSync(BONUS_SKIPPED_FILE, JSON.stringify(skipped, null, 2));
   console.log("✅ Bonus winners saved to bonus-log.json");
   console.log("⚠️ Failed transfers saved to bonus-failed.json");
 })();
