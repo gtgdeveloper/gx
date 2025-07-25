@@ -49,13 +49,12 @@ async function findGTGHolders() {
   }
 
   const gtgHolders = Array.from(holdersMap).map(([owner, amount]) => ({ owner, amount }));
-  console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
+console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
 
-  fs.mkdirSync("./data", { recursive: true });
-await uploadToGitHub(gtgHolders);
+await uploadToGitHub(gtgHolders); // Uploads to GitHub
 
-  console.log("✅ Holders saved to ./data/gtg-holders.json");
-}
+console.log("✅ Holders uploaded to GitHub.");
+
 
 findGTGHolders().catch((err) => {
   console.error("❌ Error fetching GTG holders:", err);
