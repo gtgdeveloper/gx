@@ -1,13 +1,8 @@
 
-// burn.cjs — burns 10 GTG every minute using real token supply
-
-// const { Connection, Keypair, PublicKey } = require("@solana/web3.js");
-const { getOrCreateAssociatedTokenAccount, burn } = require("@solana/spl-token");
+/const { getOrCreateAssociatedTokenAccount, burn } = require("@solana/spl-token");
 const fs = require("fs");
 const path = require("path");
-const { Connection, Keypair, PublicKey } = require('@solana/web3.js');
-
-
+const { Connection, Keypair, PublicKey } = require("@solana/web3.js");
 
 // Load from environment
 const secretArray = JSON.parse(process.env.BURNER_KEY);
@@ -17,12 +12,10 @@ const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acb
 const connection = new Connection(RPC, "confirmed");
 
 // === USER SETTINGS ===
-
-
 const wallet = keypair;
-
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
-const AMOUNT_TO_BURN = 166667 * 1e9;
+const AMOUNT_TO_BURN = 1666.67 * 1e9;
+const burnLogPath = path.join(__dirname, "data", "burn-log.json");
 
 async function main() {
   try {
@@ -57,20 +50,31 @@ async function main() {
 
     console.log(`📦 GTG Token Supply after burn: ${newOutstanding.toLocaleString("en-US", { maximumFractionDigits: 9 })}`);
 
-    const burnLog = {
+    const newEntry = {
       time: new Date().toISOString(),
       amount: AMOUNT_TO_BURN / 1e9,
       tx: sig,
       outstanding: newOutstanding
     };
 
-    fs.writeFileSync(path.join(__dirname, "burn-log.json"), JSON.stringify(burnLog, null, 2));
-    console.log("📝 Burn logged to burn-log.json");
+    let existingLog = [];
+    if (fs.existsSync(burnLogPath)) {
+      try {
+        existingLog = JSON.parse(fs.readFileSync(burnLogPath));
+        if (!Array.isArray(existingLog)) existingLog = [];
+      } catch {
+        existingLog = [];
+      }
+    }
+
+    existingLog.push(newEntry);
+    fs.writeFileSync(burnLogPath, JSON.stringify(existingLog, null, 2));
+    console.log("📝 Burn logged to /data/burn-log.json");
   } catch (err) {
     console.error("🔥 Burn failed:", err);
   }
 }
 
-// Run immediately, then every 120 seconds
+// Run immediately, then every 4 hours
 main();
-setInterval(main, 14400 * 1000);
+setInterval(main, 14400 * 1000); // 4 hours in milliseconds
