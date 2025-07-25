@@ -1,28 +1,6 @@
-
-const https = require("https");
-
-async function fetchHoldersFromGitHub(url) {
-  return new Promise((resolve, reject) => {
-    https.get(url, res => {
-      let data = "";
-      res.on("data", chunk => (data += chunk));
-      res.on("end", () => {
-        try {
-          const json = JSON.parse(data);
-          resolve(json);
-        } catch (err) {
-          reject(err);
-        }
-      });
-    }).on("error", reject);
-  });
-}
-
-const HOLDERS_URL = "https://raw.githubusercontent.com/gtgdeveloper/gx/main/gtg-holders.json";
-
 const { Connection, Keypair, PublicKey } = require("@solana/web3.js");
 const { getOrCreateAssociatedTokenAccount, transfer } = require("@solana/spl-token");
-const fs = require("fs") // fs retained if used elsewhere;
+const fs = require("fs");
 const path = require("path");
 
 // Setup RPC and constants
@@ -30,6 +8,7 @@ const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acb
 const connection = new Connection(RPC, "confirmed");
 const MINT = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
 
+const HOLDERS_FILE = path.join(__dirname, "data", "gtg-holders.json");
 const BONUS_LOG_FILE = path.join(__dirname, "bonus-log.json");
 const BONUS_FAILED_FILE = path.join(__dirname, "bonus-failed.json");
 
@@ -68,7 +47,7 @@ function delay(ms) {
 // Main function
 (async () => {
   // Load all holders
-  let holders = await fetchHoldersFromGitHub(HOLDERS_URL);
+  let holders = JSON.parse(fs.readFileSync(HOLDERS_FILE));
   console.log(`🔍 Loaded ${holders.length} holders`);
 
   // Shuffle and pick top 10
