@@ -48,13 +48,14 @@ async function findGTGHolders() {
     }
   }
 
-  const gtgHolders = Array.from(holdersMap).map(([owner, amount]) => ({ owner, amount }));
+ const gtgHolders = Array.from(holdersMap).map(([owner, amount]) => ({ owner, amount }));
 console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
 
 await uploadToGitHub(gtgHolders); // Uploads to GitHub
 
 console.log("✅ Holders uploaded to GitHub.");
 
+}
 
 findGTGHolders().catch((err) => {
   console.error("❌ Error fetching GTG holders:", err);
