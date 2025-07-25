@@ -18,16 +18,16 @@ const secretArray = JSON.parse(process.env.BURNER_KEY);
 const wallet = Keypair.fromSecretKey(new Uint8Array(secretArray));
 
 const prizes = [
-  { rank: 1, amount: 0.1 },
-  { rank: 2, amount: 0.1 },
-  { rank: 3, amount: 0.1 },
-  { rank: 4, amount: 0.1 },
-  { rank: 5, amount: 0.357 },
-  { rank: 6, amount: 0.357 },
-  { rank: 7, amount: 0.357 },
-  { rank: 8, amount: 0.357 },
-  { rank: 9, amount: 0.357 },
-  { rank: 10, amount: 0.357 }
+  { rank: 1, amount: 50.00 },
+  { rank: 2, amount: 20.00 },
+  { rank: 3, amount: 9.00 },
+  { rank: 4, amount: 3.00 },
+  { rank: 5, amount: 3.00 },
+  { rank: 6, amount: 3.00 },
+  { rank: 7, amount: 3.00 },
+  { rank: 8, amount: 3.00 },
+  { rank: 9, amount: 3.00 },
+  { rank: 10, amount: 3.00 }
 ];
 
 function shuffle(array) {
