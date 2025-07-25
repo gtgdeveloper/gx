@@ -125,18 +125,18 @@ const sleep = (ms) => new Promise(res => setTimeout(res, ms));
         toWallet
       );
 
-      const sig = await transfer(
-        connection,
-        wallet,
-        fromTokenAccount.address,
-       toTokenAccount.address,
-       wallet,
-        tokensToSend * 1e9 // convert to lamports
-     );
-//const sig = "SIMULATED_TX_" + Math.random().toString(36).slice(2, 10);
+    //  const sig = await transfer(
+      //  connection,
+       // wallet,
+       // fromTokenAccount.address,
+       // toTokenAccount.address,
+       // wallet,
+       // tokensToSend * 1e6 // convert to lamports
+     // );
+const sig = "SIMULATED_TX_" + Math.random().toString(36).slice(2, 10);
 
       console.log(`✅ Sent ${tokensToSend} GTG to ${holder.owner} [tx: ${sig}]`);
-      payouts.push({ wallet: holder.owner, amount: tokensToSend, tx: sig });
+      payouts.push({ wallet: holder.owner, amount: tokensToSend, tx: sig, timestamp: new Date().toISOString() });
     } catch (e) {
       console.error(`❌ Failed to send to ${holder.owner}:`, e.message);
     }
