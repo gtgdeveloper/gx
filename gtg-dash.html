@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GTG Airdrop Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1.5em;
+    }
+    th, td {
+      padding: 0.6em;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #eee;
+    }
+    td a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    td a:hover {
+      text-decoration: underline;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>📦 Last Airdrop Payouts</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Wallet</th>
+        <th>Amount</th>
+        <th>Time</th>
+        <th>Tx</th>
+      </tr>
+    </thead>
+    <tbody id="payoutsTable"></tbody>
+  </table>
+
+  <script>
+    const DATA_URL = "https://raw.githubusercontent.com/gtgdeveloper/gx/main/distribution.json";
+
+    fetch(DATA_URL)
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.getElementById("payoutsTable");
+        data.forEach((entry, index) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td class="center">${index + 1}</td>
+            <td>${entry.wallet}</td>
+            <td>${entry.amount}</td>
+            <td>${entry.timestamp || ""}</td>
+            <td><a href="https://solscan.io/tx/${entry.tx}" target="_blank">${entry.tx}</a></td>
+          `;
+          tbody.appendChild(row);
+        });
+      })
+      .catch(err => {
+        document.body.innerHTML += `<p style="color:red;">❌ Failed to load data: ${err.message}</p>`;
+      });
+  </script>
+</body>
+</html>
