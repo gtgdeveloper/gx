@@ -10,7 +10,7 @@ const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 // Upload GTG holders to GitHub
 async function uploadToGitHub(gtgHolders) {
   const owner = "gtgdeveloper";
-  const repo = "gtg-holders";
+  const repo = "gx";
   const path = "gtg-holders.json";
   const branch = "main";
   const token = process.env.GITHUB_TOKEN;
