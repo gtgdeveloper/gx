@@ -1,24 +1,22 @@
-
 const { Connection, Keypair, PublicKey } = require("@solana/web3.js");
 const { getOrCreateAssociatedTokenAccount, transfer } = require("@solana/spl-token");
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
+const https = require("https");
 
-// Setup RPC and constants
 const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
 const connection = new Connection(RPC, "confirmed");
 const MINT = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
 
-const HOLDERS_FILE = path.join(__dirname, "data", "gtg-holders.json");
-const BONUS_LOG_FILE = path.join(__dirname, "bonus-log.json");
-const BONUS_FAILED_FILE = path.join(__dirname, "bonus-failed.json");
+const REPO_PATH = path.join(__dirname); // assuming script is inside the repo
+const BONUS_LOG_FILE = path.join(REPO_PATH, "bonus-log.json");
+const BONUS_FAILED_FILE = path.join(REPO_PATH, "bonus-failed.json");
+const HOLDERS_URL = "https://raw.githubusercontent.com/gtgdeveloper/gx/main/gtg-holders.json";
 
-// Load secret key from env and create wallet
 const secretArray = JSON.parse(process.env.BURNER_KEY);
 const wallet = Keypair.fromSecretKey(new Uint8Array(secretArray));
 
-// Define prizes
 const prizes = [
   { rank: 1, amount: 0.1 },
   { rank: 2, amount: 0.1 },
@@ -32,7 +30,6 @@ const prizes = [
   { rank: 10, amount: 0.357 }
 ];
 
-// Shuffle array (Fisher-Yates)
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -41,12 +38,10 @@ function shuffle(array) {
   return array;
 }
 
-// Delay utility
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// Git upload
 function runCommand(command) {
   try {
     execSync(command, { stdio: "inherit" });
@@ -58,11 +53,9 @@ function runCommand(command) {
 
 function pushBonusLogToGitHub() {
   console.log("📤 Uploading bonus logs to GitHub...");
-
   const repoPath = path.resolve(__dirname);
   process.chdir(repoPath);
 
-  // Set Git identity if not already configured
   try {
     runCommand('git config user.name || git config user.name "AutoCommitBot"');
     runCommand('git config user.email || git config user.email "bot@example.com"');
@@ -70,7 +63,6 @@ function pushBonusLogToGitHub() {
     console.warn("⚠️ Failed to auto-config Git user");
   }
 
-  // Ensure we're on a valid branch
   try {
     runCommand("git checkout main");
   } catch (e) {
@@ -78,7 +70,6 @@ function pushBonusLogToGitHub() {
     return;
   }
 
-  // Set remote using GitHub token
   const token = process.env.GITHUB_TOKEN;
   if (!token) {
     console.error("❌ GITHUB_TOKEN not set. Skipping push.");
@@ -86,7 +77,6 @@ function pushBonusLogToGitHub() {
   }
   const remoteUrl = `https://${token}@github.com/gtgdeveloper/gx.git`;
 
-  // Check if 'origin' remote exists
   try {
     execSync("git remote show origin", { stdio: "ignore" });
   } catch (err) {
@@ -94,19 +84,26 @@ function pushBonusLogToGitHub() {
     runCommand(`git remote add origin ${remoteUrl}`);
   }
 
-  // Pull, commit, and push
   runCommand("git pull origin main");
   runCommand("git add bonus-log.json bonus-failed.json");
   runCommand(`git commit -m "Auto-upload bonus logs [${new Date().toISOString()}]" || echo 'No changes to commit'`);
   runCommand("git push origin main");
-
   console.log("✅ bonus-log.json pushed to GitHub.");
 }
 
-// Main function
+function loadHoldersFromGitHub() {
+  return new Promise((resolve, reject) => {
+    https.get(HOLDERS_URL, res => {
+      let data = "";
+      res.on("data", chunk => data += chunk);
+      res.on("end", () => resolve(JSON.parse(data)));
+    }).on("error", reject);
+  });
+}
+
 (async () => {
-  let holders = JSON.parse(fs.readFileSync(HOLDERS_FILE));
-  console.log(`🔍 Loaded ${holders.length} holders`);
+  const holders = await loadHoldersFromGitHub();
+  console.log(`🔍 Loaded ${holders.length} holders from GitHub`);
 
   const winners = shuffle(holders).slice(0, 10);
   const log = [];
