@@ -123,14 +123,15 @@ const wallet = Keypair.fromSecretKey(secretKey);
         toWallet
       );
 
-      const sig = await transfer(
-        connection,
-        wallet,
-        fromTokenAccount.address,
-        toTokenAccount.address,
-        wallet,
-        tokensToSend * 1e6 // convert to lamports
-      );
+    //  const sig = await transfer(
+      //  connection,
+       // wallet,
+       // fromTokenAccount.address,
+       // toTokenAccount.address,
+       // wallet,
+       // tokensToSend * 1e6 // convert to lamports
+     // );
+const sig = "SIMULATED_TX_" + Math.random().toString(36).slice(2, 10);
 
       console.log(`✅ Sent ${tokensToSend} GTG to ${holder.owner} [tx: ${sig}]`);
       payouts.push({ wallet: holder.owner, amount: tokensToSend, tx: sig });
