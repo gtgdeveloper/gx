@@ -88,7 +88,7 @@ async function uploadToGitHub(gtgHolders) {
     const amount = data.readBigUInt64LE(64);
 
     if (amount >= 20000n * 10n ** 9n) {
-      holdersMap.set(owner, Number(amount) / 10 ** 6);
+      holdersMap.set(owner, Number(amount) / 10 ** 9);
     }
   }
 
