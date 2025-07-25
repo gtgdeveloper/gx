@@ -52,10 +52,63 @@ async function findGTGHolders() {
   console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
 
   fs.mkdirSync("./data", { recursive: true });
-  fs.writeFileSync("./data/gtg-holders.json", JSON.stringify(gtgHolders, null, 2));
+await uploadToGitHub(gtgHolders);
+
   console.log("✅ Holders saved to ./data/gtg-holders.json");
 }
 
 findGTGHolders().catch((err) => {
   console.error("❌ Error fetching GTG holders:", err);
 });
+
+const fetch = require("node-fetch");
+
+async function uploadToGitHub(gtgHolders) {
+  const owner = "gtgdeveloper";
+  const repo = "gtg-holders";
+  const path = "gtg-holders.json";
+  const branch = "main";
+  const token = process.env.GITHUB_TOKEN;
+
+  const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+  const headers = {
+    "Authorization": `token ${token}`,
+    "Accept": "application/vnd.github.v3+json",
+    "User-Agent": "gtg-uploader"
+  };
+
+  // Step 1: Get existing file SHA if it exists
+  let sha;
+  try {
+    const res = await fetch(apiUrl, { headers });
+    if (res.ok) {
+      const json = await res.json();
+      sha = json.sha;
+    }
+  } catch (err) {
+    console.warn("⚠️ Could not fetch SHA (file might not exist):", err);
+  }
+
+  // Step 2: Upload or update file
+  const body = {
+    message: "Update GTG holders",
+    content: Buffer.from(JSON.stringify(gtgHolders, null, 2)).toString("base64"),
+    branch,
+    ...(sha ? { sha } : {})
+  };
+
+  const uploadRes = await fetch(apiUrl, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+  });
+
+  if (uploadRes.ok) {
+    const result = await uploadRes.json();
+    console.log(`✅ Uploaded to GitHub: ${result.content.html_url}`);
+  } else {
+    const error = await uploadRes.text();
+    console.error("❌ GitHub upload failed:", error);
+  }
+}
+
