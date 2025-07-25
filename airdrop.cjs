@@ -74,6 +74,8 @@ try {
 
 const wallet = Keypair.fromSecretKey(secretKey);
 
+const sleep = (ms) => new Promise(res => setTimeout(res, ms));
+
 (async () => {
   console.log("🚀 Starting GTG airdrop...");
 
