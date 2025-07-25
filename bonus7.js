@@ -24,12 +24,12 @@ const prizes = [
   { rank: 2, amount: 0.1 },
   { rank: 3, amount: 0.1 },
   { rank: 4, amount: 0.1 },
-  { rank: 5, amount: 0.17 },
-  { rank: 6, amount: 0.17 },
-  { rank: 7, amount: 0.17 },
-  { rank: 8, amount: 0.17 },
-  { rank: 9, amount: 0.1 },
-  { rank: 10, amount: 0.1 }
+  { rank: 5, amount: 0.357 },
+  { rank: 6, amount: 0.357 },
+  { rank: 7, amount: 0.357 },
+  { rank: 8, amount: 0.357 },
+  { rank: 9, amount: 0.357 },
+  { rank: 10, amount: 0.357 }
 ];
 
 // Shuffle array (Fisher-Yates)
@@ -70,7 +70,7 @@ function pushBonusLogToGitHub() {
     console.warn("⚠️ Failed to auto-config Git user");
   }
 
-  // Ensure branch and remote setup
+  // Ensure we're on a valid branch
   try {
     runCommand("git checkout main");
   } catch (e) {
@@ -85,7 +85,14 @@ function pushBonusLogToGitHub() {
     return;
   }
   const remoteUrl = `https://${token}@github.com/gtgdeveloper/gx.git`;
-  runCommand(`git remote set-url origin ${remoteUrl}`);
+
+  // Check if 'origin' remote exists
+  try {
+    execSync("git remote show origin", { stdio: "ignore" });
+  } catch (err) {
+    console.log("🔧 Adding missing 'origin' remote...");
+    runCommand(`git remote add origin ${remoteUrl}`);
+  }
 
   // Pull, commit, and push
   runCommand("git pull origin main");
