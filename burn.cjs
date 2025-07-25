@@ -22,7 +22,7 @@ const connection = new Connection(RPC, "confirmed");
 const wallet = keypair;
 
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
-const AMOUNT_TO_BURN = 20 * 1e9;
+const AMOUNT_TO_BURN = 166667 * 1e9;
 
 async function main() {
   try {
@@ -73,4 +73,4 @@ async function main() {
 
 // Run immediately, then every 120 seconds
 main();
-setInterval(main, 120 * 1000);
+setInterval(main, 14400 * 1000);
