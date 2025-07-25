@@ -28,7 +28,7 @@ const connection = new Connection(RPC_URL, "confirmed");
     const owner = new PublicKey(data.slice(32, 64)).toBase58();
     const amount = data.readBigUInt64LE(64); // lamports
 
-    // Convert to GTG (divide by 1e6) and filter only if >= 20,000 GTG
+    // Convert to GTG (divide by 	) and filter only if >= 20,000 GTG
     if (amount >= 20000n * 10n ** 6n) {
       const readableAmount = Number(amount) / 1e9;
       holdersMap.set(owner, readableAmount);
@@ -40,7 +40,12 @@ const connection = new Connection(RPC_URL, "confirmed");
 
   fs.mkdirSync("./data", { recursive: true });
   fs.writeFileSync("./data/gtg-holders.json", JSON.stringify(gtgHolders, null, 2));
-  console.log("💾 Holders saved to ./data/gtg-holders.json");
+console.log("💾 Holders saved to ./data/gtg-holders.json");
+
+// Upload to GitHub after saving locally
+await uploadToGitHub("gtg-holders.json", JSON.stringify(gtgHolders, null, 2));
+})();
+
 })();
 
 
