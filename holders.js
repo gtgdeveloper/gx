@@ -30,7 +30,7 @@ const connection = new Connection(RPC_URL, "confirmed");
 
     // Convert to GTG (divide by 1e6) and filter only if >= 20,000 GTG
     if (amount >= 20000n * 10n ** 6n) {
-      const readableAmount = Number(amount) / 1e6;
+      const readableAmount = Number(amount) / 1e9;
       holdersMap.set(owner, readableAmount);
     }
   }
