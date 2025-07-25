@@ -100,7 +100,13 @@ const wallet = Keypair.fromSecretKey(secretKey);
   );
 
   for (const holder of eligibleHolders) {
-    const toWallet = new PublicKey(holder.owner);
+  if (!holder.owner || typeof holder.owner !== "string") {
+    console.warn(`⚠️ Skipping invalid entry:`, holder);
+    continue;
+  }
+
+  const toWallet = new PublicKey(holder.owner);
+
     const share = holder.amount / totalSupply;
     const tokensToSend = Math.floor(share * AIRDROP_TOTAL);
 
