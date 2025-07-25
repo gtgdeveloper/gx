@@ -1,5 +1,5 @@
 
-/const { getOrCreateAssociatedTokenAccount, burn } = require("@solana/spl-token");
+const { getOrCreateAssociatedTokenAccount, burn } = require("@solana/spl-token");
 const fs = require("fs");
 const path = require("path");
 const { Connection, Keypair, PublicKey } = require("@solana/web3.js");
