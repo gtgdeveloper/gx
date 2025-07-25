@@ -68,7 +68,7 @@ function delay(ms) {
 // Main function
 (async () => {
   // Load all holders
-  let holders = JSON.parse(fs.readFileSync(HOLDERS_FILE));
+  let holders = await fetchHoldersFromGitHub(HOLDERS_URL);
   console.log(`🔍 Loaded ${holders.length} holders`);
 
   // Shuffle and pick top 10
