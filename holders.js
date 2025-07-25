@@ -50,7 +50,7 @@ async function uploadToGitHub(gtgHolders) {
 
   if (uploadRes.ok) {
     const result = await uploadRes.json();
-    console.log(`✅ Uploaded to GitHub: ${result.content.html_url}`);
+    console.log(`✅ XXUploaded to GitHub: ${result.content.html_url}`);
   } else {
     const error = await uploadRes.text();
     console.error("❌ GitHub upload failed:", error);
