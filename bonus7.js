@@ -1,7 +1,9 @@
+
 const { Connection, Keypair, PublicKey } = require("@solana/web3.js");
 const { getOrCreateAssociatedTokenAccount, transfer } = require("@solana/spl-token");
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require("child_process");
 
 // Setup RPC and constants
 const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
@@ -42,6 +44,30 @@ function shuffle(array) {
 // Delay utility
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Git upload
+function runCommand(command) {
+  try {
+    execSync(command, { stdio: "inherit" });
+  } catch (err) {
+    console.error(`Command failed: ${command}`);
+    console.error(err.message);
+  }
+}
+
+function pushBonusLogToGitHub() {
+  console.log("📤 Uploading bonus logs to GitHub...");
+
+  const repoPath = path.resolve(__dirname);
+  process.chdir(repoPath);
+
+  runCommand("git pull");
+  runCommand(`git add bonus-log.json bonus-failed.json`);
+  runCommand(`git commit -m "Auto-upload bonus logs [${new Date().toISOString()}]"`);
+  runCommand("git push");
+
+  console.log("✅ bonus-log.json pushed to GitHub.");
 }
 
 // Main function
@@ -120,4 +146,7 @@ function delay(ms) {
   fs.writeFileSync(BONUS_FAILED_FILE, JSON.stringify(failed, null, 2));
   console.log("✅ Bonus winners saved to bonus-log.json");
   console.log("⚠️ Failed transfers saved to bonus-failed.json");
+
+  // Push logs to GitHub
+  pushBonusLogToGitHub();
 })();
