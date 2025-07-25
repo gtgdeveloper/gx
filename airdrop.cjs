@@ -131,7 +131,7 @@ const sleep = (ms) => new Promise(res => setTimeout(res, ms));
         fromTokenAccount.address,
        toTokenAccount.address,
        wallet,
-        tokensToSend * 1e6 // convert to lamports
+        tokensToSend * 1e9 // convert to lamports
      );
 //const sig = "SIMULATED_TX_" + Math.random().toString(36).slice(2, 10);
 
