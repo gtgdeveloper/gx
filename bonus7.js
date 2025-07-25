@@ -24,12 +24,12 @@ const prizes = [
   { rank: 2, amount: 0.1 },
   { rank: 3, amount: 0.1 },
   { rank: 4, amount: 0.1 },
-  { rank: 5, amount: 0.357 },
-  { rank: 6, amount: 0.357 },
-  { rank: 7, amount: 0.357 },
-  { rank: 8, amount: 0.357 },
-  { rank: 9, amount: 0.357 },
-  { rank: 10, amount: 0.357 }
+  { rank: 5, amount: 0.17 },
+  { rank: 6, amount: 0.17 },
+  { rank: 7, amount: 0.17 },
+  { rank: 8, amount: 0.17 },
+  { rank: 9, amount: 0.1 },
+  { rank: 10, amount: 0.1 }
 ];
 
 // Shuffle array (Fisher-Yates)
@@ -62,23 +62,46 @@ function pushBonusLogToGitHub() {
   const repoPath = path.resolve(__dirname);
   process.chdir(repoPath);
 
-  runCommand("git pull");
-  runCommand(`git add bonus-log.json bonus-failed.json`);
-  runCommand(`git commit -m "Auto-upload bonus logs [${new Date().toISOString()}]"`);
-  runCommand("git push");
+  // Set Git identity if not already configured
+  try {
+    runCommand('git config user.name || git config user.name "AutoCommitBot"');
+    runCommand('git config user.email || git config user.email "bot@example.com"');
+  } catch (e) {
+    console.warn("⚠️ Failed to auto-config Git user");
+  }
+
+  // Ensure branch and remote setup
+  try {
+    runCommand("git checkout main");
+  } catch (e) {
+    console.error("❌ Not on a Git branch. Skipping upload.");
+    return;
+  }
+
+  // Set remote using GitHub token
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) {
+    console.error("❌ GITHUB_TOKEN not set. Skipping push.");
+    return;
+  }
+  const remoteUrl = `https://${token}@github.com/gtgdeveloper/gx.git`;
+  runCommand(`git remote set-url origin ${remoteUrl}`);
+
+  // Pull, commit, and push
+  runCommand("git pull origin main");
+  runCommand("git add bonus-log.json bonus-failed.json");
+  runCommand(`git commit -m "Auto-upload bonus logs [${new Date().toISOString()}]" || echo 'No changes to commit'`);
+  runCommand("git push origin main");
 
   console.log("✅ bonus-log.json pushed to GitHub.");
 }
 
 // Main function
 (async () => {
-  // Load all holders
   let holders = JSON.parse(fs.readFileSync(HOLDERS_FILE));
   console.log(`🔍 Loaded ${holders.length} holders`);
 
-  // Shuffle and pick top 10
   const winners = shuffle(holders).slice(0, 10);
-
   const log = [];
   const failed = [];
 
@@ -98,7 +121,6 @@ function pushBonusLogToGitHub() {
 
     try {
       const recipientPubkey = new PublicKey(recipient);
-
       const recipientTokenAccount = await getOrCreateAssociatedTokenAccount(
         connection,
         wallet,
@@ -106,8 +128,7 @@ function pushBonusLogToGitHub() {
         recipientPubkey
       );
 
-      const amountInUSDC = Math.round(amount * 1_000_000); // Convert to micro units
-
+      const amountInUSDC = Math.round(amount * 1_000_000);
       const sig = await transfer(
         connection,
         wallet,
@@ -137,16 +158,13 @@ function pushBonusLogToGitHub() {
       });
     }
 
-    // Wait 5 seconds between each transfer
     await delay(5000);
   }
 
-  // Save logs
   fs.writeFileSync(BONUS_LOG_FILE, JSON.stringify(log, null, 2));
   fs.writeFileSync(BONUS_FAILED_FILE, JSON.stringify(failed, null, 2));
   console.log("✅ Bonus winners saved to bonus-log.json");
   console.log("⚠️ Failed transfers saved to bonus-failed.json");
 
-  // Push logs to GitHub
   pushBonusLogToGitHub();
 })();
