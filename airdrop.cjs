@@ -77,6 +77,21 @@ const wallet = Keypair.fromSecretKey(secretKey);
 const sleep = (ms) => new Promise(res => setTimeout(res, ms));
 
 (async () => {
+
+// Fetch previous distribution.json from GitHub
+let previousPayouts = [];
+try {
+  const response = await fetch("https://raw.githubusercontent.com/gtgdeveloper/gx/main/distribution.json");
+  if (response.ok) {
+    previousPayouts = await response.json();
+    console.log(`📁 Loaded ${previousPayouts.length} previous payouts from GitHub.`);
+  } else {
+    console.warn("⚠️ Could not fetch distribution.json:", response.statusText);
+  }
+} catch (err) {
+  console.warn("⚠️ Failed to fetch previous payouts:", err.message);
+}
+
   console.log("🚀 Starting GTG airdrop...");
 
   // Fetch holders.json from GitHub
@@ -125,15 +140,15 @@ const sleep = (ms) => new Promise(res => setTimeout(res, ms));
         toWallet
       );
 
-    //  const sig = await transfer(
-      //  connection,
-       // wallet,
-       // fromTokenAccount.address,
-       // toTokenAccount.address,
-       // wallet,
-       // tokensToSend * 1e6 // convert to lamports
-     // );
-const sig = "SIMULATED_TX_" + Math.random().toString(36).slice(2, 10);
+      const sig = await transfer(
+        connection,
+        wallet,
+        fromTokenAccount.address,
+       toTokenAccount.address,
+       wallet,
+        tokensToSend * 1e9 // convert to lamports
+     );
+//const sig = "SIMULATED_TX_" + Math.random().toString(36).slice(2, 10);
 
       console.log(`✅ Sent ${tokensToSend} GTG to ${holder.owner} [tx: ${sig}]`);
       payouts.push({ wallet: holder.owner, amount: tokensToSend, tx: sig, timestamp: new Date().toISOString() });
