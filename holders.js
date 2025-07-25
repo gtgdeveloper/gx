@@ -1,68 +1,13 @@
-// ✅ Running holders.cjs - Version 4 (Filtered)
-const fs = require("fs");
-const { Connection, PublicKey } = require("@solana/web3.js");
-const bs58 = require("bs58");
 
-console.log("✅ Running holders.cjs - Version 4 (Filtered)");
+const fs = require("fs");
+const fetch = require("node-fetch");
+const { Connection, PublicKey } = require("@solana/web3.js");
 
 const RPC_ENDPOINT = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
 const connection = new Connection(RPC_ENDPOINT, "confirmed");
-
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 
-async function findGTGHolders() {
-  const holdersMap = new Map();
-
-  console.log("🔄 Fetching all token accounts for GTG...");
-
-  const tokenAccounts = await connection.getProgramAccounts(
-    new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
-    {
-      filters: [
-        { dataSize: 165 },
-        {
-          memcmp: {
-            offset: 0,
-            bytes: GTG_MINT.toBase58(),
-          },
-        },
-      ],
-      commitment: "confirmed",
-    }
-  );
-
-  console.log(`🔍 Fetched ${tokenAccounts.length} token accounts for GTG`);
-
-  for (const { account } of tokenAccounts) {
-    const data = account.data;
-
-    const ownerBytes = data.slice(32, 64);
-    const owner = bs58.encode(ownerBytes);
-
-    const amountBuffer = data.slice(64, 72);
-    const amount = Number(amountBuffer.readBigUInt64LE()) / Math.pow(10, 9); // assuming 9 decimals
-
-    if (amount >= 20000) {
-      console.log(`👤 ${owner} has ${amount} GTG`);
-      holdersMap.set(owner, amount);
-    }
-  }
-
- const gtgHolders = Array.from(holdersMap).map(([owner, amount]) => ({ owner, amount }));
-console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
-
-await uploadToGitHub(gtgHolders); // Uploads to GitHub
-
-console.log("✅ Holders uploaded to GitHub.");
-
-}
-
-findGTGHolders().catch((err) => {
-  console.error("❌ Error fetching GTG holders:", err);
-});
-
-const fetch = require("node-fetch");
-
+// Upload GTG holders to GitHub
 async function uploadToGitHub(gtgHolders) {
   const owner = "gtgdeveloper";
   const repo = "gtg-holders";
@@ -112,3 +57,45 @@ async function uploadToGitHub(gtgHolders) {
   }
 }
 
+(async () => {
+  console.log("🚀 Starting GTG holder discovery...");
+
+  const holdersMap = new Map();
+
+  console.log("🔄 Fetching all token accounts for GTG...");
+
+  const tokenAccounts = await connection.getProgramAccounts(
+    new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
+    {
+      filters: [
+        { dataSize: 165 },
+        {
+          memcmp: {
+            offset: 0,
+            bytes: GTG_MINT.toBase58(),
+          },
+        },
+      ],
+      commitment: "confirmed",
+    }
+  );
+
+  console.log(`🔍 Fetched ${tokenAccounts.length} token accounts.`);
+
+  for (const account of tokenAccounts) {
+    const data = account.account.data;
+    const owner = new PublicKey(data.slice(32, 64)).toBase58();
+    const amount = data.readBigUInt64LE(64);
+
+    if (amount >= 20000n * 10n ** 6n) {
+      holdersMap.set(owner, Number(amount) / 10 ** 6);
+    }
+  }
+
+  const gtgHolders = Array.from(holdersMap).map(([owner, amount]) => ({ owner, amount }));
+  console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
+
+  await uploadToGitHub(gtgHolders);
+
+  console.log("✅ Holders uploaded to GitHub.");
+})();
