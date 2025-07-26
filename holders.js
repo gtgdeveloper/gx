@@ -1,4 +1,3 @@
-
 const fs = require("fs");
 const fetch = require("node-fetch");
 const { Connection, PublicKey } = require("@solana/web3.js");
@@ -8,44 +7,6 @@ const connection = new Connection(RPC_ENDPOINT, "confirmed");
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 
 // Upload GTG holders to GitHub
-
-async function uploadToGitHub(data, path = "gtg-holders.json") {
-  const owner = "gtgdeveloper";
-  const repo = "gx";
-  const branch = "main";
-  const token = process.env.GITHUB_TOKEN;
-
-  const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
-  const headers = {
-    "Authorization": `token ${token}`,
-    "Accept": "application/vnd.github.v3+json",
-    "User-Agent": "gtg-uploader"
-  };
-
-  let sha;
-  try {
-    const res = await fetch(apiUrl, { headers });
-    if (res.ok) {
-      const json = await res.json();
-      sha = json.sha;
-    }
-  } catch (e) {
-    console.error("SHA fetch failed:", e);
-  }
-
-  const body = {
-    message: `Update ${path}`,
-    content: Buffer.from(JSON.stringify(data, null, 2)).toString("base64"),
-    branch,
-  };
-  if (sha) body.sha = sha;
-
-  await fetch(apiUrl, {
-    method: "PUT",
-    headers,
-    body: JSON.stringify(body),
-  });
-}
 
 
 (async () => {
@@ -101,3 +62,43 @@ async function uploadToGitHub(data, path = "gtg-holders.json") {
 
   console.log("✅ Holders uploaded to GitHub.");
 })();
+
+
+async function uploadToGitHub(data, path = "gtg-holders.json") {
+  const owner = "gtgdeveloper";
+  const repo = "gx";
+  const branch = "main";
+  const token = process.env.GITHUB_TOKEN;
+
+  const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+  const headers = {
+    "Authorization": `token ${token}`,
+    "Accept": "application/vnd.github.v3+json",
+    "User-Agent": "gtg-uploader"
+  };
+
+  let sha;
+  try {
+    const res = await fetch(apiUrl, { headers });
+    if (res.ok) {
+      const json = await res.json();
+      sha = json.sha;
+    }
+  } catch (e) {
+    console.error("SHA fetch failed:", e);
+  }
+
+  const body = {
+    message: `Update ${path}`,
+    content: Buffer.from(JSON.stringify(data, null, 2)).toString("base64"),
+    branch,
+  };
+  if (sha) body.sha = sha;
+
+  await fetch(apiUrl, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+  });
+}
+
