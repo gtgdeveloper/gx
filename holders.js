@@ -81,8 +81,14 @@ async function main() {
     totalQualifiedHolders,
   };
 
-  await uploadToGitHub(gtgdata, "gtgdata.json");
-  console.log("✅ Uploaded gtgdata.json to GitHub:", JSON.stringify(gtgdata, null, 2));
+  console.log("📄 Preparing to upload gtgdata.json with content:", JSON.stringify(gtgdata, null, 2));
+
+  try {
+    await uploadToGitHub(gtgdata, "gtgdata.json");
+    console.log("✅ Uploaded gtgdata.json to GitHub");
+  } catch (err) {
+    console.error("❌ Failed to upload gtgdata.json:", err.message);
+  }
 
   // Upload metadata
   console.log("📡 Calling uploadGTGMetadata...");
