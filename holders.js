@@ -1,39 +1,65 @@
-import fs from 'fs';
-import fetch from 'node-fetch'; // Only needed if you're not on Node.js 18+
 import dotenv from 'dotenv';
+import fetch from 'node-fetch';
 dotenv.config();
 
 async function uploadToGitHub(data, filename = "data.json") {
+  const owner = "gtgdeveloper";
+  const repo = "gx";
+  const path = filename;
+  const token = process.env.GITHUB_TOKEN;
+
+  const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+
   const content = Buffer.from(JSON.stringify(data, null, 2)).toString("base64");
 
-  const response = await fetch(`https://api.github.com/repos/your-username/your-repo/contents/${filename}`, {
-    method: "PUT",
+  // Check if file exists to get its sha
+  let sha = null;
+  const getRes = await fetch(apiUrl, {
     headers: {
-      "Authorization": `token ${process.env.GITHUB_TOKEN}`,
-      "Content-Type": "application/json"
+      Authorization: `Bearer ${token}`,
+      Accept: "application/vnd.github.v3+json",
     },
-    body: JSON.stringify({
-      message: `Update ${filename}`,
-      content,
-      committer: {
-        name: "GTG Bot",
-        email: "gtg-bot@example.com"
-      }
-    })
   });
 
-  if (!response.ok) {
-    throw new Error(`❌ GitHub upload failed for ${filename}: ${response.statusText}`);
+  if (getRes.ok) {
+    const getData = await getRes.json();
+    sha = getData.sha;
   }
+
+  const uploadRes = await fetch(apiUrl, {
+    method: "PUT",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: "application/vnd.github.v3+json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      message: `Upload ${filename}`,
+      content,
+      sha,
+      committer: {
+        name: "GTG Bot",
+        email: "gtg-bot@example.com",
+      },
+    }),
+  });
+
+  const uploadData = await uploadRes.json();
+
+  if (!uploadRes.ok) {
+    console.error("❌ GitHub upload failed:", uploadData);
+    throw new Error(uploadData.message || "Upload failed");
+  }
+
+  console.log(`✅ Uploaded ${filename} to GitHub at path: ${uploadData.content.path}`);
 }
 
 async function uploadGTGMetadata(gtgHolders) {
-  // Placeholder function - replace with actual logic as needed
   console.log("📡 uploadGTGMetadata: Placeholder function called.");
 }
 
 async function main() {
-  // Simulate holdersMap with mock data for this example
+  // Simulated holdersMap for example
   const holdersMap = new Map([
     ["0x123", 25000],
     ["0x456", 31000],
@@ -43,8 +69,11 @@ async function main() {
   const gtgHolders = Array.from(holdersMap).map(([owner, amount]) => ({ owner, amount }));
   console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
 
-  // Create summary info
-  const totalQualifiedSupply = gtgHolders.reduce((acc, { amount }) => acc + amount, 0);
+  // Upload gtg-holders.json
+  await uploadToGitHub(gtgHolders, "gtg-holders.json");
+
+  // Prepare and upload gtgdata.json
+  const totalQualifiedSupply = gtgHolders.reduce((sum, h) => sum + h.amount, 0);
   const totalQualifiedHolders = gtgHolders.length;
 
   const gtgdata = {
@@ -52,15 +81,10 @@ async function main() {
     totalQualifiedHolders,
   };
 
-  // Upload GTG holders
-  await uploadToGitHub(gtgHolders, "gtgHolders.json");
-
-  // Upload GTG summary data
   await uploadToGitHub(gtgdata, "gtgdata.json");
+  console.log("✅ Uploaded gtgdata.json to GitHub:", JSON.stringify(gtgdata, null, 2));
 
-  console.log("✅ Uploaded gtgdata.json to GitHub:", gtgdata);
-
-  // Call GTG metadata uploader
+  // Upload metadata
   console.log("📡 Calling uploadGTGMetadata...");
   await uploadGTGMetadata(gtgHolders);
 }
