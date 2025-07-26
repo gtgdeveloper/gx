@@ -11,7 +11,7 @@ const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 async function uploadToGitHub(data, path = "gtg-holders.json") {
   const owner = "gtgdeveloper";
   const repo = "gx";
-  const path = "gtg-holders.json";
+  const holdersPath = "gtg-holders.json";
   const branch = "main";
   const token = process.env.GITHUB_TOKEN;
 
@@ -97,7 +97,7 @@ async function uploadToGitHub(data, path = "gtg-holders.json") {
   const gtgHolders = Array.from(holdersMap).map(([owner, amount]) => ({ owner, amount }));
   console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
 
-  await uploadToGitHub(gtgHolders);
+  await uploadToGitHub(gtgHolders, holdersPath);
   // Create and upload gtgdata.json
   const totalQualifyingSupply = gtgHolders.reduce((sum, h) => sum + h.amount, 0);
   const totalHolders = holdersMap.size;
