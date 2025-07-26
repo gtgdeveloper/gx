@@ -1,3 +1,4 @@
+const { Buffer } = require("buffer");
 
 const fs = require("fs");
 const fetch = require("node-fetch");
@@ -120,17 +121,27 @@ async function uploadGTGMetadata(gtgHolders) {
     "Content-Type": "application/json",
   };
 
+  let sha = null;
   try {
     const getRes = await fetch(apiUrl, { method: "GET", headers });
-    const sha = (await getRes.json()).sha;
+    if (getRes.ok) {
+      const getData = await getRes.json();
+      sha = getData.sha;
+    } else {
+      console.log("gtgdata.json does not exist yet. It will be created.");
+    }
+  } catch (err) {
+    console.log("Skipping SHA fetch; assuming new file.");
+  }
 
-    const payload = {
-      message: "Update GTG metadata",
-      content: Buffer.from(metadataContent).toString("base64"),
-      branch,
-      sha,
-    };
+  const payload = {
+    message: "Update GTG metadata",
+    content: Buffer.from(metadataContent).toString("base64"),
+    branch,
+  };
+  if (sha) payload.sha = sha;
 
+  try {
     const res = await fetch(apiUrl, {
       method: "PUT",
       headers,
@@ -138,11 +149,12 @@ async function uploadGTGMetadata(gtgHolders) {
     });
 
     if (!res.ok) {
-      throw new Error(`GitHub metadata upload failed: ${res.statusText}`);
+      const errorText = await res.text();
+      throw new Error(`GitHub upload failed: ${res.status} - ${errorText}`);
     }
 
-    console.log("GTG metadata uploaded to gtgdata.json");
+    console.log("✅ gtgdata.json successfully uploaded to GitHub.");
   } catch (err) {
-    console.error("Error uploading metadata:", err);
+    console.error("Error uploading gtgdata.json:", err);
   }
 }
