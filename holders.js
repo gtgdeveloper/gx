@@ -1,100 +1,101 @@
-import fetch from 'node-fetch';
 
-async function uploadToGitHub(data, filename = "data.json") {
+const fs = require("fs");
+const fetch = require("node-fetch");
+const { Connection, PublicKey } = require("@solana/web3.js");
+
+const RPC_ENDPOINT = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
+const connection = new Connection(RPC_ENDPOINT, "confirmed");
+const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
+
+// Upload GTG holders to GitHub
+async function uploadToGitHub(gtgHolders) {
   const owner = "gtgdeveloper";
   const repo = "gx";
-  const path = filename;
+  const path = "gtg-holders.json";
+  const branch = "main";
   const token = process.env.GITHUB_TOKEN;
 
   const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
-  const content = Buffer.from(JSON.stringify(data, null, 2)).toString("base64");
+  const headers = {
+    "Authorization": `token ${token}`,
+    "Accept": "application/vnd.github.v3+json",
+    "User-Agent": "gtg-uploader"
+  };
 
-  // Check if file exists to get its sha
-  let sha = null;
-  const getRes = await fetch(apiUrl, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: "application/vnd.github.v3+json",
-    },
-  });
-
-  if (getRes.ok) {
-    const getData = await getRes.json();
-    sha = getData.sha;
+  // Step 1: Get existing file SHA if it exists
+  let sha;
+  try {
+    const res = await fetch(apiUrl, { headers });
+    if (res.ok) {
+      const json = await res.json();
+      sha = json.sha;
+    }
+  } catch (err) {
+    console.warn("⚠️ Could not fetch SHA (file might not exist):", err);
   }
+
+  // Step 2: Upload or update file
+  const body = {
+    message: "Update GTG holders",
+    content: Buffer.from(JSON.stringify(gtgHolders, null, 2)).toString("base64"),
+    branch,
+    ...(sha ? { sha } : {})
+  };
 
   const uploadRes = await fetch(apiUrl, {
     method: "PUT",
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: "application/vnd.github.v3+json",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      message: `Upload ${filename}`,
-      content,
-      sha,
-      committer: {
-        name: "GTG Bot",
-        email: "gtg-bot@example.com",
-      },
-    }),
+    headers,
+    body: JSON.stringify(body),
   });
 
-  const uploadData = await uploadRes.json();
-
-  if (!uploadRes.ok) {
-    console.error("❌ GitHub upload failed:", uploadData);
-    throw new Error(uploadData.message || "Upload failed");
+  if (uploadRes.ok) {
+    const result = await uploadRes.json();
+    console.log(`✅ XXUploaded to GitHub: ${result.content.html_url}`);
+  } else {
+    const error = await uploadRes.text();
+    console.error("❌ GitHub upload failed:", error);
   }
-
-  console.log(`✅ Uploaded ${filename} to GitHub: https://github.com/${owner}/${repo}/blob/main/${path}`);
 }
 
-async function uploadGTGMetadata(gtgHolders) {
-  console.log("📡 uploadGTGMetadata: Placeholder function called.");
-}
+(async () => {
+  console.log("🚀 Starting GTG holder discovery...");
 
-async function main() {
-  console.log("🚨 Running UPDATED holders.js with gtgdata logging");
+  const holdersMap = new Map();
 
-  // Simulated holdersMap
-  const holdersMap = new Map([
-    ["0x123", 25000],
-    ["0x456", 31000],
-    ["0x789", 22000]
-  ]);
+  console.log("🔄 Fetching all token accounts for GTG...");
+
+  const tokenAccounts = await connection.getProgramAccounts(
+    new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
+    {
+      filters: [
+        { dataSize: 165 },
+        {
+          memcmp: {
+            offset: 0,
+            bytes: GTG_MINT.toBase58(),
+          },
+        },
+      ],
+      commitment: "confirmed",
+    }
+  );
+
+  console.log(`🔍 Fetched ${tokenAccounts.length} token accounts.`);
+
+  for (const account of tokenAccounts) {
+    const data = account.account.data;
+    const owner = new PublicKey(data.slice(32, 64)).toBase58();
+    const amount = data.readBigUInt64LE(64);
+
+    if (amount >= 20000n * 10n ** 6n) {
+      holdersMap.set(owner, Number(amount) / 10 ** 6);
+    }
+  }
 
   const gtgHolders = Array.from(holdersMap).map(([owner, amount]) => ({ owner, amount }));
   console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
 
-  // Upload gtg-holders.json
-  await uploadToGitHub(gtgHolders, "gtg-holders.json");
+  await uploadToGitHub(gtgHolders);
+
   console.log("✅ Holders uploaded to GitHub.");
-
-  // Create and upload gtgdata.json
-  console.log("🧮 Calculating summary data...");
-  const totalQualifiedSupply = gtgHolders.reduce((sum, h) => sum + h.amount, 0);
-  const totalQualifiedHolders = gtgHolders.length;
-
-  const gtgdata = {
-    totalQualifiedSupply,
-    totalQualifiedHolders,
-  };
-
-  console.log("📤 Ready to upload gtgdata.json:", JSON.stringify(gtgdata, null, 2));
-
-  try {
-    await uploadToGitHub(gtgdata, "gtgdata.json");
-    console.log("✅ gtgdata.json successfully uploaded to GitHub.");
-  } catch (err) {
-    console.error("❌ Failed to upload gtgdata.json:", err.message);
-  }
-
-  console.log("📡 Calling uploadGTGMetadata...");
-  await uploadGTGMetadata(gtgHolders);
-}
-
-main().catch(err => {
-  console.error("🚨 Error running main:", err);
-});
+})();
