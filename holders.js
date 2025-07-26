@@ -51,7 +51,7 @@ async function uploadToGitHub(data, filename = "data.json") {
     throw new Error(uploadData.message || "Upload failed");
   }
 
-  console.log(`✅ Uploaded ${filename} to GitHub at path: ${uploadData.content.path}`);
+  console.log(`✅ Uploaded ${filename} to GitHub: https://github.com/${owner}/${repo}/blob/main/${path}`);
 }
 
 async function uploadGTGMetadata(gtgHolders) {
@@ -59,6 +59,8 @@ async function uploadGTGMetadata(gtgHolders) {
 }
 
 async function main() {
+  console.log("🚀 Starting GTG holder discovery...");
+
   // Simulated holdersMap for example
   const holdersMap = new Map([
     ["0x123", 25000],
@@ -71,8 +73,10 @@ async function main() {
 
   // Upload gtg-holders.json
   await uploadToGitHub(gtgHolders, "gtg-holders.json");
+  console.log("✅ Holders uploaded to GitHub.");
 
   // Prepare and upload gtgdata.json
+  console.log("🧮 Calculating summary data...");
   const totalQualifiedSupply = gtgHolders.reduce((sum, h) => sum + h.amount, 0);
   const totalQualifiedHolders = gtgHolders.length;
 
@@ -81,11 +85,11 @@ async function main() {
     totalQualifiedHolders,
   };
 
-  console.log("📄 Preparing to upload gtgdata.json with content:", JSON.stringify(gtgdata, null, 2));
+  console.log("📤 Ready to upload gtgdata.json:", JSON.stringify(gtgdata, null, 2));
 
   try {
     await uploadToGitHub(gtgdata, "gtgdata.json");
-    console.log("✅ Uploaded gtgdata.json to GitHub");
+    console.log("✅ gtgdata.json successfully uploaded to GitHub.");
   } catch (err) {
     console.error("❌ Failed to upload gtgdata.json:", err.message);
   }
