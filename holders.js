@@ -15,7 +15,7 @@ const holdersPath = "gtg-holders.json";
 
   const holdersMap = new Map();
 
-  console.log("🔄 Fetching all token accounts for GTG...");
+  console.log("🔄 Fetching all token accounts for GTG-aldo...");
 
   const tokenAccounts = await connection.getProgramAccounts(
     new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
