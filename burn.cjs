@@ -77,4 +77,4 @@ async function main() {
 
 // Run immediately, then every 4 hours
 main();
-setInterval(main, 14400 * 1000); // 4 hours in milliseconds
+
