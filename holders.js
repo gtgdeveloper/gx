@@ -8,7 +8,7 @@ const connection = new Connection(RPC_ENDPOINT, "confirmed");
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 
 // Upload GTG holders to GitHub
-async function uploadToGitHub(gtgHolders) {
+async function uploadToGitHub(data, path = "gtg-holders.json") {
   const owner = "gtgdeveloper";
   const repo = "gx";
   const path = "gtg-holders.json";
@@ -18,6 +18,8 @@ async function uploadToGitHub(gtgHolders) {
   const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
   const headers = {
     "Authorization": `token ${token}`,
+    "Accept": "application/vnd.github.v3+json",
+    "User-Agent": "gtg-uploader"
     "Accept": "application/vnd.github.v3+json",
     "User-Agent": "gtg-uploader"
   };
@@ -96,6 +98,17 @@ async function uploadToGitHub(gtgHolders) {
   console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
 
   await uploadToGitHub(gtgHolders);
+  // Create and upload gtgdata.json
+  const totalQualifyingSupply = gtgHolders.reduce((sum, h) => sum + h.amount, 0);
+  const totalHolders = holdersMap.size;
+
+  const gtgData = {
+    totalQualifyingSupply,
+    totalHolders,
+  };
+
+  await uploadToGitHub(gtgData, "gtgdata.json");
+
 
   console.log("✅ Holders uploaded to GitHub.");
 })();
