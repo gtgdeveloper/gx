@@ -8,10 +8,10 @@ const connection = new Connection(RPC_ENDPOINT, "confirmed");
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 
 // Upload GTG holders to GitHub
+
 async function uploadToGitHub(data, path = "gtg-holders.json") {
   const owner = "gtgdeveloper";
   const repo = "gx";
-  const holdersPath = "gtg-holders.json";
   const branch = "main";
   const token = process.env.GITHUB_TOKEN;
 
@@ -20,11 +20,8 @@ async function uploadToGitHub(data, path = "gtg-holders.json") {
     "Authorization": `token ${token}`,
     "Accept": "application/vnd.github.v3+json",
     "User-Agent": "gtg-uploader"
-    "Accept": "application/vnd.github.v3+json",
-    "User-Agent": "gtg-uploader"
   };
 
-  // Step 1: Get existing file SHA if it exists
   let sha;
   try {
     const res = await fetch(apiUrl, { headers });
@@ -32,32 +29,24 @@ async function uploadToGitHub(data, path = "gtg-holders.json") {
       const json = await res.json();
       sha = json.sha;
     }
-  } catch (err) {
-    console.warn("⚠️ Could not fetch SHA (file might not exist):", err);
+  } catch (e) {
+    console.error("SHA fetch failed:", e);
   }
 
-  // Step 2: Upload or update file
   const body = {
-    message: "Update GTG holders",
-    content: Buffer.from(JSON.stringify(gtgHolders, null, 2)).toString("base64"),
+    message: `Update ${path}`,
+    content: Buffer.from(JSON.stringify(data, null, 2)).toString("base64"),
     branch,
-    ...(sha ? { sha } : {})
   };
+  if (sha) body.sha = sha;
 
-  const uploadRes = await fetch(apiUrl, {
+  await fetch(apiUrl, {
     method: "PUT",
     headers,
     body: JSON.stringify(body),
   });
-
-  if (uploadRes.ok) {
-    const result = await uploadRes.json();
-    console.log(`✅ XXUploaded to GitHub: ${result.content.html_url}`);
-  } else {
-    const error = await uploadRes.text();
-    console.error("❌ GitHub upload failed:", error);
-  }
 }
+
 
 (async () => {
   console.log("🚀 Starting GTG holder discovery...");
