@@ -51,7 +51,7 @@ const holdersPath = "gtg-holders.json";
   await uploadToGitHub(gtgHolders, holdersPath);
   // Create and upload gtgdata.json
   const totalQualifyingSupply = gtgHolders.reduce((sum, h) => sum + h.amount, 0);
-  const totalHolders = holdersMap.size;
+  const totalHolders = parsed.length;
 
   const gtgData = {
     totalQualifyingSupply,
