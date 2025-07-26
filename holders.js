@@ -5,6 +5,7 @@ const { Connection, PublicKey } = require("@solana/web3.js");
 const RPC_ENDPOINT = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
 const connection = new Connection(RPC_ENDPOINT, "confirmed");
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
+const holdersPath = "gtg-holders.json";
 
 // Upload GTG holders to GitHub
 
