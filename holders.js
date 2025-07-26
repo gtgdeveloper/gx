@@ -1,6 +1,4 @@
-import dotenv from 'dotenv';
 import fetch from 'node-fetch';
-dotenv.config();
 
 async function uploadToGitHub(data, filename = "data.json") {
   const owner = "gtgdeveloper";
@@ -9,7 +7,6 @@ async function uploadToGitHub(data, filename = "data.json") {
   const token = process.env.GITHUB_TOKEN;
 
   const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
-
   const content = Buffer.from(JSON.stringify(data, null, 2)).toString("base64");
 
   // Check if file exists to get its sha
@@ -59,9 +56,9 @@ async function uploadGTGMetadata(gtgHolders) {
 }
 
 async function main() {
-  console.log("🚀 Starting GTG holder discovery...");
+  console.log("🚨 Running UPDATED holders.js with gtgdata logging");
 
-  // Simulated holdersMap for example
+  // Simulated holdersMap
   const holdersMap = new Map([
     ["0x123", 25000],
     ["0x456", 31000],
@@ -75,7 +72,7 @@ async function main() {
   await uploadToGitHub(gtgHolders, "gtg-holders.json");
   console.log("✅ Holders uploaded to GitHub.");
 
-  // Prepare and upload gtgdata.json
+  // Create and upload gtgdata.json
   console.log("🧮 Calculating summary data...");
   const totalQualifiedSupply = gtgHolders.reduce((sum, h) => sum + h.amount, 0);
   const totalQualifiedHolders = gtgHolders.length;
@@ -94,7 +91,6 @@ async function main() {
     console.error("❌ Failed to upload gtgdata.json:", err.message);
   }
 
-  // Upload metadata
   console.log("📡 Calling uploadGTGMetadata...");
   await uploadGTGMetadata(gtgHolders);
 }
