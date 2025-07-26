@@ -96,6 +96,53 @@ async function uploadToGitHub(gtgHolders) {
   console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
 
   await uploadToGitHub(gtgHolders);
+  await uploadGTGMetadata(gtgHolders);
 
   console.log("✅ Holders uploaded to GitHub.");
 })();
+
+
+
+async function uploadGTGMetadata(gtgHolders) {
+  const owner = "gtgdeveloper";
+  const repo = "gx";
+  const path = "gtgdata.json";
+  const branch = "main";
+  const token = process.env.GITHUB_TOKEN;
+
+  const qualifiedSupply = gtgHolders.filter(h => parseFloat(h.amount) >= 20000).reduce((sum, h) => sum + parseFloat(h.amount), 0);
+  const totalHolders = gtgHolders.length;
+  const metadataContent = JSON.stringify({ qualifiedSupply, totalHolders }, null, 2);
+
+  const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+  const headers = {
+    "Authorization": `token ${token}`,
+    "Content-Type": "application/json",
+  };
+
+  try {
+    const getRes = await fetch(apiUrl, { method: "GET", headers });
+    const sha = (await getRes.json()).sha;
+
+    const payload = {
+      message: "Update GTG metadata",
+      content: Buffer.from(metadataContent).toString("base64"),
+      branch,
+      sha,
+    };
+
+    const res = await fetch(apiUrl, {
+      method: "PUT",
+      headers,
+      body: JSON.stringify(payload),
+    });
+
+    if (!res.ok) {
+      throw new Error(`GitHub metadata upload failed: ${res.statusText}`);
+    }
+
+    console.log("GTG metadata uploaded to gtgdata.json");
+  } catch (err) {
+    console.error("Error uploading metadata:", err);
+  }
+}
