@@ -7,16 +7,12 @@ const connection = new Connection(RPC_ENDPOINT, "confirmed");
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 const holdersPath = "gtg-holders.json";
 
-// Upload GTG holders to GitHub
-//lets go
-
 (async () => {
   console.log("🚀 Starting GTG holder discovery...");
 
   const holdersMap = new Map();
 
-  console.log("🔄 Fetching all token accounts for GTG-aldo...");
-
+  console.log("🔄 Fetching all token accounts for GTG...");
   const tokenAccounts = await connection.getProgramAccounts(
     new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
     {
@@ -32,7 +28,7 @@ const holdersPath = "gtg-holders.json";
       commitment: "confirmed",
     }
   );
-//
+
   console.log(`🔍 Fetched ${tokenAccounts.length} token accounts.`);
 
   for (const account of tokenAccounts) {
@@ -49,9 +45,9 @@ const holdersPath = "gtg-holders.json";
   console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
 
   await uploadToGitHub(gtgHolders, holdersPath);
-  // Create and upload gtgdata.json
+
   const totalQualifyingSupply = gtgHolders.reduce((sum, h) => sum + h.amount, 0);
-  const totalHolders = parsed.length;
+  const totalHolders = tokenAccounts.length;
 
   const gtgData = {
     totalQualifyingSupply,
@@ -60,10 +56,8 @@ const holdersPath = "gtg-holders.json";
 
   await uploadToGitHub(gtgData, "gtgdata.json");
 
-
-  console.log("✅ Holders uploaded to GitHub.");
+  console.log("✅ Holder data uploaded to GitHub.");
 })();
-//
 
 async function uploadToGitHub(data, path = "gtg-holders.json") {
   const owner = "gtgdeveloper";
@@ -96,10 +90,15 @@ async function uploadToGitHub(data, path = "gtg-holders.json") {
   };
   if (sha) body.sha = sha;
 
-  await fetch(apiUrl, {
+  const uploadRes = await fetch(apiUrl, {
     method: "PUT",
     headers,
     body: JSON.stringify(body),
   });
-}
 
+  if (uploadRes.ok) {
+    console.log(`☁️ Uploaded ${path} to GitHub.`);
+  } else {
+    console.error(`❌ Failed to upload ${path}`, await uploadRes.text());
+  }
+}
