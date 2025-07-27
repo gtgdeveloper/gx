@@ -82,7 +82,7 @@ async function uploadToGitHub(data, path = "gtg-holders.json") {
   } catch (e) {
     console.error("SHA fetch failed:", e);
   }
-
+//
   const body = {
     message: `Update ${path}`,
     content: Buffer.from(JSON.stringify(data, null, 2)).toString("base64"),
