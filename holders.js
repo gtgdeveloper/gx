@@ -63,7 +63,7 @@ const holdersPath = "gtg-holders.json";
 
   console.log("✅ Holders uploaded to GitHub.");
 })();
-
+//
 
 async function uploadToGitHub(data, path = "gtg-holders.json") {
   const owner = "gtgdeveloper";
