@@ -8,7 +8,7 @@ const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 const holdersPath = "gtg-holders.json";
 
 (async () => {
-  console.log("🚀 Starting GTG holder discovery...");
+  console.log("🚀 Super Starting GTG holder discovery...");
 
   const holdersMap = new Map();
 
