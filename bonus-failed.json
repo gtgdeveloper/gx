@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "timestamp": "2025-07-28T00:01:06.886Z",
+    "rank": 2,
+    "recipient": "89fepFfcBTAEKsJP3kk1wRHF6T5qd6MYXdQbaShCpp3z",
+    "amount": 20,
+    "error": "TokenOwnerOffCurveError"
+  }
+]
