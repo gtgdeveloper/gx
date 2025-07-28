@@ -28,7 +28,7 @@ const holdersPath = "gtg-holders.json";
       commitment: "confirmed",
     }
   );
-
+//
   console.log(`🔍 Fetched ${tokenAccounts.length} token accounts.`);
 
   for (const account of tokenAccounts) {
