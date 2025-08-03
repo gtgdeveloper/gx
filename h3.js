@@ -29,7 +29,7 @@ const excludedWallets = new Set([
   "B6eCTNftSFHo1TfzQ3Xjy7dVrbiGtfELqvAXtFf35quC",
   "DNTv8Lywgo9qHfiKLj9RX5m8mxEfrJYAk7mKVp9naNJD",
   "7TTediuXav7LMupW5y2d78C966peW2vi53qTrMouetyk",
-  "65eRCmP8sE7AwLG3xdT7EprXrrsoGjKEfL6yoLB5BECW"
+  "65eRCmP8sE7AwLG3xdT7EprXrrsoGjKEfL6yoLB5BECW",
   "G8UyqnFPvZtzu7VG87HGoAfeH5UvJ6rMpso9meJx9k49",
   "5fTUixvys1Hau4tsPZWSc6cfR1SfhzgJMf7i6MWkmEBp",
   "6w9ppKUB9cJYckM8cHpovFoKPb3xg4dvF1JEcq9xKWu8",
