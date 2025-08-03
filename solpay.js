@@ -23,7 +23,7 @@ https.get(jsonUrl, res => {
     res.on('end', async () => {
         try {
             const parsedData = JSON.parse(data);
-            await sendSolPayments(parsedData.slice(0, 4)); // Top 4 entries
+            await sendSolPayments(parsedData); // Send to all recipients
         } catch (err) {
             console.error('Error parsing JSON:', err.message);
             console.error('Raw response:', data.substring(0, 200) + '...');
@@ -35,7 +35,7 @@ https.get(jsonUrl, res => {
 });
 
 async function sendSolPayments(entries) {
-    console.log('Sending real SOL payments to 4 addresses...\n');
+    console.log('Sending real SOL payments to all recipients...\n');
     let totalSol = 0;
     let txCount = 0;
 
