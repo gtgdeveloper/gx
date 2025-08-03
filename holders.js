@@ -44,9 +44,13 @@ const holdersPath = "gtg-holders.json";
   const gtgHolders = Array.from(holdersMap).map(([owner, amount]) => ({ owner, amount }));
   console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
 
+
+
+  
   await uploadToGitHub(gtgHolders, holdersPath);
 
   const totalQualifyingSupply = gtgHolders.reduce((sum, h) => sum + h.amount, 0);
+  console.log(`📈 Total qualifying supply (≥ 20k GTG): ${totalQualifiedSupply}`);
   const totalHolders = tokenAccounts.length;
 
   const gtgData = {
