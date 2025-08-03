@@ -1,10 +1,9 @@
 
-require('dotenv').config();
 const https = require('https');
 const web3 = require('@solana/web3.js');
 const bs58 = require('bs58');
 
-// Load wallet from environment variable
+// Load wallet key from Render environment variable
 const secretKey = bs58.decode(process.env.WALLETKEY);
 const fromKeypair = web3.Keypair.fromSecretKey(secretKey);
 
