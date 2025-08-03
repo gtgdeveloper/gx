@@ -30,15 +30,19 @@ const holdersPath = "gtg-holders.json";
   );
 //
   console.log(`🔍 Fetched ${tokenAccounts.length} token accounts.`);
-
+let tot = 0;
   for (const account of tokenAccounts) {
     const data = account.account.data;
     const owner = new PublicKey(data.slice(32, 64)).toBase58();
     const amount = data.readBigUInt64LE(64);
 
-    if (amount >= 20000n * 10n ** 9n) {
-      holdersMap.set(owner, Number(amount) / 10 ** 9);
+     if (amount >= 20000n * 10n ** 9n) {
+const amountInGTG = Number(amount) / 10 ** 9;     
+ holdersMap.set(owner, Number(amount) / 10 ** 9);
+tot += amountInGTG;
     }
+  
+
   }
 
   const gtgHolders = Array.from(holdersMap).map(([owner, amount]) => ({ owner, amount }));
@@ -55,7 +59,8 @@ const holdersPath = "gtg-holders.json";
 
   const gtgData = {
     totalQualifyingSupply,
-    totalHolders
+    totalHolders,
+    tot 
   };
 
   await uploadToGitHub(gtgData, "gtgdata.json");
