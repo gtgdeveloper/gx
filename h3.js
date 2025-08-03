@@ -35,12 +35,18 @@ for (const account of tokenAccounts) {
   const data = account.account.data;
   const owner = new PublicKey(data.slice(32, 64)).toBase58();
   const amount = data.readBigUInt64LE(64);
+const amountInGTG = Number(amount) / 10 ** 9;
 
-  if (amount >= 20000n * 10n ** 9n) {
-    const amountInGTG = Number(amount) / 10 ** 9;
-    holdersMap.set(owner, amountInGTG);
-    tot += amountInGTG;
-  }
+if (amountInGTG >= 20000 && amountInGTG <= 70000000) {
+  holdersMap.set(owner, amountInGTG);
+  tot += amountInGTG;
+}
+
+
+
+  
+
+
 }
 
 const gtgHolders = Array.from(holdersMap).map(([owner, amount]) => ({ owner, amount }));
