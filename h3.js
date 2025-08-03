@@ -10,6 +10,10 @@ const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 const excludedWallets = new Set([
   "F4DACnJRJYhcYswDwHaoLDi9tccwDbiNsA6eyoudTNup",
   "89fepFfcBTAEKsJP3kk1wRHF6T5qd6MYXdQbaShCpp3z",
+  "3pNpU9vd6zX1vtDhtopHdArpPoc1xvExhpP8GNwN3psv",
+  "6w9ppKUB9cJYckM8cHpovFoKPb3xg4dvF1JEcq9xKWu8",
+  "5YVoJ5885V8xrAeexyPuDyR18DkWCjWW4CbsEAcD2Mxf",
+  "Eq5L73qju35S5U6uawqm8i2boagmio4iHqEEuhGWetqL",
   "5fTUixvys1Hau4tsPZWSc6cfR1SfhzgJMf7i6MWkmEBp",
   "F8gacHyY4APg1ceiUQHVBteHdQ4htTtJxw24wMVTEKWf",
   "9ZHiw3wqtYxrppgAfEbXResxWUasSiVN3jmjQrU9wQYA",
