@@ -6,6 +6,37 @@ const RPC_ENDPOINT = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3
 const connection = new Connection(RPC_ENDPOINT, "confirmed");
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 const holdersPath = "gtg-holders.json";
+const excludedWallets = new Set([
+  "F4DACnJRJYhcYswDwHaoLDi9tccwDbiNsA6eyoudTNup",
+  "F8gacHyY4APg1ceiUQHVBteHdQ4htTtJxw24wMVTEKWf",
+  "9ZHiw3wqtYxrppgAfEbXResxWUasSiVN3jmjQrU9wQYA",
+  "2gGSZD8MrrbP1YKJTiQfp5puvVKuMsgAULFAKnF6PSSg",
+  "H1G8MR8m7o3xf9Z1wEBGixZ7MAgXGmM1A8L7VcDi16Lb",
+  "E5hubdTm1g2PWRLdgjCCVnLhWxc4X1dXNnFgHTM8Wz9c",
+  "HyhfwRRSYEL8frDr2kxrmAGgjzJKwyiSbpSALxrwXQfJ",
+  "427RBNJvXSDGWSaPFG3YK8U6hR36XiKVZcLYFJnQNCr4",
+  "42bCmuhppv9TeQ731mz5xLz5R5NnW8HvPjZPK9H1NJez",
+  "BW6ss9hx7EubC7XfwDeCaWoXq8YzEXC3yjGDRMbgEoH8",
+  "DzFATJqBCNUnRPUChCxsCtBnUuo7KKVVq3nPLpidnUMP",
+  "8pLXCR7fKRaSd7tiriTyCMVb3S1rBSd29mJPU1sFkGuh",
+  "ELwyps9sfZ5XmZ4tWgiSGgQbrsKDngsgm9ZxMxHFacM",
+  "3mnnj8Ux25bCZ6Mj7VFRDMZoZ9S43fQfjaeNVSqD28Nz",
+  "5y8ijbjxfms9GJeyXqTr8iCRqJ5xXWeEHwQpvjK8h5xh",
+  "ED8ZpXkydsUZ8YchZDEBjKwdLk4Zqqs8Y8H1XocjhRPN",
+  "FAfCCF5A3ZLRS4pBtcPpmpuyNRxmXW6Hj8cfx23XnTbC",
+  "7n3UceCNFgSSYCfHVCTeaNAp8dHRv9za6BDvg3XAVcMb",
+  "TRSQujxiGfZfM9kQTn4agqr7tfVu1RB1PPvKtCxGvWP",
+  "HiyGnXgKuZKFGF6ZoS9Hki4r3mdDmDudGcW5XTQNhJyf",
+  "HfGYxdGD123CjYrSyXdWww2az6AMKqmfzFdmDojrynrh",
+  "BXEQkRAh5uHP72xqe9efBQRuB2hS3qpuebDp5canP7Pa",
+  "5sYuzP7rarmkFCM2m29RmEQSgi4cAgiBBWSvTbg4RhAH",
+  "G3fkSwJ7GecBv19g7tT8Rc3YLcyCDiKj9TvdPR5NjfKb",
+  "6gKYfBR8Lyt69EhvjKRMuD6hZstVricyoRxyLh3pCTZ6",
+  "53YvHR4fsz6trVqjusiyqruhgr1tT8TGSRGPuRAfWMtZ",
+  "2tVkWmHTtpht7FRi8n6XkHm8E6G1UyVyUPFQa6946KCk",
+  "AzUXusuDcaUfE8VXtFciuPPnzr4RiypwBz5NL6uiydRu",
+  "DEk1ZEp7xv8HeP6RHmysx1xJDLeer2qVhawwVjFF364u"
+]);
 
 (async () => {
   console.log("🚀 Super Starting GTG holder discovery...");
@@ -37,10 +68,15 @@ for (const account of tokenAccounts) {
   const amount = data.readBigUInt64LE(64);
 const amountInGTG = Number(amount) / 10 ** 9;
 
-if (amountInGTG >= 20000 && amountInGTG <= 70000000) {
+if (
+  amountInGTG >= 20000 &&
+  amountInGTG <= 70000000 &&
+  !excludedWallets.has(owner)
+) {
   holdersMap.set(owner, amountInGTG);
   tot += amountInGTG;
 }
+
 
 
 
