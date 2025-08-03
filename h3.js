@@ -44,7 +44,8 @@ const excludedWallets = new Set([
   );
 
   const holders = [];
-  let total = 0;
+  let totalGTG = 0;
+  let totalSOL = 0;
 
   for (const account of tokenAccounts) {
     const data = account.account.data;
@@ -52,13 +53,15 @@ const excludedWallets = new Set([
     const amount = Number(data.readBigUInt64LE(64)) / 10 ** 9;
 
     if (amount >= 20000 && !excludedWallets.has(owner)) {
-      total += amount;
+      totalGTG += amount;
+      const sol_equiv = amount * gtg_price_in_sol;
+      totalSOL += sol_equiv;
       holders.push({ owner, amount });
     }
   }
 
   for (const holder of holders) {
-    holder.percentage = (holder.amount / total) * 100;
+    holder.percentage = (holder.amount / totalGTG) * 100;
     holder.double_amount_for_100_apy = holder.amount * 2;
     holder.sol_equivalent_for_100_apy = holder.amount * gtg_price_in_sol;
     holder.daily_sol_for_100_apy = holder.sol_equivalent_for_100_apy / 365;
@@ -66,6 +69,9 @@ const excludedWallets = new Set([
 
   fs.writeFileSync("gtgsol-5-full.json", JSON.stringify(holders, null, 2));
   console.log("✅ Exported gtgsol-5-full.json");
+
+  console.log(`📊 Total qualifying GTG tokens: ${totalGTG.toLocaleString(undefined, { maximumFractionDigits: 2 })}`);
+  console.log(`💸 Total SOL required for 100% APY: ${totalSOL.toFixed(4)} SOL`);
 
   await uploadToGitHub(holders, GITHUB_FILE_PATH);
 })();
