@@ -7,17 +7,12 @@ const RPC_ENDPOINT = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3
 const connection = new Connection(RPC_ENDPOINT, "confirmed");
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 
+const gtg_price_usd = 0.0004394;
+const sol_price_usd = 161.77;
+const gtg_price_in_sol = gtg_price_usd / sol_price_usd;
+
 const excludedWallets = new Set([
   "F4DACnJRJYhcYswDwHaoLDi9tccwDbiNsA6eyoudTNup",
-  "89fepFfcBTAEKsJP3kk1wRHF6T5qd6MYXdQbaShCpp3z",
-  "3pNpU9vd6zX1vtDhtopHdArpPoc1xvExhpP8GNwN3psv",
-  "6w9ppKUB9cJYckM8cHpovFoKPb3xg4dvF1JEcq9xKWu8",
-  "5YVoJ5885V8xrAeexyPuDyR18DkWCjWW4CbsEAcD2Mxf",
-  "Eq5L73qju35S5U6uawqm8i2boagmio4iHqEEuhGWetqL",
-  "AWmyzHn9hG7mM7P3zAUQXM5qriU765Tmf8xjvDoPBzDd",
-  "FqofLY44suNi6C2i9862tTti5pgfoS2XLfDDTjGTLokq",
-  "9CVKoSRd6SCFZ1Zo1i241SZFkjShmPMH7U1BuPWtSNL8",
-  "5fTUixvys1Hau4tsPZWSc6cfR1SfhzgJMf7i6MWkmEBp",
   "F8gacHyY4APg1ceiUQHVBteHdQ4htTtJxw24wMVTEKWf",
   "9ZHiw3wqtYxrppgAfEbXResxWUasSiVN3jmjQrU9wQYA",
   "2gGSZD8MrrbP1YKJTiQfp5puvVKuMsgAULFAKnF6PSSg",
@@ -49,7 +44,7 @@ const excludedWallets = new Set([
 ]);
 
 (async () => {
-  console.log("🚀 Starting gtgsol.json export...");
+  console.log("🚀 Fetching GTG holders...");
 
   const tokenAccounts = await connection.getProgramAccounts(
     new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
@@ -63,71 +58,30 @@ const excludedWallets = new Set([
           },
         },
       ],
-      commitment: "confirmed",
     }
   );
 
-  console.log(`🔍 Fetched ${tokenAccounts.length} token accounts.`);
-
-  const gtgSolHolders = [];
+  const holders = [];
+  let total = 0;
 
   for (const account of tokenAccounts) {
     const data = account.account.data;
     const owner = new PublicKey(data.slice(32, 64)).toBase58();
-    const amount = data.readBigUInt64LE(64);
-    const amountInGTG = Number(amount) / 10 ** 9;
+    const amount = Number(data.readBigUInt64LE(64)) / 10 ** 9;
 
-    if (
-      amountInGTG >= 20000 &&
-      !excludedWallets.has(owner)
-    ) {
-      gtgSolHolders.push({ owner, amount: amountInGTG });
+    if (amount >= 20000 && !excludedWallets.has(owner)) {
+      total += amount;
+      holders.push({ owner, amount });
     }
   }
 
-  await uploadToGitHub(gtgSolHolders, "gtgsol.json");
+  for (const holder of holders) {
+    holder.percentage = (holder.amount / total) * 100;
+    holder.double_amount_for_100_apy = holder.amount * 2;
+    holder.sol_equivalent_for_100_apy = holder.amount * gtg_price_in_sol;
+    holder.daily_sol_for_100_apy = holder.sol_equivalent_for_100_apy / 365;
+  }
+
+  fs.writeFileSync("gtgsol-5-full.json", JSON.stringify(holders, null, 2));
+  console.log("✅ Exported gtgsol-5-full.json with all computed fields.");
 })();
-
-async function uploadToGitHub(data, path = "gtgsol.json") {
-  const owner = "gtgdeveloper";
-  const repo = "gx";
-  const branch = "main";
-  const token = process.env.GITHUB_TOKEN;
-
-  const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
-  const headers = {
-    "Authorization": `token ${token}`,
-    "Accept": "application/vnd.github.v3+json",
-    "User-Agent": "gtg-uploader"
-  };
-
-  let sha;
-  try {
-    const res = await fetch(apiUrl, { headers });
-    if (res.ok) {
-      const json = await res.json();
-      sha = json.sha;
-    }
-  } catch (e) {
-    console.error("SHA fetch failed:", e);
-  }
-
-  const body = {
-    message: `Update ${path}`,
-    content: Buffer.from(JSON.stringify(data, null, 2)).toString("base64"),
-    branch,
-  };
-  if (sha) body.sha = sha;
-
-  const uploadRes = await fetch(apiUrl, {
-    method: "PUT",
-    headers,
-    body: JSON.stringify(body),
-  });
-
-  if (uploadRes.ok) {
-    console.log(`☁️ Uploaded ${path} to GitHub.`);
-  } else {
-    console.error(`❌ Failed to upload ${path}`, await uploadRes.text());
-  }
-}
