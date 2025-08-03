@@ -21,6 +21,8 @@ const excludedWallets = new Set([
   "5YVoJ5885V8xrAeexyPuDyR18DkWCjWW4CbsEAcD2Mxf",
   "5AAhKREft7qHXYQZM4BZiuNzhUY28syDQs1aD5aJCnAW",
   "7fxUkD4i5yqBvfX5PYz4yjTR5BGaczJjzzNievh3SLJk",
+  "CWSBtsbo7N49iH7UuHotAWLrbV1n5FeePXn4rc32FJub",
+  "5mQijpL12YSJtGEBxZz2rfoBCoBRCEaFZ5JQPCEWJUYK",
   "9YJJSYjF3aLHqwnJp3VQNR8VG6noFpFxVbuZJmrq2f3g",
   "GNvJjh6P8m3tQqj57JdtnzZ5BWDHccd7C5jQAXH13mVr",
   "E7JnTLcrgdPdLoe53KVFe5yqehZKcioUZrfbytgBvG8y",
