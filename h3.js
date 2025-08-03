@@ -1,3 +1,4 @@
+
 const fs = require("fs");
 const fetch = require("node-fetch");
 const { Connection, PublicKey } = require("@solana/web3.js");
@@ -5,7 +6,7 @@ const { Connection, PublicKey } = require("@solana/web3.js");
 const RPC_ENDPOINT = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
 const connection = new Connection(RPC_ENDPOINT, "confirmed");
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
-const holdersPath = "gtg-holders.json";
+
 const excludedWallets = new Set([
   "F4DACnJRJYhcYswDwHaoLDi9tccwDbiNsA6eyoudTNup",
   "F8gacHyY4APg1ceiUQHVBteHdQ4htTtJxw24wMVTEKWf",
@@ -39,11 +40,8 @@ const excludedWallets = new Set([
 ]);
 
 (async () => {
-  console.log("🚀 Super Starting GTG holder discovery...");
+  console.log("🚀 Starting gtgsol.json export...");
 
-  const holdersMap = new Map();
-
-  console.log("🔄 Fetching EVERY token accounts for GTG...");
   const tokenAccounts = await connection.getProgramAccounts(
     new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
     {
@@ -59,55 +57,29 @@ const excludedWallets = new Set([
       commitment: "confirmed",
     }
   );
-//
+
   console.log(`🔍 Fetched ${tokenAccounts.length} token accounts.`);
-let tot = 0;
-for (const account of tokenAccounts) {
-  const data = account.account.data;
-  const owner = new PublicKey(data.slice(32, 64)).toBase58();
-  const amount = data.readBigUInt64LE(64);
-const amountInGTG = Number(amount) / 10 ** 9;
 
-if (
-  amountInGTG >= 20000 &&
-  amountInGTG <= 70000000 &&
-  !excludedWallets.has(owner)
-) {
-  holdersMap.set(owner, amountInGTG);
-  tot += amountInGTG;
-}
+  const gtgSolHolders = [];
 
+  for (const account of tokenAccounts) {
+    const data = account.account.data;
+    const owner = new PublicKey(data.slice(32, 64)).toBase58();
+    const amount = data.readBigUInt64LE(64);
+    const amountInGTG = Number(amount) / 10 ** 9;
 
+    if (
+      amountInGTG >= 20000 &&
+      !excludedWallets.has(owner)
+    ) {
+      gtgSolHolders.push({ owner, amount: amountInGTG });
+    }
+  }
 
-
-  
-
-
-}
-
-const gtgHolders = Array.from(holdersMap).map(([owner, amount]) => ({ owner, amount }));
-console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
-console.log(`📊 Total from 'tot' variable (≥ 20k GTG): ${tot}`);
-
-await uploadToGitHub(gtgHolders, holdersPath);
-
-const totalQualifyingSupply = gtgHolders.reduce((sum, h) => sum + h.amount, 0);
-console.log(`📈 Total qualifying supply (≥ 20k GTG): ${totalQualifyingSupply}`);
-
-const totalHolders = tokenAccounts.length;
-const gtgData = {
-  totalQualifyingSupply,
-  totalHolders,
-  tot
-};
-
-await uploadToGitHub(gtgData, "gtgdata.json");
-
-
-  console.log("✅ Holder data uploaded to GitHub.");
+  await uploadToGitHub(gtgSolHolders, "gtgsol.json");
 })();
 
-async function uploadToGitHub(data, path = "gtg-holders.json") {
+async function uploadToGitHub(data, path = "gtgsol.json") {
   const owner = "gtgdeveloper";
   const repo = "gx";
   const branch = "main";
