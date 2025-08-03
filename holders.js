@@ -47,6 +47,7 @@ tot += amountInGTG;
 
   const gtgHolders = Array.from(holdersMap).map(([owner, amount]) => ({ owner, amount }));
   console.log(`📦 Found ${gtgHolders.length} holders with ≥ 20k GTG`);
+console.log(`📊 Total from 'tot' variable (≥ 20k GTG): ${tot}`);
 
 
 
