@@ -19,7 +19,10 @@ const GITHUB_FILE_PATH = "gtgsol-5-full.json";
 const excludedWallets = new Set([
   "F4DACnJRJYhcYswDwHaoLDi9tccwDbiNsA6eyoudTNup",
   "5YVoJ5885V8xrAeexyPuDyR18DkWCjWW4CbsEAcD2Mxf",
+  "5AAhKREft7qHXYQZM4BZiuNzhUY28syDQs1aD5aJCnAW",
+  "7fxUkD4i5yqBvfX5PYz4yjTR5BGaczJjzzNievh3SLJk",
   "9YJJSYjF3aLHqwnJp3VQNR8VG6noFpFxVbuZJmrq2f3g",
+  "GNvJjh6P8m3tQqj57JdtnzZ5BWDHccd7C5jQAXH13mVr",
   "E7JnTLcrgdPdLoe53KVFe5yqehZKcioUZrfbytgBvG8y",
   "6SyLbAmhjWCjuvD4mNZanuT8bYZDbPcwM9966px6qR1x",
   "EwqZqL4VkujGwHQE8GBYNoAUdnkvdAyzQZVCQViVvFLZ",
