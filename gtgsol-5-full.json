@@ -1,1024 +1,440 @@
 [
   {
-    "owner": "9EkAmGeJ3aFBijxKdWAZ6HWPBXeortX9BT8Wmu7J1dJD",
-    "amount": 83289.527276382,
-    "percentage": 0.13303547110366556,
-    "double_amount_for_100_apy": 166579.054552764,
-    "sol_equivalent_for_100_apy": 0.22623118183372842,
-    "daily_sol_for_100_apy": 0.0006198114570787081
-  },
-  {
-    "owner": "6ecsPGq1GCM7wLUeBkzXuscfVoEwxuiTPopaRS5Eokki",
-    "amount": 84152.46932305,
-    "percentage": 0.13441381848379524,
-    "double_amount_for_100_apy": 168304.9386461,
-    "sol_equivalent_for_100_apy": 0.2285751067598947,
-    "daily_sol_for_100_apy": 0.000626233169205191
-  },
-  {
-    "owner": "EaGj7kx632FuRU26mtb6UjUvQjLTsnHHME8Yf5dAyg7e",
-    "amount": 1188007.999999999,
-    "percentage": 1.8975639449899975,
-    "double_amount_for_100_apy": 2376015.999999998,
-    "sol_equivalent_for_100_apy": 3.2268697236817676,
-    "daily_sol_for_100_apy": 0.008840738968991143
-  },
-  {
-    "owner": "23oKdX41ZMyZrPjVtuj1KoqJMg4y1LuiZkLBKUDr6UVP",
-    "amount": 91852.063580082,
-    "percentage": 0.14671211315285132,
-    "double_amount_for_100_apy": 183704.127160164,
-    "sol_equivalent_for_100_apy": 0.24948876019711955,
-    "daily_sol_for_100_apy": 0.000683530849855122
-  },
-  {
-    "owner": "42eK9KwtLnibpzACAcDace7wxNp8evxhBAg8oVHLW3EC",
-    "amount": 54908.914159167,
-    "percentage": 0.08770410280653508,
-    "double_amount_for_100_apy": 109817.828318334,
-    "sol_equivalent_for_100_apy": 0.1491437032919452,
-    "daily_sol_for_100_apy": 0.00040861288573135673
-  },
-  {
-    "owner": "76QmSGCVUzk7YXmFWVCpaRKWVF1dW4PXTeVxiKnkJzDC",
-    "amount": 46922.791561603,
-    "percentage": 0.07494814636397971,
-    "double_amount_for_100_apy": 93845.583123206,
-    "sol_equivalent_for_100_apy": 0.1274517809987535,
-    "daily_sol_for_100_apy": 0.0003491829616404206
-  },
-  {
-    "owner": "FG4662UCtZFjqpe33s71sN2iyxqZAxpA27arf6bUD4AG",
-    "amount": 85445.698696365,
-    "percentage": 0.13647944887635535,
-    "double_amount_for_100_apy": 170891.39739273,
-    "sol_equivalent_for_100_apy": 0.2320877789898175,
-    "daily_sol_for_100_apy": 0.000635856928739226
-  },
-  {
-    "owner": "8wHNDU4WaLttQ3M6SgEXZGW9qFEMi9aoSTGtPvwJbMYa",
-    "amount": 40303.654272846,
-    "percentage": 0.06437562810982306,
-    "double_amount_for_100_apy": 80607.308545692,
-    "sol_equivalent_for_100_apy": 0.10947286695610144,
-    "daily_sol_for_100_apy": 0.0002999256628934286
-  },
-  {
-    "owner": "H1vNWJp5rTNs61dvWN9p73dFpGanZE5QcPn22ZyjmsL3",
-    "amount": 362957.975231586,
-    "percentage": 0.5797401762833504,
-    "double_amount_for_100_apy": 725915.950463172,
-    "sol_equivalent_for_100_apy": 0.9858671837594046,
-    "daily_sol_for_100_apy": 0.0027010059829024784
-  },
-  {
-    "owner": "C6Bym8Nz9T8pC1UW3PsWQWdyzhUNWKSP3b5mzn4QgPko",
-    "amount": 805473.186916455,
-    "percentage": 1.2865543650790694,
-    "double_amount_for_100_apy": 1610946.37383291,
-    "sol_equivalent_for_100_apy": 2.1878278934974986,
-    "daily_sol_for_100_apy": 0.005994049023280818
-  },
-  {
-    "owner": "S1n39sNU9YSwwviMVjgYk5ZLdyqoojDnFPvbxGxixqB",
-    "amount": 85513.049042052,
-    "percentage": 0.13658702524592378,
-    "double_amount_for_100_apy": 171026.098084104,
-    "sol_equivalent_for_100_apy": 0.2322707161344974,
-    "daily_sol_for_100_apy": 0.0006363581263958833
-  },
-  {
-    "owner": "FFxVkf2W9gWmbourzpZwC3zDizjjPPg8mhRQpWq1gcL2",
-    "amount": 525002.304745976,
-    "percentage": 0.8385679595782316,
-    "double_amount_for_100_apy": 1050004.609491952,
-    "sol_equivalent_for_100_apy": 1.4260123181392212,
-    "daily_sol_for_100_apy": 0.003906883063395127
-  },
-  {
-    "owner": "36to2vW2mmkovE9MVNyZ24CEueEW5TFgcS269DPMjfvD",
-    "amount": 88107.848946073,
-    "percentage": 0.14073160907223958,
-    "double_amount_for_100_apy": 176215.697892146,
-    "sol_equivalent_for_100_apy": 0.2393187168628576,
-    "daily_sol_for_100_apy": 0.0006556677174324865
-  },
-  {
-    "owner": "48UZG62TRGSEfSELMTqMP5z5WWi5buBQtzMjvyvrjG9s",
-    "amount": 87607.489272585,
-    "percentage": 0.13993240193227266,
-    "double_amount_for_100_apy": 175214.97854517,
-    "sol_equivalent_for_100_apy": 0.23795963890940128,
-    "daily_sol_for_100_apy": 0.0006519442161901404
-  },
-  {
-    "owner": "H3NHCLKceUp2LiQbsfekm6y2mtz6RAyUGg45HrApHQaZ",
-    "amount": 339684.936273206,
-    "percentage": 0.5425669589163215,
-    "double_amount_for_100_apy": 679369.872546412,
-    "sol_equivalent_for_100_apy": 0.922652908440667,
-    "daily_sol_for_100_apy": 0.002527816187508677
-  },
-  {
-    "owner": "7uieVDziL6ash997w57dzc5ct5VAhky1d4a2WL1Dhmuu",
-    "amount": 83742.996286636,
-    "percentage": 0.13375978141473105,
-    "double_amount_for_100_apy": 167485.992573272,
-    "sol_equivalent_for_100_apy": 0.22746289527321417,
-    "daily_sol_for_100_apy": 0.0006231860144471621
-  },
-  {
-    "owner": "98n96p8o8RZVP22BFoMScaS3VXGMgQ5zGj7Dbvy9cGji",
-    "amount": 47815.61209021,
-    "percentage": 0.07637421760628747,
-    "double_amount_for_100_apy": 95631.22418042,
-    "sol_equivalent_for_100_apy": 0.12987686191777384,
-    "daily_sol_for_100_apy": 0.00035582701895280506
-  },
-  {
-    "owner": "H9818nzG9mSndrCX5SR4ZRzEK9x1NjFmeYDbDVUijW1x",
-    "amount": 756814.302820522,
-    "percentage": 1.2088332183663455,
-    "double_amount_for_100_apy": 1513628.605641044,
-    "sol_equivalent_for_100_apy": 2.0556605344584122,
-    "daily_sol_for_100_apy": 0.005631946669749074
-  },
-  {
-    "owner": "6vPLQSv1zBoMxw5tWddu7uoq22swzBiJqLVXvMfTnm1z",
-    "amount": 258816.84285394,
-    "percentage": 0.4133991600694431,
-    "double_amount_for_100_apy": 517633.68570788,
-    "sol_equivalent_for_100_apy": 0.702998830129327,
-    "daily_sol_for_100_apy": 0.0019260241921351424
-  },
-  {
-    "owner": "CCK7AxcYxJe65Y1yLcsVYUmaJA38HXWeEDfyWTz7KbS3",
-    "amount": 33203.341498095,
-    "percentage": 0.05303454495253843,
-    "double_amount_for_100_apy": 66406.68299619,
-    "sol_equivalent_for_100_apy": 0.09018698308872436,
-    "daily_sol_for_100_apy": 0.0002470876249006147
-  },
-  {
-    "owner": "5mxsR8Bt4DqsYxVkkdyaurXAJ9T94xnXTjbtPPmJ74bq",
-    "amount": 47649.487018857,
-    "percentage": 0.07610887179568827,
-    "double_amount_for_100_apy": 95298.974037714,
-    "sol_equivalent_for_100_apy": 0.12942563266418844,
-    "daily_sol_for_100_apy": 0.00035459077442243406
-  },
-  {
-    "owner": "2nLBJVQjJCJAkMDw1aKGBHfM6qXdRFQA9PmZbWSMQz18",
-    "amount": 82943.736106057,
-    "percentage": 0.13248315086903364,
-    "double_amount_for_100_apy": 165887.472212114,
-    "sol_equivalent_for_100_apy": 0.22529194316005094,
-    "daily_sol_for_100_apy": 0.0006172382004384958
-  },
-  {
-    "owner": "muMRkJg6ENSB39nBn47oN1ZguAC6JwTsFvxDfMw1MYT",
-    "amount": 85118.374857301,
-    "percentage": 0.13595662586898202,
-    "double_amount_for_100_apy": 170236.749714602,
-    "sol_equivalent_for_100_apy": 0.23119870131852663,
-    "daily_sol_for_100_apy": 0.0006334210995028127
-  },
-  {
-    "owner": "Df9TCSZfVdaYAqvpNgbVHQcBiXvamRTWzA8BoJkAuvtA",
-    "amount": 890995.999999999,
-    "percentage": 1.4231569860895776,
-    "double_amount_for_100_apy": 1781991.999999998,
-    "sol_equivalent_for_100_apy": 2.4201251307411726,
-    "daily_sol_for_100_apy": 0.006630479810249788
-  },
-  {
-    "owner": "EbBaXL4hZzfMq8UyAbhUrKqreCWuhMkDVcp8PFqJb7x9",
-    "amount": 63890.644019962,
-    "percentage": 0.1020503081750887,
-    "double_amount_for_100_apy": 127781.288039924,
-    "sol_equivalent_for_100_apy": 0.17353989603987946,
-    "daily_sol_for_100_apy": 0.0004754517699722725
-  },
-  {
-    "owner": "BBqdZKN15A1oj15xHoy5FcaZeRpaSxEnkVpwDns9mycM",
-    "amount": 84633.583287695,
-    "percentage": 0.13518228512100774,
-    "double_amount_for_100_apy": 169267.16657539,
-    "sol_equivalent_for_100_apy": 0.2298819094802076,
-    "daily_sol_for_100_apy": 0.0006298134506307057
-  },
-  {
-    "owner": "D2MQVUmGPum9Joc53A9FNDFXBSGCCP38bpGXFUh5e62n",
-    "amount": 106143.85609458,
-    "percentage": 0.16953989729638347,
-    "double_amount_for_100_apy": 212287.71218916,
-    "sol_equivalent_for_100_apy": 0.2883081558259161,
-    "daily_sol_for_100_apy": 0.0007898853584271674
-  },
-  {
-    "owner": "xbXkY8XSL465uUveXhjsb86funRwce1r5D87ihgtAec",
-    "amount": 468791.027842823,
-    "percentage": 0.7487836379631648,
-    "double_amount_for_100_apy": 937582.055685646,
-    "sol_equivalent_for_100_apy": 1.273331134537531,
-    "daily_sol_for_100_apy": 0.0034885784507877565
-  },
-  {
-    "owner": "Hg46gQuCegrmUJyXXX29nmHyNJEnMid95CbhCzGjeGRs",
-    "amount": 530147.61178657,
-    "percentage": 0.8467863799307329,
-    "double_amount_for_100_apy": 1060295.22357314,
-    "sol_equivalent_for_100_apy": 1.4399880114917405,
-    "daily_sol_for_100_apy": 0.003945172634223946
-  },
-  {
-    "owner": "8D16nTyDWoaKR9zwhohY97wacTj8DmDsWarGUrQgkt5D",
-    "amount": 46313.58096817,
-    "percentage": 0.07397507542758498,
-    "double_amount_for_100_apy": 92627.16193634,
-    "sol_equivalent_for_100_apy": 0.1257970419571855,
-    "daily_sol_for_100_apy": 0.0003446494300196863
-  },
-  {
-    "owner": "D7qLRacXg2H2Hg5xMjaqygfWdgeYrXf4TUmQcCf5T99s",
-    "amount": 1037150.599566623,
-    "percentage": 1.6566046552400182,
-    "double_amount_for_100_apy": 2074301.199133246,
-    "sol_equivalent_for_100_apy": 2.8171105486157764,
-    "daily_sol_for_100_apy": 0.007718111092098017
-  },
-  {
-    "owner": "B2bdRh5atvnTRL8ELJLkbu8TM7nuEDLQ8Ud1rD9wX5vA",
-    "amount": 85447.78509178,
-    "percentage": 0.13648278140333706,
-    "double_amount_for_100_apy": 170895.57018356,
-    "sol_equivalent_for_100_apy": 0.23209344606124824,
-    "daily_sol_for_100_apy": 0.0006358724549623239
-  },
-  {
-    "owner": "9aBMk5SvGaBL1iPiqVoBiBVwttc4ZsJq5AfNhkQ3g8nS",
-    "amount": 82655.142841195,
-    "percentage": 0.1320221908635715,
-    "double_amount_for_100_apy": 165310.28568239,
-    "sol_equivalent_for_100_apy": 0.2245080655524577,
-    "daily_sol_for_100_apy": 0.0006150905905546786
-  },
-  {
-    "owner": "3B9jAmdtCHW8a35G8HqC78dinLfoxUtc3pasqMqfNDjo",
-    "amount": 84145.094687727,
-    "percentage": 0.13440203923475283,
-    "double_amount_for_100_apy": 168290.189375454,
-    "sol_equivalent_for_100_apy": 0.22855507576056897,
-    "daily_sol_for_100_apy": 0.0006261782897549835
-  },
-  {
-    "owner": "52JYwt7CpEuMvKbbUDHHE1UmDrpES9cnNGjSAi3d7sLk",
-    "amount": 87424.633516452,
-    "percentage": 0.1396403327795634,
-    "double_amount_for_100_apy": 174849.267032904,
-    "sol_equivalent_for_100_apy": 0.23746296573610068,
-    "daily_sol_for_100_apy": 0.0006505834677701389
-  },
-  {
-    "owner": "UkFYxgVPxz4YNELAHaGh3aeRWKmEqegTevaCDdfqdJu",
-    "amount": 83846.470898153,
-    "percentage": 0.1339250578203079,
-    "double_amount_for_100_apy": 167692.941796306,
-    "sol_equivalent_for_100_apy": 0.22774395322153937,
-    "daily_sol_for_100_apy": 0.0006239560362233955
-  },
-  {
-    "owner": "2BZe9ksdrKAdcqZb3vPbD2iuAuasnv84McbGPPrXrwyL",
-    "amount": 2060061.69040589,
-    "percentage": 3.2904650374150397,
-    "double_amount_for_100_apy": 4120123.38081178,
-    "sol_equivalent_for_100_apy": 5.595543714930754,
-    "daily_sol_for_100_apy": 0.015330256753234942
+    "owner": "5twSDrFqGfQ3RMEX1kXVweafMDiqQDhdDkhCyCrwXucp",
+    "amount": 83298.951935965,
+    "percentage": 0.13304950816110214,
+    "double_amount_for_100_apy": 166597.90387193,
+    "sol_equivalent_for_100_apy": 0.22625678111308042,
+    "daily_sol_for_100_apy": 0.0006198815920906313
   },
   {
     "owner": "2S2e3rJwhjUEJqinGwV6RmGhVAKJXXkNpFsmhKmpcPH1",
     "amount": 77180.261275313,
-    "percentage": 0.12327735256070814,
+    "percentage": 0.12327641061222183,
     "double_amount_for_100_apy": 154360.522550626,
     "sol_equivalent_for_100_apy": 0.20963718121019057,
     "daily_sol_for_100_apy": 0.000574348441671755
   },
   {
-    "owner": "6tNWNPknqvToHVYhL6iDwCuFhh1YjEcZPcd4FaP9EQW1",
-    "amount": 77576.586744982,
-    "percentage": 0.1239103894777366,
-    "double_amount_for_100_apy": 155153.173489964,
-    "sol_equivalent_for_100_apy": 0.2107136812495833,
-    "daily_sol_for_100_apy": 0.0005772977568481735
+    "owner": "627L8LHowp7qzshnQJSgpoenCpJfYpyHprf5UjQsu9FT",
+    "amount": 85536.233571781,
+    "percentage": 0.13662301316140535,
+    "double_amount_for_100_apy": 171072.467143562,
+    "sol_equivalent_for_100_apy": 0.23233369000086895,
+    "daily_sol_for_100_apy": 0.0006365306575366273
   },
   {
-    "owner": "Z2x1gARyVRqmoqjTxUhyC13eupAXcHJWiQLxGzgW8R3",
-    "amount": 83680.93596734,
-    "percentage": 0.1336606546207106,
-    "double_amount_for_100_apy": 167361.87193468,
-    "sol_equivalent_for_100_apy": 0.227294326908878,
-    "daily_sol_for_100_apy": 0.0006227241833119944
+    "owner": "Hg46gQuCegrmUJyXXX29nmHyNJEnMid95CbhCzGjeGRs",
+    "amount": 530147.61178657,
+    "percentage": 0.8467799097305525,
+    "double_amount_for_100_apy": 1060295.22357314,
+    "sol_equivalent_for_100_apy": 1.4399880114917405,
+    "daily_sol_for_100_apy": 0.003945172634223946
   },
   {
-    "owner": "8NtZ91dXwb1RpRK6kLpb29xPkscCvjgrsWYZJJQGPFuw",
-    "amount": 91426.866816473,
-    "percentage": 0.14603296112007808,
-    "double_amount_for_100_apy": 182853.733632946,
-    "sol_equivalent_for_100_apy": 0.24833383989094537,
-    "daily_sol_for_100_apy": 0.0006803666846327271
+    "owner": "2nLBJVQjJCJAkMDw1aKGBHfM6qXdRFQA9PmZbWSMQz18",
+    "amount": 82943.736106057,
+    "percentage": 0.13248213858007032,
+    "double_amount_for_100_apy": 165887.472212114,
+    "sol_equivalent_for_100_apy": 0.22529194316005094,
+    "daily_sol_for_100_apy": 0.0006172382004384958
   },
   {
-    "owner": "ECAe8bm8xnQQN3MKqfRnzsURwxJ27nhN5h6Fkm9jZ4id",
-    "amount": 47477.480441029,
-    "percentage": 0.07583413165893202,
-    "double_amount_for_100_apy": 94954.960882058,
-    "sol_equivalent_for_100_apy": 0.12895842805086322,
-    "daily_sol_for_100_apy": 0.0003533107617831869
+    "owner": "CLaHgfzRzVfkEZESRjVg1yCxMR1Jpuu2P34jv9f58piR",
+    "amount": 79222.145189158,
+    "percentage": 0.1265378159978261,
+    "double_amount_for_100_apy": 158444.290378316,
+    "sol_equivalent_for_100_apy": 0.21518335041179468,
+    "daily_sol_for_100_apy": 0.0005895434257857388
   },
   {
-    "owner": "DiZ7ojw72wLzoue5ZLAATiPVjwS5QRSSkLaa4LJFVqJU",
-    "amount": 29541.10637956,
-    "percentage": 0.04718498390664633,
-    "double_amount_for_100_apy": 59082.21275912,
-    "sol_equivalent_for_100_apy": 0.08023961267959859,
-    "daily_sol_for_100_apy": 0.00021983455528657147
+    "owner": "9y9HNKiqfRaUU3WHAooWfCvA15U7f8acS7LNZvcE8fvr",
+    "amount": 80843.203756665,
+    "percentage": 0.12912705679971453,
+    "double_amount_for_100_apy": 161686.40751333,
+    "sol_equivalent_for_100_apy": 0.21958647295962538,
+    "daily_sol_for_100_apy": 0.0006016067752318504
   },
   {
-    "owner": "B3bBT3W4r8MfvcanKw7QQ17GYrXKT6qXRbmkjrojbyCy",
-    "amount": 32980.489534776,
-    "percentage": 0.05267859124628026,
-    "double_amount_for_100_apy": 65960.979069552,
-    "sol_equivalent_for_100_apy": 0.08958167213686453,
-    "daily_sol_for_100_apy": 0.0002454292387311357
+    "owner": "82sxBeYejDgAeLFATgTkR9cRMS5Hdm3jFVGZ5MbCnAXB",
+    "amount": 88002.338990808,
+    "percentage": 0.14056200765592436,
+    "double_amount_for_100_apy": 176004.677981616,
+    "sol_equivalent_for_100_apy": 0.23903213050974242,
+    "daily_sol_for_100_apy": 0.0006548825493417601
   },
   {
-    "owner": "2uep9rqRhLqnoPa3QJHsx9r97VNzt9vmdWc2YNgo77aj",
-    "amount": 36872.181711014,
-    "percentage": 0.05889465608644033,
-    "double_amount_for_100_apy": 73744.363422028,
-    "sol_equivalent_for_100_apy": 0.1001522942685266,
-    "daily_sol_for_100_apy": 0.0002743898473110318
+    "owner": "GwGSoymm1cE4MkZjVj4faFcXhDWUqm1nP5CAVqT9QveA",
+    "amount": 220420.957319936,
+    "percentage": 0.35206805461803947,
+    "double_amount_for_100_apy": 440841.914639872,
+    "sol_equivalent_for_100_apy": 0.5987078484662166,
+    "daily_sol_for_100_apy": 0.0016402954752499086
   },
   {
-    "owner": "AJwVgVuETmuu8uRw5Fi4LeJYZTynHR8VTcvBHhgkN5Kr",
-    "amount": 795304.638325784,
-    "percentage": 1.2703124953454177,
-    "double_amount_for_100_apy": 1590609.276651568,
-    "sol_equivalent_for_100_apy": 2.16020806132379,
-    "daily_sol_for_100_apy": 0.005918378250202164
-  },
-  {
-    "owner": "6ncLPo29tzHkzDwsMZcqa1qH4yWvGTWZfC7Uv7iiNMov",
-    "amount": 84663.825227513,
-    "percentage": 0.13523058952184108,
-    "double_amount_for_100_apy": 169327.650455026,
-    "sol_equivalent_for_100_apy": 0.229964052698085,
-    "daily_sol_for_100_apy": 0.0006300385005426986
-  },
-  {
-    "owner": "CGVLSjU6ervN8a8NzQQPNM84zh3LJkg2iXh61wy6HfLC",
-    "amount": 82743.91312417,
-    "percentage": 0.13216398055552633,
-    "double_amount_for_100_apy": 165487.82624834,
-    "sol_equivalent_for_100_apy": 0.22474918357396484,
-    "daily_sol_for_100_apy": 0.0006157511878738763
-  },
-  {
-    "owner": "7f2gGGX9Exc7mfNSbxEoyt2ScSaa17kYLD73kva1jyUu",
-    "amount": 228478.654680179,
-    "percentage": 0.3649410250780534,
-    "double_amount_for_100_apy": 456957.309360358,
-    "sol_equivalent_for_100_apy": 0.620594182274035,
-    "daily_sol_for_100_apy": 0.001700258033627493
-  },
-  {
-    "owner": "H5iSDfqA1hj3GykihjWkLHMZdzCmCJrhLDW2cvV6d1JV",
-    "amount": 40493.340641635,
-    "percentage": 0.06467860756305072,
-    "double_amount_for_100_apy": 80986.68128327,
-    "sol_equivalent_for_100_apy": 0.10998809345326338,
-    "daily_sol_for_100_apy": 0.0003013372423377079
-  },
-  {
-    "owner": "2iMbbqGkfxoYutXnwbBikTSh1AWrZLFcWy2e9mqWaTei",
-    "amount": 83942.737319793,
-    "percentage": 0.1340788208343762,
-    "double_amount_for_100_apy": 167885.474639586,
-    "sol_equivalent_for_100_apy": 0.2280054322699947,
-    "daily_sol_for_100_apy": 0.0006246724171780676
-  },
-  {
-    "owner": "2qN1GwmgbsGb3Rsb3PAtLaLdXpMjwakgDjFJwCwHbdHd",
-    "amount": 83213.908529493,
-    "percentage": 0.13291468790383706,
-    "double_amount_for_100_apy": 166427.817058986,
-    "sol_equivalent_for_100_apy": 0.22602578604104112,
-    "daily_sol_for_100_apy": 0.0006192487288795648
-  },
-  {
-    "owner": "47MD734cLCRpwic4wcYTTtXmrUy6Z1xUpP7CFH6PjcSt",
-    "amount": 83164.753580332,
-    "percentage": 0.13283617440961334,
-    "double_amount_for_100_apy": 166329.507160664,
-    "sol_equivalent_for_100_apy": 0.22589227126907263,
-    "daily_sol_for_100_apy": 0.0006188829349837606
+    "owner": "3AM6w3nzniZNt196FsDh7JKLXsEmAzCi8oL9agJaR9f4",
+    "amount": 84117.570711922,
+    "percentage": 0.13435704952844432,
+    "double_amount_for_100_apy": 168235.141423844,
+    "sol_equivalent_for_100_apy": 0.22848031508202093,
+    "daily_sol_for_100_apy": 0.0006259734659781396
   },
   {
     "owner": "7Ekwo8CXReGdMTVxLYVFtNyVrtcwvu13nfdvu3GgYjHu",
     "amount": 84441.277049109,
-    "percentage": 0.13487512104068386,
+    "percentage": 0.13487409047494353,
     "double_amount_for_100_apy": 168882.554098218,
     "sol_equivalent_for_100_apy": 0.22935956688742345,
     "daily_sol_for_100_apy": 0.0006283823750340368
   },
   {
-    "owner": "93SXE6KMNrXXZpovjha15yoJSfAc6YFgj8rRE38UMUBs",
-    "amount": 47176.61288574,
-    "percentage": 0.07535356635538717,
-    "double_amount_for_100_apy": 94353.22577148,
-    "sol_equivalent_for_100_apy": 0.1281412109908769,
-    "daily_sol_for_100_apy": 0.0003510718109339094
+    "owner": "6CfkBeNfhQBsie4xsoksgQmqWyx5Y5iA3crzEoNMGp8A",
+    "amount": 100453.822144589,
+    "percentage": 0.1604501775666376,
+    "double_amount_for_100_apy": 200907.644289178,
+    "sol_equivalent_for_100_apy": 0.27285287414435555,
+    "daily_sol_for_100_apy": 0.0007475421209434399
   },
   {
-    "owner": "9FDj7xq89xw6XHQfLC46b547RpiqtsB2LNk346KmiUtZ",
-    "amount": 35554.923938311,
-    "percentage": 0.056790645965516036,
-    "double_amount_for_100_apy": 71109.847876622,
-    "sol_equivalent_for_100_apy": 0.09657435605176395,
-    "daily_sol_for_100_apy": 0.00026458727685414784
+    "owner": "9Q4SR95AR7arXXAMT4HG6kkmuwZjSXJZovhL2Yf4QCn6",
+    "amount": 160941.082138096,
+    "percentage": 0.2570636403426814,
+    "double_amount_for_100_apy": 321882.164276192,
+    "sol_equivalent_for_100_apy": 0.43714849163305547,
+    "daily_sol_for_100_apy": 0.0011976671003645356
   },
   {
-    "owner": "12jXbYZNKgSsfatkD1FWRC9EG7Qr9akqU2vv8wneFkMe",
-    "amount": 531865.566662255,
-    "percentage": 0.8495304096268457,
-    "double_amount_for_100_apy": 1063731.13332451,
-    "sol_equivalent_for_100_apy": 1.4446543239871101,
-    "daily_sol_for_100_apy": 0.00395795705201948
+    "owner": "2BZe9ksdrKAdcqZb3vPbD2iuAuasnv84McbGPPrXrwyL",
+    "amount": 2060061.69040589,
+    "percentage": 3.2904398953390874,
+    "double_amount_for_100_apy": 4120123.38081178,
+    "sol_equivalent_for_100_apy": 5.595543714930754,
+    "daily_sol_for_100_apy": 0.015330256753234942
   },
   {
-    "owner": "ABFh3exo6T5PAa84egnFuh9sb3ZEukb64gF9BTr4fYQN",
-    "amount": 77452.172427827,
-    "percentage": 0.12371166680711998,
-    "double_amount_for_100_apy": 154904.344855654,
-    "sol_equivalent_for_100_apy": 0.2103757468306063,
-    "daily_sol_for_100_apy": 0.0005763719091249488
+    "owner": "6tNWNPknqvToHVYhL6iDwCuFhh1YjEcZPcd4FaP9EQW1",
+    "amount": 77576.586744982,
+    "percentage": 0.12390944269228589,
+    "double_amount_for_100_apy": 155153.173489964,
+    "sol_equivalent_for_100_apy": 0.2107136812495833,
+    "daily_sol_for_100_apy": 0.0005772977568481735
   },
   {
-    "owner": "DKoTRmcy93NBbK67UgqdyUf8hSMAkP5TToj5mvm612K",
-    "amount": 234712.777037078,
-    "percentage": 0.37489857234466073,
-    "double_amount_for_100_apy": 469425.554074156,
-    "sol_equivalent_for_100_apy": 0.6375273179828896,
-    "daily_sol_for_100_apy": 0.001746650186254492
+    "owner": "FzKviPkXJD3cmu9FNjaC5QWUXJqKPrzkcGDXKBoFvH5d",
+    "amount": 3617712.904252713,
+    "percentage": 5.778403105826781,
+    "double_amount_for_100_apy": 7235425.808505426,
+    "sol_equivalent_for_100_apy": 9.826439080970774,
+    "daily_sol_for_100_apy": 0.026921750906769244
   },
   {
-    "owner": "EpAa65hRE3X19e4mf82vA8rsfaZctAZTiaNFiyWbGfwc",
-    "amount": 444796.040543038,
-    "percentage": 0.7104572775678099,
-    "double_amount_for_100_apy": 889592.081086076,
-    "sol_equivalent_for_100_apy": 1.2081559016789942,
-    "daily_sol_for_100_apy": 0.0033100161689835457
-  },
-  {
-    "owner": "7xF7qq5uRE36oTecfMQqjt5mqLKXXcGZZJrPgwuihw5k",
-    "amount": 64523.207063367,
-    "percentage": 0.1030606791693063,
-    "double_amount_for_100_apy": 129046.414126734,
-    "sol_equivalent_for_100_apy": 0.17525806505312147,
-    "daily_sol_for_100_apy": 0.0004801590823373191
-  },
-  {
-    "owner": "9Gxdt1xEUutWEMsckvKxsR4iqJ53fnMLfE5RHLjyjrH2",
-    "amount": 82561.676269595,
-    "percentage": 0.13187289995279483,
-    "double_amount_for_100_apy": 165123.35253919,
-    "sol_equivalent_for_100_apy": 0.2242541914623233,
-    "daily_sol_for_100_apy": 0.0006143950451022556
-  },
-  {
-    "owner": "E3AR3YNiNyi9rSqmt99Fmf8XnXwgEZsADTxz2koaR3fR",
-    "amount": 158577.586884024,
-    "percentage": 0.2532904756151835,
-    "double_amount_for_100_apy": 317155.173768048,
-    "sol_equivalent_for_100_apy": 0.43072876106101343,
-    "daily_sol_for_100_apy": 0.001180078797427434
+    "owner": "5LmkWykmDykfjZEQwCiTNUzhJwMaNx9Zqtw5k7MYi3KG",
+    "amount": 249185.879592311,
+    "percentage": 0.3980129155278611,
+    "double_amount_for_100_apy": 498371.759184622,
+    "sol_equivalent_for_100_apy": 0.6768391883097079,
+    "daily_sol_for_100_apy": 0.0018543539405745423
   },
   {
     "owner": "9z3sV8EkCKNgtjpbe3c1uot9J92sn6WciBeVkMZtqVT8",
     "amount": 384543.964066464,
-    "percentage": 0.6142187270422858,
+    "percentage": 0.6142140338655734,
     "double_amount_for_100_apy": 769087.928132928,
     "sol_equivalent_for_100_apy": 1.0444990901329312,
     "daily_sol_for_100_apy": 0.0028616413428299483
   },
   {
-    "owner": "CDB5mDxYAvhzEdb5rG7SaHCSv4hLAEeuAM9ZMvTjpRuP",
-    "amount": 22100.982346468,
-    "percentage": 0.03530113202059089,
-    "double_amount_for_100_apy": 44201.964692936,
-    "sol_equivalent_for_100_apy": 0.06003073278752574,
-    "daily_sol_for_100_apy": 0.00016446776106171436
+    "owner": "CQv7EXrj7N9g9ciKeQeJDkPC7SyXawTPV3T6vGEAmpLp",
+    "amount": 83621.900667783,
+    "percentage": 0.13356533902008663,
+    "double_amount_for_100_apy": 167243.801335566,
+    "sol_equivalent_for_100_apy": 0.22713397510925296,
+    "daily_sol_for_100_apy": 0.0006222848633130218
   },
   {
-    "owner": "2hKuLYRaiiBVa7eiiYLJiBPUVVT2qoBH7VEQjP3A2ayX",
-    "amount": 77380.546524465,
-    "percentage": 0.12359726123767342,
-    "double_amount_for_100_apy": 154761.09304893,
-    "sol_equivalent_for_100_apy": 0.21018119640755342,
-    "daily_sol_for_100_apy": 0.0005758388942672697
+    "owner": "FZjutB3bDfV8fXy6f3eYkQLbQZamF8942L9DXGCyv47c",
+    "amount": 77735.731173316,
+    "percentage": 0.1241636366217929,
+    "double_amount_for_100_apy": 155471.462346632,
+    "sol_equivalent_for_100_apy": 0.21114594966653302,
+    "daily_sol_for_100_apy": 0.0005784820538809124
   },
   {
-    "owner": "ErkiFz9HFtVXG99EzdZ3cvXvHzHqKQYJnkpnQ8f3852f",
-    "amount": 30547.499385908,
-    "percentage": 0.04879246052577352,
-    "double_amount_for_100_apy": 61094.998771816,
-    "sol_equivalent_for_100_apy": 0.08297317939153102,
-    "daily_sol_for_100_apy": 0.0002273237791548795
-  },
-  {
-    "owner": "6AiKWmYLF4hN3tiBU4g14LXkiHvKo6Bnge3h7vEMbgBF",
-    "amount": 59159.093544188,
-    "percentage": 0.09449276682290166,
-    "double_amount_for_100_apy": 118318.187088376,
-    "sol_equivalent_for_100_apy": 0.16068804910252954,
-    "daily_sol_for_100_apy": 0.00044024123041788916
-  },
-  {
-    "owner": "45uHGcerR18ZqTVZGtZkxL8MZXMkLjsMqqdNUSGQaerZ",
-    "amount": 2172484.548879351,
-    "percentage": 3.4700341672794455,
-    "double_amount_for_100_apy": 4344969.097758702,
-    "sol_equivalent_for_100_apy": 5.900906909671674,
-    "daily_sol_for_100_apy": 0.016166868245675817
-  },
-  {
-    "owner": "3JeCh7isYjwsdRP5Vy4Cmn1fpHzuU2gcRoRPzWc7S4mc",
-    "amount": 59303.297571959,
-    "percentage": 0.09472309891142344,
-    "double_amount_for_100_apy": 118606.595143918,
-    "sol_equivalent_for_100_apy": 0.1610797363733621,
-    "daily_sol_for_100_apy": 0.00044131434622838927
-  },
-  {
-    "owner": "8g6WUHP8DN6ZKi7DCb4VKZmn5VhTaDKDgkaPorSafMy2",
-    "amount": 24294.231082716,
-    "percentage": 0.03880433210367037,
-    "double_amount_for_100_apy": 48588.462165432,
-    "sol_equivalent_for_100_apy": 0.06598803942477227,
-    "daily_sol_for_100_apy": 0.00018078914910896513
-  },
-  {
-    "owner": "3vCsgkAmHEipvdpW45AVyDG2s1erWhuftma1J7wMRmf2",
-    "amount": 85322.863589606,
-    "percentage": 0.136283248623693,
-    "double_amount_for_100_apy": 170645.727179212,
-    "sol_equivalent_for_100_apy": 0.23175413402530057,
-    "daily_sol_for_100_apy": 0.000634942832946029
-  },
-  {
-    "owner": "4tCukTai7QuXKkFbFHoiQDGnmETKEAbU2m8mutzD9NLZ",
-    "amount": 171392.062850298,
-    "percentage": 0.2737585933109754,
-    "double_amount_for_100_apy": 342784.125700596,
-    "sol_equivalent_for_100_apy": 0.4655354665044257,
-    "daily_sol_for_100_apy": 0.0012754396342587004
-  },
-  {
-    "owner": "HdTyU6wjJAxP3Xqq5EbSobHbREvuGbVu5NL55dGcY4qY",
-    "amount": 49558.750160154,
-    "percentage": 0.07915847154453132,
-    "double_amount_for_100_apy": 99117.500320308,
-    "sol_equivalent_for_100_apy": 0.13461157705613938,
-    "daily_sol_for_100_apy": 0.00036879884124969695
-  },
-  {
-    "owner": "HtEWNdyGkZxqQvND4vcEceSzJTjBkvjqsy2HBxx2sCC5",
-    "amount": 87803.100759244,
-    "percentage": 0.14024484537062493,
-    "double_amount_for_100_apy": 175606.201518488,
-    "sol_equivalent_for_100_apy": 0.23849095922366206,
-    "daily_sol_for_100_apy": 0.0006533998882840056
+    "owner": "E3AR3YNiNyi9rSqmt99Fmf8XnXwgEZsADTxz2koaR3fR",
+    "amount": 158577.586884024,
+    "percentage": 0.2532885402509406,
+    "double_amount_for_100_apy": 317155.173768048,
+    "sol_equivalent_for_100_apy": 0.43072876106101343,
+    "daily_sol_for_100_apy": 0.001180078797427434
   },
   {
     "owner": "2Rad1hnCrxuafQP3hHCGJ5fxBFnqXRUHYXVMGJofFow6",
     "amount": 81983.746720289,
-    "percentage": 0.13094979314248092,
+    "percentage": 0.1309487925697328,
     "double_amount_for_100_apy": 163967.493440578,
     "sol_equivalent_for_100_apy": 0.2226844180558508,
     "daily_sol_for_100_apy": 0.0006100942960434268
   },
   {
-    "owner": "D29kmutt7NrAkUqUcSfNeiguf9uquKatttTGoYYGAy5D",
-    "amount": 63474.009248055,
-    "percentage": 0.10138483191449124,
-    "double_amount_for_100_apy": 126948.01849611,
-    "sol_equivalent_for_100_apy": 0.17240823183282045,
-    "daily_sol_for_100_apy": 0.000472351320089919
+    "owner": "8ixEiWWNpum38cEVtxPbMdkhjwd6FyFiHVDBR5htFpok",
+    "amount": 84628.378896727,
+    "percentage": 0.13517293947871906,
+    "double_amount_for_100_apy": 169256.757793454,
+    "sol_equivalent_for_100_apy": 0.22986777330297237,
+    "daily_sol_for_100_apy": 0.0006297747213780065
   },
   {
-    "owner": "4aYHhiJYGibcN28cpVL24SNRCRtsHrexwKiU1pynM5pc",
-    "amount": 424743.402364457,
-    "percentage": 0.6784278945926067,
-    "double_amount_for_100_apy": 849486.804728914,
-    "sol_equivalent_for_100_apy": 1.1536888854481202,
-    "daily_sol_for_100_apy": 0.0031607914669811513
+    "owner": "42eK9KwtLnibpzACAcDace7wxNp8evxhBAg8oVHLW3EC",
+    "amount": 54908.914159167,
+    "percentage": 0.0877034326692782,
+    "double_amount_for_100_apy": 109817.828318334,
+    "sol_equivalent_for_100_apy": 0.1491437032919452,
+    "daily_sol_for_100_apy": 0.00040861288573135673
   },
   {
-    "owner": "HdbfQg4wsYaM6J7jeP84CCvzqrsjgXJHoMerbhjdJxwt",
-    "amount": 82598.722222873,
-    "percentage": 0.13193207216817393,
-    "double_amount_for_100_apy": 165197.444445746,
-    "sol_equivalent_for_100_apy": 0.22435481575527225,
-    "daily_sol_for_100_apy": 0.0006146707280966363
+    "owner": "ZY7KnsopGG7TwkU8Km5QkhyU6Xwn46qGuWU6HV3wUQc",
+    "amount": 82970.719987445,
+    "percentage": 0.13252523866792873,
+    "double_amount_for_100_apy": 165941.43997489,
+    "sol_equivalent_for_100_apy": 0.22536523683305515,
+    "daily_sol_for_100_apy": 0.0006174390050220689
   },
   {
-    "owner": "6zuPCYF33Xwh4AhsC4QZiXWYffe3y1hNJvhdKxTAqZQj",
-    "amount": 83293.951812722,
-    "percentage": 0.13304253826199455,
-    "double_amount_for_100_apy": 166587.903625444,
-    "sol_equivalent_for_100_apy": 0.22624319976825152,
-    "daily_sol_for_100_apy": 0.0006198443829267165
+    "owner": "DS2mRtamRNUxzc66FPFLPYB5cUYd57tmSkJjDCR9bBdi",
+    "amount": 83144.936314749,
+    "percentage": 0.1328035062345993,
+    "double_amount_for_100_apy": 166289.872629498,
+    "sol_equivalent_for_100_apy": 0.22583844357236016,
+    "daily_sol_for_100_apy": 0.0006187354618420826
   },
   {
-    "owner": "JD8vN6oQ81qwqf3n4DHKEngMi5yXCas8En3E1HUE7Vj5",
-    "amount": 84068.756239383,
-    "percentage": 0.13428010648076963,
-    "double_amount_for_100_apy": 168137.512478766,
-    "sol_equivalent_for_100_apy": 0.22834772511333923,
-    "daily_sol_for_100_apy": 0.0006256102057899705
+    "owner": "CvxkiiPuVUsRPMWQou2qBzB6Ssxjpiix14yFj5FMKxrW",
+    "amount": 82189.553335762,
+    "percentage": 0.13127751782171476,
+    "double_amount_for_100_apy": 164379.106671524,
+    "sol_equivalent_for_100_apy": 0.22324343039954145,
+    "daily_sol_for_100_apy": 0.0006116258367110725
   },
   {
-    "owner": "6WBwxaSEwmqVe5yviPFMHRgVYMbdAxAG9nej78jyoELC",
-    "amount": 83199.491450787,
-    "percentage": 0.13289166000440827,
-    "double_amount_for_100_apy": 166398.982901574,
-    "sol_equivalent_for_100_apy": 0.22598662634280647,
-    "daily_sol_for_100_apy": 0.0006191414420350862
+    "owner": "12jXbYZNKgSsfatkD1FWRC9EG7Qr9akqU2vv8wneFkMe",
+    "amount": 531865.566662255,
+    "percentage": 0.8495239184598405,
+    "double_amount_for_100_apy": 1063731.13332451,
+    "sol_equivalent_for_100_apy": 1.4446543239871101,
+    "daily_sol_for_100_apy": 0.00395795705201948
   },
   {
-    "owner": "z4YDgTE1LGe6N6qByLdBRmKc1Wym9DMSGry7vC7Xbtz",
-    "amount": 78249.05389943,
-    "percentage": 0.12498449792353035,
-    "double_amount_for_100_apy": 156498.10779886,
-    "sol_equivalent_for_100_apy": 0.21254023788965531,
-    "daily_sol_for_100_apy": 0.000582302021615494
+    "owner": "23oKdX41ZMyZrPjVtuj1KoqJMg4y1LuiZkLBKUDr6UVP",
+    "amount": 91852.063580082,
+    "percentage": 0.14671099214197597,
+    "double_amount_for_100_apy": 183704.127160164,
+    "sol_equivalent_for_100_apy": 0.24948876019711955,
+    "daily_sol_for_100_apy": 0.000683530849855122
+  },
+  {
+    "owner": "6vPLQSv1zBoMxw5tWddu7uoq22swzBiJqLVXvMfTnm1z",
+    "amount": 258816.84285394,
+    "percentage": 0.41339600133261933,
+    "double_amount_for_100_apy": 517633.68570788,
+    "sol_equivalent_for_100_apy": 0.702998830129327,
+    "daily_sol_for_100_apy": 0.0019260241921351424
+  },
+  {
+    "owner": "BBqdZKN15A1oj15xHoy5FcaZeRpaSxEnkVpwDns9mycM",
+    "amount": 84633.583287695,
+    "percentage": 0.13518125220826097,
+    "double_amount_for_100_apy": 169267.16657539,
+    "sol_equivalent_for_100_apy": 0.2298819094802076,
+    "daily_sol_for_100_apy": 0.0006298134506307057
+  },
+  {
+    "owner": "4cUyKneVRn7npmjLFigJvJUZwn6qr6x5Wm66UtNaiKoK",
+    "amount": 48088.328540426,
+    "percentage": 0.07680923123152437,
+    "double_amount_for_100_apy": 96176.657080852,
+    "sol_equivalent_for_100_apy": 0.13061761488943058,
+    "daily_sol_for_100_apy": 0.0003578564791491249
   },
   {
     "owner": "8gQjeMVhKVj3RbjEQHvxFADNTXhq9QbMVvAYPe9uZSSy",
     "amount": 84428.100357096,
-    "percentage": 0.1348540743678684,
+    "percentage": 0.13485304396294337,
     "double_amount_for_100_apy": 168856.200714192,
     "sol_equivalent_for_100_apy": 0.229323776330024,
     "daily_sol_for_100_apy": 0.0006282843187123945
   },
   {
-    "owner": "3pwLmqsNcNMk7zhXNnkLwDNqdvgdRhQntZcn55C3gy9B",
-    "amount": 69431.727108675,
-    "percentage": 0.11090088787264596,
-    "double_amount_for_100_apy": 138863.45421735,
-    "sol_equivalent_for_100_apy": 0.1885905970918699,
-    "daily_sol_for_100_apy": 0.000516686567374986
-  },
-  {
-    "owner": "HvwnSN9PskkMHheJEwPAFT4Av4uNcw9Ychw8KaC1Wbbi",
-    "amount": 77733.945546824,
-    "percentage": 0.12416173323030577,
-    "double_amount_for_100_apy": 155467.891093648,
-    "sol_equivalent_for_100_apy": 0.21114109954425705,
-    "daily_sol_for_100_apy": 0.0005784687658746769
-  },
-  {
-    "owner": "ButcZhoUCaY8gbKRGcPkdgxTJS3tHpqUAMdaE5kGYzbF",
-    "amount": 87519.29887708,
-    "percentage": 0.1397915384744469,
-    "double_amount_for_100_apy": 175038.59775416,
-    "sol_equivalent_for_100_apy": 0.2377200959794087,
-    "daily_sol_for_100_apy": 0.0006512879341901608
-  },
-  {
-    "owner": "FAMmEYXoJNnK47n51ZvW1s5CTsWdFTDmCZZY2TdBBLgD",
-    "amount": 472569.614463104,
-    "percentage": 0.7548190432244651,
-    "double_amount_for_100_apy": 945139.228926208,
-    "sol_equivalent_for_100_apy": 1.2835945391301717,
-    "daily_sol_for_100_apy": 0.0035166973674799224
-  },
-  {
-    "owner": "FRTT1miwwfTHch5sVFSoV9EY8fgcN1s8aq6ZgBWWBmWr",
-    "amount": 105418.63081828,
-    "percentage": 0.16838152013368568,
-    "double_amount_for_100_apy": 210837.26163656,
-    "sol_equivalent_for_100_apy": 0.2863382974689512,
-    "daily_sol_for_100_apy": 0.0007844884862163046
-  },
-  {
-    "owner": "GLkp8nGJQunvEqPkkQodw8EQAVwQJNBuUUmGi7VKm9ye",
-    "amount": 84264.27652336,
-    "percentage": 0.13459240424424343,
-    "double_amount_for_100_apy": 168528.55304672,
-    "sol_equivalent_for_100_apy": 0.22887879770269134,
-    "daily_sol_for_100_apy": 0.0006270651991854558
-  },
-  {
-    "owner": "79WURBWJWgF2aEohjfMudtdo3JhEpU51NoHi2QU4WqyM",
-    "amount": 47675.974708265,
-    "percentage": 0.07615117966264431,
-    "double_amount_for_100_apy": 95351.94941653,
-    "sol_equivalent_for_100_apy": 0.12949757857953662,
-    "daily_sol_for_100_apy": 0.0003547878865192784
-  },
-  {
-    "owner": "8otm8ek2xjXDodyE3c2nXzVdhHQFm2srQF6D7nvnjNLH",
-    "amount": 111347.574383411,
-    "percentage": 0.17785161590835474,
-    "double_amount_for_100_apy": 222695.148766822,
-    "sol_equivalent_for_100_apy": 0.3024425059286072,
-    "daily_sol_for_100_apy": 0.0008286096052838554
-  },
-  {
-    "owner": "ATvAMJwdvzSidrxdrcjYaQkGEFu2tLcaWjkFx6Wqf47f",
-    "amount": 85455.212311961,
-    "percentage": 0.13649464464434805,
-    "double_amount_for_100_apy": 170910.424623922,
-    "sol_equivalent_for_100_apy": 0.23211361989167129,
-    "daily_sol_for_100_apy": 0.0006359277257306063
-  },
-  {
-    "owner": "Baw2AgUDqwiRdPmgn6nuajvRtAK2LjCwU58SzZYhNi2V",
-    "amount": 377144.962549616,
-    "percentage": 0.6024005587241454,
-    "double_amount_for_100_apy": 754289.925099232,
-    "sol_equivalent_for_100_apy": 1.0244019073023507,
-    "daily_sol_for_100_apy": 0.0028065805679516457
-  },
-  {
-    "owner": "MXTEi69QBHmupFUjGNNyW5sc336ErrksbRHrhG4ypo1",
-    "amount": 70652.535035995,
-    "percentage": 0.11285084200312351,
-    "double_amount_for_100_apy": 141305.07007199,
-    "sol_equivalent_for_100_apy": 0.19190655804423687,
-    "daily_sol_for_100_apy": 0.0005257713919020188
-  },
-  {
-    "owner": "596PuCJq33Bn6J5ZRyVdTU9zD27K6rqfHUMGQVMPiKDi",
-    "amount": 1188274.722364975,
-    "percentage": 1.897989971366167,
-    "double_amount_for_100_apy": 2376549.44472995,
-    "sol_equivalent_for_100_apy": 3.2275941955070158,
-    "daily_sol_for_100_apy": 0.008842723823306892
-  },
-  {
-    "owner": "JDTybisdWYmqxsGAmX9Y4PgaFkN9oP5qrH1nsKfMQJta",
-    "amount": 284920.579,
-    "percentage": 0.455093751806448,
-    "double_amount_for_100_apy": 569841.158,
-    "sol_equivalent_for_100_apy": 0.7739018508536811,
-    "daily_sol_for_100_apy": 0.002120279043434743
-  },
-  {
-    "owner": "HcoXimDTvHHwMCVYL9zruyjGaPsHsxHtbK2weFi1iaUQ",
-    "amount": 442670.114565642,
-    "percentage": 0.7070616097908048,
-    "double_amount_for_100_apy": 885340.229131284,
-    "sol_equivalent_for_100_apy": 1.2023814572550107,
-    "daily_sol_for_100_apy": 0.0032941957733013992
-  },
-  {
-    "owner": "4EG5qw8sKMURwTJ3s7w5Z6Un3VTtPiJ8DYKKobjxMAGw",
-    "amount": 84148.021487354,
-    "percentage": 0.13440671411021357,
-    "double_amount_for_100_apy": 168296.042974708,
-    "sol_equivalent_for_100_apy": 0.2285630255396139,
-    "daily_sol_for_100_apy": 0.000626200069971545
-  },
-  {
-    "owner": "9mBrTn9kvqSySrpLk29HhvtdYMSxoDz5v1RDjMVUYky4",
-    "amount": 87699.090011647,
-    "percentage": 0.14007871261349578,
-    "double_amount_for_100_apy": 175398.180023294,
-    "sol_equivalent_for_100_apy": 0.23820844502143593,
-    "daily_sol_for_100_apy": 0.0006526258767710573
-  },
-  {
     "owner": "HXaE7of4dzmG4EnUb33xHfhmtLRBuuaUdixUzGFyiWWP",
     "amount": 84085.441422483,
-    "percentage": 0.13430675714462553,
+    "percentage": 0.1343057309216903,
     "double_amount_for_100_apy": 168170.882844966,
     "sol_equivalent_for_100_apy": 0.22839304544129954,
     "daily_sol_for_100_apy": 0.0006257343710720536
   },
   {
-    "owner": "AeLdhWxM8zmLnK6eKMZkQhCFEr5HxoyQbvjuQ92xa2LE",
-    "amount": 438432.796122777,
-    "percentage": 0.700293488110966,
-    "double_amount_for_100_apy": 876865.592245554,
-    "sol_equivalent_for_100_apy": 1.190872044361428,
-    "daily_sol_for_100_apy": 0.003262663135236789
+    "owner": "GNXVuVWJk3TgEpBdMaphhGnJQGj3RE2dhX1SdoQzQHAM",
+    "amount": 89060.452582558,
+    "percentage": 0.14225208285722027,
+    "double_amount_for_100_apy": 178120.905165116,
+    "sol_equivalent_for_100_apy": 0.24190618077997147,
+    "daily_sol_for_100_apy": 0.0006627566596711547
   },
   {
-    "owner": "7hs4RpVKnaw4BnR69izpBuMgMzyNzVePGN3rMNRgHTRX",
-    "amount": 32772.591886205,
-    "percentage": 0.05234652354793435,
-    "double_amount_for_100_apy": 65545.18377241,
-    "sol_equivalent_for_100_apy": 0.08901698012485923,
-    "daily_sol_for_100_apy": 0.00024388213732838145
+    "owner": "G8WCFY8HUGywg6PcW8ayfJh1xG9sB1YBuhRcGK8yRJEk",
+    "amount": 47337.870046209,
+    "percentage": 0.07561055908463289,
+    "double_amount_for_100_apy": 94675.740092418,
+    "sol_equivalent_for_100_apy": 0.1285792180151093,
+    "daily_sol_for_100_apy": 0.00035227183017838163
   },
   {
-    "owner": "DCM312seeKsTPWGiZsxoPKX6KnnNVmZvdVMnbiup7AT2",
-    "amount": 56386.035921556,
-    "percentage": 0.09006345812962167,
-    "double_amount_for_100_apy": 112772.071843112,
-    "sol_equivalent_for_100_apy": 0.153155864399652,
-    "daily_sol_for_100_apy": 0.0004196051079442521
+    "owner": "AJwVgVuETmuu8uRw5Fi4LeJYZTynHR8VTcvBHhgkN5Kr",
+    "amount": 795304.638325784,
+    "percentage": 1.270302789029478,
+    "double_amount_for_100_apy": 1590609.276651568,
+    "sol_equivalent_for_100_apy": 2.16020806132379,
+    "daily_sol_for_100_apy": 0.005918378250202164
   },
   {
-    "owner": "6QyRXcK21uo3dXZwbFm1N6Dupi4XN3BpTDkWwPei65fC",
-    "amount": 88023.133572435,
-    "percentage": 0.14059629614623081,
-    "double_amount_for_100_apy": 176046.26714487,
-    "sol_equivalent_for_100_apy": 0.23908861279426308,
-    "daily_sol_for_100_apy": 0.0006550372953267481
+    "owner": "68AT5oxAdKtbRXa9Y9wacyJSwDw5s51EmuuRDrH6veB5",
+    "amount": 83869.521637597,
+    "percentage": 0.1339608523786395,
+    "double_amount_for_100_apy": 167739.043275194,
+    "sol_equivalent_for_100_apy": 0.2278065636864692,
+    "daily_sol_for_100_apy": 0.0006241275717437512
   },
   {
-    "owner": "EemYx31Vm5LqLQDdLKsL2KFYmkpRwjaKx1JfvUG3Foyg",
-    "amount": 140497.919692611,
-    "percentage": 0.22441245071985963,
-    "double_amount_for_100_apy": 280995.839385222,
-    "sol_equivalent_for_100_apy": 0.38162073260142965,
-    "daily_sol_for_100_apy": 0.001045536253702547
+    "owner": "D29kmutt7NrAkUqUcSfNeiguf9uquKatttTGoYYGAy5D",
+    "amount": 63474.009248055,
+    "percentage": 0.10138405724431077,
+    "double_amount_for_100_apy": 126948.01849611,
+    "sol_equivalent_for_100_apy": 0.17240823183282045,
+    "daily_sol_for_100_apy": 0.000472351320089919
   },
   {
-    "owner": "2YG3BRuKEBGQgiG32ZRcZm8u7g8zKzKU82ZxwQqx2Cpo",
-    "amount": 87902.656154096,
-    "percentage": 0.140403861747451,
-    "double_amount_for_100_apy": 175805.312308192,
-    "sol_equivalent_for_100_apy": 0.23876137178778375,
-    "daily_sol_for_100_apy": 0.0006541407446240651
+    "owner": "DKoTRmcy93NBbK67UgqdyUf8hSMAkP5TToj5mvm612K",
+    "amount": 234712.777037078,
+    "percentage": 0.374895707786529,
+    "double_amount_for_100_apy": 469425.554074156,
+    "sol_equivalent_for_100_apy": 0.6375273179828896,
+    "daily_sol_for_100_apy": 0.001746650186254492
   },
   {
-    "owner": "9S5oDjU1FkbX1GjR5wrvkD159CY6Q8JuPEjqotQtESLA",
-    "amount": 54781.572914615,
-    "percentage": 0.08750070505637512,
-    "double_amount_for_100_apy": 109563.14582923,
-    "sol_equivalent_for_100_apy": 0.14879781874687412,
-    "daily_sol_for_100_apy": 0.000407665256840751
+    "owner": "C6Bym8Nz9T8pC1UW3PsWQWdyzhUNWKSP3b5mzn4QgPko",
+    "amount": 805473.186916455,
+    "percentage": 1.2865445346608169,
+    "double_amount_for_100_apy": 1610946.37383291,
+    "sol_equivalent_for_100_apy": 2.1878278934974986,
+    "daily_sol_for_100_apy": 0.005994049023280818
   },
   {
     "owner": "BwY5q84jD6z4rPMRqfekwSotuHhPCsJ365HTpzojjtLs",
     "amount": 84514.941557753,
-    "percentage": 0.13499278280359137,
+    "percentage": 0.13499175133881067,
     "double_amount_for_100_apy": 169029.883115506,
     "sol_equivalent_for_100_apy": 0.2295596545742515,
     "daily_sol_for_100_apy": 0.0006289305604774013
   },
   {
-    "owner": "3sE5HnfrktWSWdyQLLVjVVdoUsMk9QU1yN3FPS8PENzG",
-    "amount": 83798.957830615,
-    "percentage": 0.13384916684661413,
-    "double_amount_for_100_apy": 167597.91566123,
-    "sol_equivalent_for_100_apy": 0.22761489813174404,
-    "daily_sol_for_100_apy": 0.0006236024606349152
-  },
-  {
-    "owner": "8TnnKg7QkWfa1V8Mp7utZMEAk8XKMqqpC2TSVvxtW5Ht",
-    "amount": 69343.706687492,
-    "percentage": 0.11076029590890521,
-    "double_amount_for_100_apy": 138687.413374984,
-    "sol_equivalent_for_100_apy": 0.18835151584647328,
-    "daily_sol_for_100_apy": 0.0005160315502643104
-  },
-  {
-    "owner": "E4KTvsgSjLj3aCxLhRUyVzujNjx8VJieHjy3sDijN4hx",
-    "amount": 61080.000003585,
-    "percentage": 0.09756096403962927,
-    "double_amount_for_100_apy": 122160.00000717,
-    "sol_equivalent_for_100_apy": 0.1659056190985674,
-    "daily_sol_for_100_apy": 0.0004545359427358011
-  },
-  {
-    "owner": "BVMZDy2pZAe8u4jWAEpV4H3VDPiNmz594USLHnkyU4Zt",
-    "amount": 77921.096473784,
-    "percentage": 0.12446066291030014,
-    "double_amount_for_100_apy": 155842.192947568,
-    "sol_equivalent_for_100_apy": 0.21164943926921362,
-    "daily_sol_for_100_apy": 0.0005798614774499003
-  },
-  {
-    "owner": "AFYVx1QHny6YjVa6Ks4rbwMgA3vcYvMCCMF793vbMPFR",
-    "amount": 47988.055218606,
-    "percentage": 0.0766496550301142,
-    "double_amount_for_100_apy": 95976.110437212,
-    "sol_equivalent_for_100_apy": 0.1303452522906316,
-    "daily_sol_for_100_apy": 0.00035711028024830574
-  },
-  {
     "owner": "C6Kbm8TGaCYqLmJexFbowNsKRtYtSx4GsmWs3ZdWsdHq",
     "amount": 84949.67793742,
-    "percentage": 0.13568717213399284,
+    "percentage": 0.1356861353634608,
     "double_amount_for_100_apy": 169899.35587484,
     "sol_equivalent_for_100_apy": 0.2307404864047867,
     "daily_sol_for_100_apy": 0.0006321657161774978
   },
   {
-    "owner": "57CJEn2p9VR9DGZGvyz5wvxQBdLJbhaSrDVjPKoDQCZ9",
-    "amount": 69650.242718988,
-    "percentage": 0.11124991527275388,
-    "double_amount_for_100_apy": 139300.485437976,
-    "sol_equivalent_for_100_apy": 0.1891841296329562,
-    "daily_sol_for_100_apy": 0.0005183126839259074
+    "owner": "BVMZDy2pZAe8u4jWAEpV4H3VDPiNmz594USLHnkyU4Zt",
+    "amount": 77921.096473784,
+    "percentage": 0.12445971192027157,
+    "double_amount_for_100_apy": 155842.192947568,
+    "sol_equivalent_for_100_apy": 0.21164943926921362,
+    "daily_sol_for_100_apy": 0.0005798614774499003
   },
   {
-    "owner": "EAdq2omMxJhLmriAy2oZxyhS9q5bip6K3YdKTTGm6BXw",
-    "amount": 33545.170673797,
-    "percentage": 0.053580536830672064,
-    "double_amount_for_100_apy": 67090.341347594,
-    "sol_equivalent_for_100_apy": 0.09111546018462262,
-    "daily_sol_for_100_apy": 0.0002496313977660894
+    "owner": "4mtzamBuW9nQ7NBk15QhaKXUpvS2tVZXA4kzU4kwvmYg",
+    "amount": 990039.273999999,
+    "percentage": 1.5813432870936461,
+    "double_amount_for_100_apy": 1980078.547999998,
+    "sol_equivalent_for_100_apy": 2.68914667117265,
+    "daily_sol_for_100_apy": 0.007367525126500411
   },
   {
-    "owner": "Bu9RTZsdUDE5VdVYcY7TuChkDdN2hqQKaqtqqPv8P6v",
-    "amount": 83095.569166864,
-    "percentage": 0.1327256685472352,
-    "double_amount_for_100_apy": 166191.138333728,
-    "sol_equivalent_for_100_apy": 0.22570435242578996,
-    "daily_sol_for_100_apy": 0.0006183680888377807
+    "owner": "JD8vN6oQ81qwqf3n4DHKEngMi5yXCas8En3E1HUE7Vj5",
+    "amount": 84068.756239383,
+    "percentage": 0.13427908046146914,
+    "double_amount_for_100_apy": 168137.512478766,
+    "sol_equivalent_for_100_apy": 0.22834772511333923,
+    "daily_sol_for_100_apy": 0.0006256102057899705
   },
   {
-    "owner": "ABj7j2dJao3sQp7t73PnMvgztVfUbPfpyQfpykFYvnDZ",
-    "amount": 354164.355432197,
-    "percentage": 0.5656944325869521,
-    "double_amount_for_100_apy": 708328.710864394,
-    "sol_equivalent_for_100_apy": 0.9619819359393419,
-    "daily_sol_for_100_apy": 0.0026355669477790187
+    "owner": "BJjpgZYnrdXpMoAE1chy16UNJoG1CLgTYag6pcTtj7dh",
+    "amount": 47168.750067444,
+    "percentage": 0.07534043167640095,
+    "double_amount_for_100_apy": 94337.500134888,
+    "sol_equivalent_for_100_apy": 0.1281198539879761,
+    "daily_sol_for_100_apy": 0.0003510132985971948
   },
   {
-    "owner": "5tZyijHeRDimLDRMLwh7TgRSCT4iVLa1RsXHMsD3N6ay",
-    "amount": 370585.919962814,
-    "percentage": 0.5919240276516533,
-    "double_amount_for_100_apy": 741171.839925628,
-    "sol_equivalent_for_100_apy": 1.006586222610252,
-    "daily_sol_for_100_apy": 0.0027577704729048
+    "owner": "9mBrTn9kvqSySrpLk29HhvtdYMSxoDz5v1RDjMVUYky4",
+    "amount": 87699.090011647,
+    "percentage": 0.14007764228769326,
+    "double_amount_for_100_apy": 175398.180023294,
+    "sol_equivalent_for_100_apy": 0.23820844502143593,
+    "daily_sol_for_100_apy": 0.0006526258767710573
   },
   {
-    "owner": "DnX5B6kqDDzpbq2B46duxJqrFNji7aP2kLBcDiGcXvbB",
-    "amount": 63100.617628846,
-    "percentage": 0.10078842644081391,
-    "double_amount_for_100_apy": 126201.235257692,
-    "sol_equivalent_for_100_apy": 0.17139402476426363,
-    "daily_sol_for_100_apy": 0.00046957267058702365
+    "owner": "AEy1bDga7DXu5rXGemtXch9ZBw6hXeJhjzhm5ymNjgtV",
+    "amount": 84787.256226878,
+    "percentage": 0.13542670678482863,
+    "double_amount_for_100_apy": 169574.512453756,
+    "sol_equivalent_for_100_apy": 0.2302993162272992,
+    "daily_sol_for_100_apy": 0.0006309570307597239
   },
   {
-    "owner": "GYfALc5YvW5tC6fokRoyiGL4jSCJDWn5aVk4QUE2Hc5m",
-    "amount": 54281.453148263,
-    "percentage": 0.08670188111174985,
-    "double_amount_for_100_apy": 108562.906296526,
-    "sol_equivalent_for_100_apy": 0.14743939242966408,
-    "daily_sol_for_100_apy": 0.0004039435409031893
+    "owner": "7txmSTPVWVKgH8T29VyUmNGEKKDuTkBDYawxaSBhm1KC",
+    "amount": 82980.685357069,
+    "percentage": 0.13254115588532822,
+    "double_amount_for_100_apy": 165961.370714138,
+    "sol_equivalent_for_100_apy": 0.22539230479011013,
+    "daily_sol_for_100_apy": 0.0006175131638085209
   },
   {
-    "owner": "DzMgK5k9t2vnAHctiojF3wZRp1euZEveJAcyKYZgkjxs",
-    "amount": 117905.615952422,
-    "percentage": 0.18832654808987281,
-    "double_amount_for_100_apy": 235811.231904844,
-    "sol_equivalent_for_100_apy": 0.3202554716541647,
-    "daily_sol_for_100_apy": 0.0008774122511073005
+    "owner": "FYAaKu2MTKpvXgkmVKB1Cjkt7Wm7MfxuzEzohxhgfRx3",
+    "amount": 84575.727703903,
+    "percentage": 0.13508884219842296,
+    "double_amount_for_100_apy": 169151.455407806,
+    "sol_equivalent_for_100_apy": 0.2297247620269208,
+    "daily_sol_for_100_apy": 0.0006293829096627967
   },
   {
-    "owner": "2s2As1LnQ8PUtcTviaEXRfa5DQT9oYmAzy3CR6B9aVhu",
-    "amount": 1188342.328999999,
-    "percentage": 1.8980979570977983,
-    "double_amount_for_100_apy": 2376684.657999998,
-    "sol_equivalent_for_100_apy": 3.2277778287853094,
-    "daily_sol_for_100_apy": 0.00884322692817893
+    "owner": "AyvWC5qage5GVdUCregpEX67nRiJV9CVb3nrAMSP9aqR",
+    "amount": 120007.603477181,
+    "percentage": 0.19168251517145007,
+    "double_amount_for_100_apy": 240015.206954362,
+    "sol_equivalent_for_100_apy": 0.3259648944048546,
+    "daily_sol_for_100_apy": 0.0008930545052187797
   },
   {
-    "owner": "9J7zDLKnaRWK9LtZuyGzikJAVzABj1kcn5eMNp5Xmiah",
-    "amount": 221487.217422955,
-    "percentage": 0.3537738450060606,
-    "double_amount_for_100_apy": 442974.43484591,
-    "sol_equivalent_for_100_apy": 0.6016040263067715,
-    "daily_sol_for_100_apy": 0.0016482302090596477
+    "owner": "7uieVDziL6ash997w57dzc5ct5VAhky1d4a2WL1Dhmuu",
+    "amount": 83742.996286636,
+    "percentage": 0.1337587593711763,
+    "double_amount_for_100_apy": 167485.992573272,
+    "sol_equivalent_for_100_apy": 0.22746289527321417,
+    "daily_sol_for_100_apy": 0.0006231860144471621
   },
   {
-    "owner": "GME8jEUdr1xu2hBBU4pJLQRQHRBYW2kHwnH2YVGLHatF",
-    "amount": 844750.157830775,
-    "percentage": 1.3492901074944692,
-    "double_amount_for_100_apy": 1689500.31566155,
-    "sol_equivalent_for_100_apy": 2.294512081046192,
-    "daily_sol_for_100_apy": 0.006286334468619704
-  },
-  {
-    "owner": "w1RgmsVQkyS6FGuaLykAhwK5x3RJb8jLYnDHyJ4cp4j",
-    "amount": 34170.230215154,
-    "percentage": 0.05457892274150012,
-    "double_amount_for_100_apy": 68340.460430308,
-    "sol_equivalent_for_100_apy": 0.09281324817048071,
-    "daily_sol_for_100_apy": 0.0002542828716999472
+    "owner": "GZtd6uxVTtuWpHfoGNbq4DDCYadPvFDvDakWVZyn6xfk",
+    "amount": 84565.390154604,
+    "percentage": 0.13507233051588846,
+    "double_amount_for_100_apy": 169130.780309208,
+    "sol_equivalent_for_100_apy": 0.22969668315468253,
+    "daily_sol_for_100_apy": 0.0006293059812457056
   },
   {
     "owner": "9RBAYbLc4LkXwW4q3QJPVZTT23x5cRt7FUFPgwAiEoAe",
     "amount": 79111.363606577,
-    "percentage": 0.12636183528969036,
+    "percentage": 0.12636086977301592,
     "double_amount_for_100_apy": 158222.727213154,
     "sol_equivalent_for_100_apy": 0.21488244525394035,
     "daily_sol_for_100_apy": 0.0005887190280929873
@@ -1026,913 +442,1497 @@
   {
     "owner": "FpGFCJa5FnPRWRDrLgF2M6F6Wh3H9akLNdXv8gqdwhVo",
     "amount": 58949.955954836,
-    "percentage": 0.09415871861018214,
+    "percentage": 0.09415799915392659,
     "double_amount_for_100_apy": 117899.911909672,
     "sol_equivalent_for_100_apy": 0.16011998916087616,
     "daily_sol_for_100_apy": 0.0004386849018106196
   },
   {
-    "owner": "JA2SRHpThp4hQNM9537n9138RqiKmSddt6grWFK6viYS",
-    "amount": 84792.02508254,
-    "percentage": 0.13543535870071205,
-    "double_amount_for_100_apy": 169584.05016508,
-    "sol_equivalent_for_100_apy": 0.23031226940265856,
-    "daily_sol_for_100_apy": 0.0006309925189113933
+    "owner": "3t35yLb3PmKYVwEULLnQSgpwGrr9P2K5MbSGVj6LzDvt",
+    "amount": 84197.510373695,
+    "percentage": 0.13448473340002098,
+    "double_amount_for_100_apy": 168395.02074739,
+    "sol_equivalent_for_100_apy": 0.22869744735242367,
+    "daily_sol_for_100_apy": 0.0006265683489107498
   },
   {
-    "owner": "BqhVUXVBtYeh4bdWwKJKfaffi1GstBR8hsBr9VTA2oAw",
-    "amount": 41685.775725598,
-    "percentage": 0.06658324273559948,
-    "double_amount_for_100_apy": 83371.551451196,
-    "sol_equivalent_for_100_apy": 0.11322698803132696,
-    "daily_sol_for_100_apy": 0.0003102109261132245
+    "owner": "E9mNQqUicjt876kNYUivojW4pSwyDvsuQNXGxV79kqm3",
+    "amount": 2002718,
+    "percentage": 3.1988475087924804,
+    "double_amount_for_100_apy": 4005436,
+    "sol_equivalent_for_100_apy": 5.439786667490882,
+    "daily_sol_for_100_apy": 0.014903525116413375
   },
   {
-    "owner": "3n3pCV1pkWvjzhXYDM9TM95rzBa8RBQmz1LJGauHrVbT",
-    "amount": 821252.139232208,
-    "percentage": 1.3117575379567683,
-    "double_amount_for_100_apy": 1642504.278464416,
-    "sol_equivalent_for_100_apy": 2.2306867155753984,
-    "daily_sol_for_100_apy": 0.006111470453631229
+    "owner": "4EG5qw8sKMURwTJ3s7w5Z6Un3VTtPiJ8DYKKobjxMAGw",
+    "amount": 84148.021487354,
+    "percentage": 0.13440568712351833,
+    "double_amount_for_100_apy": 168296.042974708,
+    "sol_equivalent_for_100_apy": 0.2285630255396139,
+    "daily_sol_for_100_apy": 0.000626200069971545
   },
   {
-    "owner": "GNXVuVWJk3TgEpBdMaphhGnJQGj3RE2dhX1SdoQzQHAM",
-    "amount": 89060.452582558,
-    "percentage": 0.14225316979780733,
-    "double_amount_for_100_apy": 178120.905165116,
-    "sol_equivalent_for_100_apy": 0.24190618077997147,
-    "daily_sol_for_100_apy": 0.0006627566596711547
+    "owner": "9aBMk5SvGaBL1iPiqVoBiBVwttc4ZsJq5AfNhkQ3g8nS",
+    "amount": 82655.142841195,
+    "percentage": 0.13202118209675212,
+    "double_amount_for_100_apy": 165310.28568239,
+    "sol_equivalent_for_100_apy": 0.2245080655524577,
+    "daily_sol_for_100_apy": 0.0006150905905546786
   },
   {
-    "owner": "EjL7X5YvJVZmwjtbePR6BhFR59LF51w2PgUTHAs1MbN5",
-    "amount": 77905.775185198,
-    "percentage": 0.12443619074781337,
-    "double_amount_for_100_apy": 155811.550370396,
-    "sol_equivalent_for_100_apy": 0.21160782355428076,
-    "daily_sol_for_100_apy": 0.00057974746179255
+    "owner": "DKiqtUZBQrKWep7vVifxcS38BE9r3V7Uh7ogvXZznp3Z",
+    "amount": 375298.690595826,
+    "percentage": 0.5994469922702736,
+    "double_amount_for_100_apy": 750597.381191652,
+    "sol_equivalent_for_100_apy": 1.0193870597008465,
+    "daily_sol_for_100_apy": 0.002792841259454374
   },
   {
-    "owner": "8ixEiWWNpum38cEVtxPbMdkhjwd6FyFiHVDBR5htFpok",
-    "amount": 84628.378896727,
-    "percentage": 0.13517397232794867,
-    "double_amount_for_100_apy": 169256.757793454,
-    "sol_equivalent_for_100_apy": 0.22986777330297237,
-    "daily_sol_for_100_apy": 0.0006297747213780065
+    "owner": "Bu9RTZsdUDE5VdVYcY7TuChkDdN2hqQKaqtqqPv8P6v",
+    "amount": 83095.569166864,
+    "percentage": 0.13272465440522135,
+    "double_amount_for_100_apy": 166191.138333728,
+    "sol_equivalent_for_100_apy": 0.22570435242578996,
+    "daily_sol_for_100_apy": 0.0006183680888377807
   },
   {
-    "owner": "7v1rebHZmKx84XPLs1WyvDdvHBLTjPrpoiDEUEVZLC1v",
-    "amount": 235597.574339139,
-    "percentage": 0.37631182836567695,
-    "double_amount_for_100_apy": 471195.148678278,
-    "sol_equivalent_for_100_apy": 0.6399306061977973,
-    "daily_sol_for_100_apy": 0.0017532345375282118
+    "owner": "EY9ksz8A7wPaHLipbdvyRNoBUGeMUbiEKoXdVd3GL6iX",
+    "amount": 590175.212317861,
+    "percentage": 0.9426591800113959,
+    "double_amount_for_100_apy": 1180350.424635722,
+    "sol_equivalent_for_100_apy": 1.6030351010228603,
+    "daily_sol_for_100_apy": 0.004391876989103727
   },
   {
-    "owner": "6hwDekJfomsimdKQbkdZrDAnV34ygazMHQ4uzDrPsACo",
-    "amount": 102024.028,
-    "percentage": 0.16295943887200262,
-    "double_amount_for_100_apy": 204048.056,
-    "sol_equivalent_for_100_apy": 0.2771178704531124,
-    "daily_sol_for_100_apy": 0.0007592270423372943
+    "owner": "7f2gGGX9Exc7mfNSbxEoyt2ScSaa17kYLD73kva1jyUu",
+    "amount": 228478.654680179,
+    "percentage": 0.36493823660442853,
+    "double_amount_for_100_apy": 456957.309360358,
+    "sol_equivalent_for_100_apy": 0.620594182274035,
+    "daily_sol_for_100_apy": 0.001700258033627493
   },
   {
-    "owner": "FZjutB3bDfV8fXy6f3eYkQLbQZamF8942L9DXGCyv47c",
-    "amount": 77735.731173316,
-    "percentage": 0.12416458534952589,
-    "double_amount_for_100_apy": 155471.462346632,
-    "sol_equivalent_for_100_apy": 0.21114594966653302,
-    "daily_sol_for_100_apy": 0.0005784820538809124
-  },
-  {
-    "owner": "4aoDxFK1BXADhEfmq2gXbXVQkNQd5GPNAExs6PBTnaGh",
-    "amount": 86992.691791754,
-    "percentage": 0.13895040725454694,
-    "double_amount_for_100_apy": 173985.383583508,
-    "sol_equivalent_for_100_apy": 0.23628972475302407,
-    "daily_sol_for_100_apy": 0.0006473691089123947
-  },
-  {
-    "owner": "GZtd6uxVTtuWpHfoGNbq4DDCYadPvFDvDakWVZyn6xfk",
-    "amount": 84565.390154604,
-    "percentage": 0.13507336259637037,
-    "double_amount_for_100_apy": 169130.780309208,
-    "sol_equivalent_for_100_apy": 0.22969668315468253,
-    "daily_sol_for_100_apy": 0.0006293059812457056
-  },
-  {
-    "owner": "CvxkiiPuVUsRPMWQou2qBzB6Ssxjpiix14yFj5FMKxrW",
-    "amount": 82189.553335762,
-    "percentage": 0.131278520906235,
-    "double_amount_for_100_apy": 164379.106671524,
-    "sol_equivalent_for_100_apy": 0.22324343039954145,
-    "daily_sol_for_100_apy": 0.0006116258367110725
+    "owner": "xbXkY8XSL465uUveXhjsb86funRwce1r5D87ihgtAec",
+    "amount": 468791.027842823,
+    "percentage": 0.748777916590993,
+    "double_amount_for_100_apy": 937582.055685646,
+    "sol_equivalent_for_100_apy": 1.273331134537531,
+    "daily_sol_for_100_apy": 0.0034885784507877565
   },
   {
     "owner": "5NMb27gbokooTpno5itgqBa4pSU2bQxZk4kqQarrBfds",
     "amount": 62112.013692412,
-    "percentage": 0.09920936368563692,
+    "percentage": 0.09920860563796627,
     "double_amount_for_100_apy": 124224.027384824,
     "sol_equivalent_for_100_apy": 0.16870877675988027,
     "daily_sol_for_100_apy": 0.000462215826739398
   },
   {
-    "owner": "FYAaKu2MTKpvXgkmVKB1Cjkt7Wm7MfxuzEzohxhgfRx3",
-    "amount": 84575.727703903,
-    "percentage": 0.13508987440506975,
-    "double_amount_for_100_apy": 169151.455407806,
-    "sol_equivalent_for_100_apy": 0.2297247620269208,
-    "daily_sol_for_100_apy": 0.0006293829096627967
+    "owner": "3fM5cdu7uDHkqGEDTBzJs3gECu6wyBNTXKpFYZwZ1TZ8",
+    "amount": 1138225.999999999,
+    "percentage": 1.8180349927163115,
+    "double_amount_for_100_apy": 2276451.999999998,
+    "sol_equivalent_for_100_apy": 3.091651754960744,
+    "daily_sol_for_100_apy": 0.008470278780714366
   },
   {
-    "owner": "H6bughJVtUV3emRGxpzScRGnqGJY15BFfvpfonPpQ3SE",
-    "amount": 147695.114403241,
-    "percentage": 0.2359082800307432,
-    "double_amount_for_100_apy": 295390.228806482,
-    "sol_equivalent_for_100_apy": 0.40116976737827836,
-    "daily_sol_for_100_apy": 0.0010990952530911737
+    "owner": "C3gfPwiTcLPe9rSnPFJA4i8RYRUg1c3y1wwe9itCV9uD",
+    "amount": 85010.014873681,
+    "percentage": 0.13578250872119096,
+    "double_amount_for_100_apy": 170020.029747362,
+    "sol_equivalent_for_100_apy": 0.2309043737126502,
+    "daily_sol_for_100_apy": 0.0006326147225004116
   },
   {
-    "owner": "ECNQ82uFZ6ZjeMG45SpdSMUUX73ZkLZqg8GL1pv9gwxH",
-    "amount": 50071.852872961,
-    "percentage": 0.07997803269891673,
-    "double_amount_for_100_apy": 100143.705745922,
-    "sol_equivalent_for_100_apy": 0.1360052676786738,
-    "daily_sol_for_100_apy": 0.00037261717172239395
+    "owner": "8b8Lm5n7deoZD9bNNcWqoRmpG1ZzoNfwA6Jbe3bNsBBx",
+    "amount": 129543.587843564,
+    "percentage": 0.20691389564253407,
+    "double_amount_for_100_apy": 259087.175687128,
+    "sol_equivalent_for_100_apy": 0.3518665543578044,
+    "daily_sol_for_100_apy": 0.0009640179571446696
+  },
+  {
+    "owner": "EbBaXL4hZzfMq8UyAbhUrKqreCWuhMkDVcp8PFqJb7x9",
+    "amount": 63890.644019962,
+    "percentage": 0.10204952842007842,
+    "double_amount_for_100_apy": 127781.288039924,
+    "sol_equivalent_for_100_apy": 0.17353989603987946,
+    "daily_sol_for_100_apy": 0.0004754517699722725
+  },
+  {
+    "owner": "DA7iMX8acSwZGcu1PZ2KHWLpp943VQAyYxi67LqhzjCb",
+    "amount": 390493.618708431,
+    "percentage": 0.6237171381117187,
+    "double_amount_for_100_apy": 780987.237416862,
+    "sol_equivalent_for_100_apy": 1.0606595540612263,
+    "daily_sol_for_100_apy": 0.002905916586469113
+  },
+  {
+    "owner": "3B9jAmdtCHW8a35G8HqC78dinLfoxUtc3pasqMqfNDjo",
+    "amount": 84145.094687727,
+    "percentage": 0.13440101228377777,
+    "double_amount_for_100_apy": 168290.189375454,
+    "sol_equivalent_for_100_apy": 0.22855507576056897,
+    "daily_sol_for_100_apy": 0.0006261782897549835
+  },
+  {
+    "owner": "8RknfWhm9Cw4WDeL9Z8oh3uvRYj3ZEvb6hFESFKa3PB1",
+    "amount": 82743.558610767,
+    "percentage": 0.1321624044576803,
+    "double_amount_for_100_apy": 165487.117221534,
+    "sol_equivalent_for_100_apy": 0.2247482206439452,
+    "daily_sol_for_100_apy": 0.0006157485497094389
+  },
+  {
+    "owner": "H1vNWJp5rTNs61dvWN9p73dFpGanZE5QcPn22ZyjmsL3",
+    "amount": 362957.975231586,
+    "percentage": 0.5797357465533948,
+    "double_amount_for_100_apy": 725915.950463172,
+    "sol_equivalent_for_100_apy": 0.9858671837594046,
+    "daily_sol_for_100_apy": 0.0027010059829024784
   },
   {
     "owner": "FTbZTMKAjmGQhmYoHuEyr7eNPS3pveX7pjdiiH4ayMeM",
     "amount": 2196607.827156928,
-    "percentage": 3.5085654424009007,
+    "percentage": 3.5085386338441062,
     "double_amount_for_100_apy": 4393215.654313856,
     "sol_equivalent_for_100_apy": 5.966430606742622,
     "daily_sol_for_100_apy": 0.01634638522395239
   },
   {
-    "owner": "6CfkBeNfhQBsie4xsoksgQmqWyx5Y5iA3crzEoNMGp8A",
-    "amount": 100453.822144589,
-    "percentage": 0.16045140355789692,
-    "double_amount_for_100_apy": 200907.644289178,
-    "sol_equivalent_for_100_apy": 0.27285287414435555,
-    "daily_sol_for_100_apy": 0.0007475421209434399
+    "owner": "ANtrL5Bo5bpyWy2ympjK9AgHshjwvf56fWsY2A6W7ZY5",
+    "amount": 67797.640058237,
+    "percentage": 0.10828998990486961,
+    "double_amount_for_100_apy": 135595.280116474,
+    "sol_equivalent_for_100_apy": 0.1841520865524469,
+    "daily_sol_for_100_apy": 0.0005045262645272517
+  },
+  {
+    "owner": "QDZkCqMUkEcUB7JdCpAc3guZQieAJ5aiW8UkC7AZkHu",
+    "amount": 1188007.999999999,
+    "percentage": 1.8975494459157674,
+    "double_amount_for_100_apy": 2376015.999999998,
+    "sol_equivalent_for_100_apy": 3.2268697236817676,
+    "daily_sol_for_100_apy": 0.008840738968991143
+  },
+  {
+    "owner": "6ncLPo29tzHkzDwsMZcqa1qH4yWvGTWZfC7Uv7iiNMov",
+    "amount": 84663.825227513,
+    "percentage": 0.1352295562400058,
+    "double_amount_for_100_apy": 169327.650455026,
+    "sol_equivalent_for_100_apy": 0.229964052698085,
+    "daily_sol_for_100_apy": 0.0006300385005426986
+  },
+  {
+    "owner": "H3NHCLKceUp2LiQbsfekm6y2mtz6RAyUGg45HrApHQaZ",
+    "amount": 339684.936273206,
+    "percentage": 0.542562813222769,
+    "double_amount_for_100_apy": 679369.872546412,
+    "sol_equivalent_for_100_apy": 0.922652908440667,
+    "daily_sol_for_100_apy": 0.002527816187508677
+  },
+  {
+    "owner": "CDB5mDxYAvhzEdb5rG7SaHCSv4hLAEeuAM9ZMvTjpRuP",
+    "amount": 22100.982346468,
+    "percentage": 0.03530086228858269,
+    "double_amount_for_100_apy": 44201.964692936,
+    "sol_equivalent_for_100_apy": 0.06003073278752574,
+    "daily_sol_for_100_apy": 0.00016446776106171436
+  },
+  {
+    "owner": "4mVoMoUcwW48mpUNVSomjbAEopxBiKEHK5kB8xQT5ooh",
+    "amount": 20347.287,
+    "percentage": 0.03249976698198929,
+    "double_amount_for_100_apy": 40694.574,
+    "sol_equivalent_for_100_apy": 0.055267341953390614,
+    "daily_sol_for_100_apy": 0.0001514173752147688
+  },
+  {
+    "owner": "D4j6HS8x8zXEwGpsuMcHaQEmKNbK98h4fy2ZGxzCu2ZJ",
+    "amount": 357096.847628522,
+    "percentage": 0.57037404239346,
+    "double_amount_for_100_apy": 714193.695257044,
+    "sol_equivalent_for_100_apy": 0.9699471771525782,
+    "daily_sol_for_100_apy": 0.00265738952644542
+  },
+  {
+    "owner": "EHeVLBy8YqwgEjYcsE8ARvKjuwVqqVWVbgNLhpH3fyeB",
+    "amount": 66672.891425784,
+    "percentage": 0.10649348167907846,
+    "double_amount_for_100_apy": 133345.782851568,
+    "sol_equivalent_for_100_apy": 0.181097042050377,
+    "daily_sol_for_100_apy": 0.000496156279590074
+  },
+  {
+    "owner": "GME8jEUdr1xu2hBBU4pJLQRQHRBYW2kHwnH2YVGLHatF",
+    "amount": 844750.157830775,
+    "percentage": 1.3492797977194138,
+    "double_amount_for_100_apy": 1689500.31566155,
+    "sol_equivalent_for_100_apy": 2.294512081046192,
+    "daily_sol_for_100_apy": 0.006286334468619704
+  },
+  {
+    "owner": "8g6WUHP8DN6ZKi7DCb4VKZmn5VhTaDKDgkaPorSafMy2",
+    "amount": 24294.231082716,
+    "percentage": 0.03880403560410148,
+    "double_amount_for_100_apy": 48588.462165432,
+    "sol_equivalent_for_100_apy": 0.06598803942477227,
+    "daily_sol_for_100_apy": 0.00018078914910896513
+  },
+  {
+    "owner": "7v1rebHZmKx84XPLs1WyvDdvHBLTjPrpoiDEUEVZLC1v",
+    "amount": 235597.574339139,
+    "percentage": 0.37630895300901374,
+    "double_amount_for_100_apy": 471195.148678278,
+    "sol_equivalent_for_100_apy": 0.6399306061977973,
+    "daily_sol_for_100_apy": 0.0017532345375282118
+  },
+  {
+    "owner": "Df9TCSZfVdaYAqvpNgbVHQcBiXvamRTWzA8BoJkAuvtA",
+    "amount": 890995.999999999,
+    "percentage": 1.4231461119059505,
+    "double_amount_for_100_apy": 1781991.999999998,
+    "sol_equivalent_for_100_apy": 2.4201251307411726,
+    "daily_sol_for_100_apy": 0.006630479810249788
+  },
+  {
+    "owner": "2JruZtz6cxBEDm45tT4h37tYZdjEq2yX7cY4F8BTQNBY",
+    "amount": 267829.647019959,
+    "percentage": 0.42779173061337894,
+    "double_amount_for_100_apy": 535659.294039918,
+    "sol_equivalent_for_100_apy": 0.7274794269677318,
+    "daily_sol_for_100_apy": 0.001993094320459539
+  },
+  {
+    "owner": "AJYhaQxosfrhQK4iaTqD8VsYNM5KQKJhQVfdYQmtuLfJ",
+    "amount": 93721.162317094,
+    "percentage": 0.149696415870418,
+    "double_amount_for_100_apy": 187442.324634188,
+    "sol_equivalent_for_100_apy": 0.254565609953212,
+    "daily_sol_for_100_apy": 0.000697440027269074
+  },
+  {
+    "owner": "FRTT1miwwfTHch5sVFSoV9EY8fgcN1s8aq6ZgBWWBmWr",
+    "amount": 105418.63081828,
+    "percentage": 0.16838023354929108,
+    "double_amount_for_100_apy": 210837.26163656,
+    "sol_equivalent_for_100_apy": 0.2863382974689512,
+    "daily_sol_for_100_apy": 0.0007844884862163046
+  },
+  {
+    "owner": "9r89sTj1CkHjzKL3A1M5cRKsLdMd4z2YRT5bkXPu65g7",
+    "amount": 1181148.789508687,
+    "percentage": 1.8865935507810472,
+    "double_amount_for_100_apy": 2362297.579017374,
+    "sol_equivalent_for_100_apy": 3.208238722322539,
+    "daily_sol_for_100_apy": 0.008789695129650792
+  },
+  {
+    "owner": "79WURBWJWgF2aEohjfMudtdo3JhEpU51NoHi2QU4WqyM",
+    "amount": 47675.974708265,
+    "percentage": 0.07615059779998322,
+    "double_amount_for_100_apy": 95351.94941653,
+    "sol_equivalent_for_100_apy": 0.12949757857953662,
+    "daily_sol_for_100_apy": 0.0003547878865192784
+  },
+  {
+    "owner": "AtKYpjYmNPwC2uBsPEHbVNUXoE2nftfUSTRiwWcjcdb5",
+    "amount": 333066.862042196,
+    "percentage": 0.5319920737243123,
+    "double_amount_for_100_apy": 666133.724084392,
+    "sol_equivalent_for_100_apy": 0.9046768818776096,
+    "daily_sol_for_100_apy": 0.002478566799664684
+  },
+  {
+    "owner": "BRRr9HZxnBABesPepcTQXMXuWCt5aFEMUuhrJ4y8uEEL",
+    "amount": 255677.803962953,
+    "percentage": 0.4083821617723635,
+    "double_amount_for_100_apy": 511355.607925906,
+    "sol_equivalent_for_100_apy": 0.6944725663678157,
+    "daily_sol_for_100_apy": 0.001902664565391276
+  },
+  {
+    "owner": "4aoDxFK1BXADhEfmq2gXbXVQkNQd5GPNAExs6PBTnaGh",
+    "amount": 86992.691791754,
+    "percentage": 0.1389493455499997,
+    "double_amount_for_100_apy": 173985.383583508,
+    "sol_equivalent_for_100_apy": 0.23628972475302407,
+    "daily_sol_for_100_apy": 0.0006473691089123947
+  },
+  {
+    "owner": "8otm8ek2xjXDodyE3c2nXzVdhHQFm2srQF6D7nvnjNLH",
+    "amount": 111347.574383411,
+    "percentage": 0.1778502569640157,
+    "double_amount_for_100_apy": 222695.148766822,
+    "sol_equivalent_for_100_apy": 0.3024425059286072,
+    "daily_sol_for_100_apy": 0.0008286096052838554
+  },
+  {
+    "owner": "JA2SRHpThp4hQNM9537n9138RqiKmSddt6grWFK6viYS",
+    "amount": 84792.02508254,
+    "percentage": 0.13543432385425835,
+    "double_amount_for_100_apy": 169584.05016508,
+    "sol_equivalent_for_100_apy": 0.23031226940265856,
+    "daily_sol_for_100_apy": 0.0006309925189113933
+  },
+  {
+    "owner": "9MtzuLnCJortLxLnEEeEWEZB9tVSefJocc1DqLchQQ4f",
+    "amount": 160343.878669745,
+    "percentage": 0.2561097552590217,
+    "double_amount_for_100_apy": 320687.75733949,
+    "sol_equivalent_for_100_apy": 0.43552636636883196,
+    "daily_sol_for_100_apy": 0.0011932229215584438
+  },
+  {
+    "owner": "Baw2AgUDqwiRdPmgn6nuajvRtAK2LjCwU58SzZYhNi2V",
+    "amount": 377144.962549616,
+    "percentage": 0.6023959558487377,
+    "double_amount_for_100_apy": 754289.925099232,
+    "sol_equivalent_for_100_apy": 1.0244019073023507,
+    "daily_sol_for_100_apy": 0.0028065805679516457
+  },
+  {
+    "owner": "J6Pay6vWQKcLNkHKfKnyHLvADz7hbMXMiK3Z6aazmr6t",
+    "amount": 84241.124566268,
+    "percentage": 0.13455439630376487,
+    "double_amount_for_100_apy": 168482.249132536,
+    "sol_equivalent_for_100_apy": 0.22881591231018208,
+    "daily_sol_for_100_apy": 0.000626892910438855
+  },
+  {
+    "owner": "8D16nTyDWoaKR9zwhohY97wacTj8DmDsWarGUrQgkt5D",
+    "amount": 46313.58096817,
+    "percentage": 0.07397451019229337,
+    "double_amount_for_100_apy": 92627.16193634,
+    "sol_equivalent_for_100_apy": 0.1257970419571855,
+    "daily_sol_for_100_apy": 0.0003446494300196863
+  },
+  {
+    "owner": "D2MQVUmGPum9Joc53A9FNDFXBSGCCP38bpGXFUh5e62n",
+    "amount": 106143.85609458,
+    "percentage": 0.16953860186095832,
+    "double_amount_for_100_apy": 212287.71218916,
+    "sol_equivalent_for_100_apy": 0.2883081558259161,
+    "daily_sol_for_100_apy": 0.0007898853584271674
+  },
+  {
+    "owner": "AFYVx1QHny6YjVa6Ks4rbwMgA3vcYvMCCMF793vbMPFR",
+    "amount": 47988.055218606,
+    "percentage": 0.07664906935865848,
+    "double_amount_for_100_apy": 95976.110437212,
+    "sol_equivalent_for_100_apy": 0.1303452522906316,
+    "daily_sol_for_100_apy": 0.00035711028024830574
+  },
+  {
+    "owner": "CGVLSjU6ervN8a8NzQQPNM84zh3LJkg2iXh61wy6HfLC",
+    "amount": 82743.91312417,
+    "percentage": 0.13216297070530778,
+    "double_amount_for_100_apy": 165487.82624834,
+    "sol_equivalent_for_100_apy": 0.22474918357396484,
+    "daily_sol_for_100_apy": 0.0006157511878738763
+  },
+  {
+    "owner": "ECNQ82uFZ6ZjeMG45SpdSMUUX73ZkLZqg8GL1pv9gwxH",
+    "amount": 50071.852872961,
+    "percentage": 0.07997742159569887,
+    "double_amount_for_100_apy": 100143.705745922,
+    "sol_equivalent_for_100_apy": 0.1360052676786738,
+    "daily_sol_for_100_apy": 0.00037261717172239395
+  },
+  {
+    "owner": "UkFYxgVPxz4YNELAHaGh3aeRWKmEqegTevaCDdfqdJu",
+    "amount": 83846.470898153,
+    "percentage": 0.13392403451389456,
+    "double_amount_for_100_apy": 167692.941796306,
+    "sol_equivalent_for_100_apy": 0.22774395322153937,
+    "daily_sol_for_100_apy": 0.0006239560362233955
+  },
+  {
+    "owner": "4v91uQbk67t28xULRseArTsHJ8aMeSx5UUNpzuD5GQRe",
+    "amount": 81580.61685267,
+    "percentage": 0.1303048921440349,
+    "double_amount_for_100_apy": 163161.23370534,
+    "sol_equivalent_for_100_apy": 0.22158943589703406,
+    "daily_sol_for_100_apy": 0.000607094344923381
+  },
+  {
+    "owner": "8evCNBNLc9tt5kw6N2BSrz25sQThBWFx6UqL6CDRpFwL",
+    "amount": 84059.571076381,
+    "percentage": 0.13426440943150547,
+    "double_amount_for_100_apy": 168119.142152762,
+    "sol_equivalent_for_100_apy": 0.22832277635508322,
+    "daily_sol_for_100_apy": 0.0006255418530276253
+  },
+  {
+    "owner": "6QyRXcK21uo3dXZwbFm1N6Dupi4XN3BpTDkWwPei65fC",
+    "amount": 88023.133572435,
+    "percentage": 0.1405952218656303,
+    "double_amount_for_100_apy": 176046.26714487,
+    "sol_equivalent_for_100_apy": 0.23908861279426308,
+    "daily_sol_for_100_apy": 0.0006550372953267481
+  },
+  {
+    "owner": "EAdq2omMxJhLmriAy2oZxyhS9q5bip6K3YdKTTGm6BXw",
+    "amount": 33545.170673797,
+    "percentage": 0.05358012742777271,
+    "double_amount_for_100_apy": 67090.341347594,
+    "sol_equivalent_for_100_apy": 0.09111546018462262,
+    "daily_sol_for_100_apy": 0.0002496313977660894
+  },
+  {
+    "owner": "FFxVkf2W9gWmbourzpZwC3zDizjjPPg8mhRQpWq1gcL2",
+    "amount": 525002.304745976,
+    "percentage": 0.8385615521740833,
+    "double_amount_for_100_apy": 1050004.609491952,
+    "sol_equivalent_for_100_apy": 1.4260123181392212,
+    "daily_sol_for_100_apy": 0.003906883063395127
+  },
+  {
+    "owner": "2s2As1LnQ8PUtcTviaEXRfa5DQT9oYmAzy3CR6B9aVhu",
+    "amount": 1188342.328999999,
+    "percentage": 1.8980834539432414,
+    "double_amount_for_100_apy": 2376684.657999998,
+    "sol_equivalent_for_100_apy": 3.2277778287853094,
+    "daily_sol_for_100_apy": 0.00884322692817893
   },
   {
     "owner": "2hiwSGtEfvwzHfgXE3XpzGPNCN2iwsfJoHunoCkcNwhj",
     "amount": 122474.745504408,
-    "percentage": 0.19562466013780255,
+    "percentage": 0.19562316539161706,
     "double_amount_for_100_apy": 244949.491008816,
     "sol_equivalent_for_100_apy": 0.3326661505510099,
     "daily_sol_for_100_apy": 0.0009114141110986572
   },
   {
-    "owner": "7txmSTPVWVKgH8T29VyUmNGEKKDuTkBDYawxaSBhm1KC",
-    "amount": 82980.685357069,
-    "percentage": 0.13254216862523963,
-    "double_amount_for_100_apy": 165961.370714138,
-    "sol_equivalent_for_100_apy": 0.22539230479011013,
-    "daily_sol_for_100_apy": 0.0006175131638085209
+    "owner": "HcoXimDTvHHwMCVYL9zruyjGaPsHsxHtbK2weFi1iaUQ",
+    "amount": 442670.114565642,
+    "percentage": 0.7070562072119918,
+    "double_amount_for_100_apy": 885340.229131284,
+    "sol_equivalent_for_100_apy": 1.2023814572550107,
+    "daily_sol_for_100_apy": 0.0032941957733013992
   },
   {
-    "owner": "GK2RYjoxaEWU6Fw9wj4p9MZ8nE34xLPWowvpBY2LpzwG",
-    "amount": 288088.127735506,
-    "percentage": 0.46015316746231455,
-    "double_amount_for_100_apy": 576176.255471012,
-    "sol_equivalent_for_100_apy": 0.7825055531123282,
-    "daily_sol_for_100_apy": 0.0021438508304447348
+    "owner": "ECAe8bm8xnQQN3MKqfRnzsURwxJ27nhN5h6Fkm9jZ4id",
+    "amount": 47477.480441029,
+    "percentage": 0.07583355221879931,
+    "double_amount_for_100_apy": 94954.960882058,
+    "sol_equivalent_for_100_apy": 0.12895842805086322,
+    "daily_sol_for_100_apy": 0.0003533107617831869
+  },
+  {
+    "owner": "48UZG62TRGSEfSELMTqMP5z5WWi5buBQtzMjvyvrjG9s",
+    "amount": 87607.489272585,
+    "percentage": 0.13993133272441372,
+    "double_amount_for_100_apy": 175214.97854517,
+    "sol_equivalent_for_100_apy": 0.23795963890940128,
+    "daily_sol_for_100_apy": 0.0006519442161901404
+  },
+  {
+    "owner": "AeLdhWxM8zmLnK6eKMZkQhCFEr5HxoyQbvjuQ92xa2LE",
+    "amount": 438432.796122777,
+    "percentage": 0.7002881372466151,
+    "double_amount_for_100_apy": 876865.592245554,
+    "sol_equivalent_for_100_apy": 1.190872044361428,
+    "daily_sol_for_100_apy": 0.003262663135236789
+  },
+  {
+    "owner": "2YG3BRuKEBGQgiG32ZRcZm8u7g8zKzKU82ZxwQqx2Cpo",
+    "amount": 87902.656154096,
+    "percentage": 0.14040278893722027,
+    "double_amount_for_100_apy": 175805.312308192,
+    "sol_equivalent_for_100_apy": 0.23876137178778375,
+    "daily_sol_for_100_apy": 0.0006541407446240651
+  },
+  {
+    "owner": "4RXTm8McowoyoQ5F2VvsgY9kJMqFhbany8XTiPFQ2Pdw",
+    "amount": 164834.286065357,
+    "percentage": 0.2632820723355731,
+    "double_amount_for_100_apy": 329668.572130714,
+    "sol_equivalent_for_100_apy": 0.4477232199858927,
+    "daily_sol_for_100_apy": 0.0012266389588654594
+  },
+  {
+    "owner": "3n3pCV1pkWvjzhXYDM9TM95rzBa8RBQmz1LJGauHrVbT",
+    "amount": 821252.139232208,
+    "percentage": 1.3117475149638858,
+    "double_amount_for_100_apy": 1642504.278464416,
+    "sol_equivalent_for_100_apy": 2.2306867155753984,
+    "daily_sol_for_100_apy": 0.006111470453631229
+  },
+  {
+    "owner": "6zuPCYF33Xwh4AhsC4QZiXWYffe3y1hNJvhdKxTAqZQj",
+    "amount": 83293.951812722,
+    "percentage": 0.13304152169881464,
+    "double_amount_for_100_apy": 166587.903625444,
+    "sol_equivalent_for_100_apy": 0.22624319976825152,
+    "daily_sol_for_100_apy": 0.0006198443829267165
+  },
+  {
+    "owner": "8TnnKg7QkWfa1V8Mp7utZMEAk8XKMqqpC2TSVvxtW5Ht",
+    "amount": 69343.706687492,
+    "percentage": 0.1107594496018512,
+    "double_amount_for_100_apy": 138687.413374984,
+    "sol_equivalent_for_100_apy": 0.18835151584647328,
+    "daily_sol_for_100_apy": 0.0005160315502643104
+  },
+  {
+    "owner": "w1RgmsVQkyS6FGuaLykAhwK5x3RJb8jLYnDHyJ4cp4j",
+    "amount": 34170.230215154,
+    "percentage": 0.054578505710045494,
+    "double_amount_for_100_apy": 68340.460430308,
+    "sol_equivalent_for_100_apy": 0.09281324817048071,
+    "daily_sol_for_100_apy": 0.0002542828716999472
+  },
+  {
+    "owner": "A8wzugnC1Kgeyackjyddz784QTG7VBekzEAeMmuLyMiu",
+    "amount": 84633.632068869,
+    "percentage": 0.13518133012414177,
+    "double_amount_for_100_apy": 169267.264137738,
+    "sol_equivalent_for_100_apy": 0.22988204197973072,
+    "daily_sol_for_100_apy": 0.0006298138136430979
+  },
+  {
+    "owner": "9GReid1CpJaJuEto7jarjLDeGWASYDDAwZxBeWEbnKq1",
+    "amount": 1216979.733450482,
+    "percentage": 1.943824636618341,
+    "double_amount_for_100_apy": 2433959.466900964,
+    "sol_equivalent_for_100_apy": 3.3055628044640026,
+    "daily_sol_for_100_apy": 0.009056336450586308
+  },
+  {
+    "owner": "4KBB2gLNU5563WvSJ3zWUSB6EkeqFcZD22414Ae8bsow",
+    "amount": 91573.562644283,
+    "percentage": 0.14626615566241316,
+    "double_amount_for_100_apy": 183147.125288566,
+    "sol_equivalent_for_100_apy": 0.2487322953940653,
+    "daily_sol_for_100_apy": 0.0006814583435453844
+  },
+  {
+    "owner": "3HhWTLVug55hpRWU6FsxDGCHDKBmmYSXaySUbMoDoYqD",
+    "amount": 84158.881231809,
+    "percentage": 0.13442303288387802,
+    "double_amount_for_100_apy": 168317.762463618,
+    "sol_equivalent_for_100_apy": 0.22859252279938724,
+    "daily_sol_for_100_apy": 0.0006262808843818828
+  },
+  {
+    "owner": "6AiKWmYLF4hN3tiBU4g14LXkiHvKo6Bnge3h7vEMbgBF",
+    "amount": 59159.093544188,
+    "percentage": 0.09449204481422101,
+    "double_amount_for_100_apy": 118318.187088376,
+    "sol_equivalent_for_100_apy": 0.16068804910252954,
+    "daily_sol_for_100_apy": 0.00044024123041788916
+  },
+  {
+    "owner": "8ccAjDpyEv5CiEBV8YUJYVzMQ9NGWdNR7sYWSPPa3Air",
+    "amount": 93665.98253752,
+    "percentage": 0.1496082797971286,
+    "double_amount_for_100_apy": 187331.96507504,
+    "sol_equivalent_for_100_apy": 0.25441573052473443,
+    "daily_sol_for_100_apy": 0.0006970293986979025
+  },
+  {
+    "owner": "6WBwxaSEwmqVe5yviPFMHRgVYMbdAxAG9nej78jyoELC",
+    "amount": 83199.491450787,
+    "percentage": 0.13289064459407227,
+    "double_amount_for_100_apy": 166398.982901574,
+    "sol_equivalent_for_100_apy": 0.22598662634280647,
+    "daily_sol_for_100_apy": 0.0006191414420350862
+  },
+  {
+    "owner": "9EkAmGeJ3aFBijxKdWAZ6HWPBXeortX9BT8Wmu7J1dJD",
+    "amount": 83289.527276382,
+    "percentage": 0.13303445459448504,
+    "double_amount_for_100_apy": 166579.054552764,
+    "sol_equivalent_for_100_apy": 0.22623118183372842,
+    "daily_sol_for_100_apy": 0.0006198114570787081
+  },
+  {
+    "owner": "EuedL84fVmM5FL7FWmWV9u5TMgf5nL9V9vd4jtyu9k1r",
+    "amount": 83533.981107152,
+    "percentage": 0.1334249092304215,
+    "double_amount_for_100_apy": 167067.962214304,
+    "sol_equivalent_for_100_apy": 0.2268951678214909,
+    "daily_sol_for_100_apy": 0.0006216305967712079
   },
   {
     "owner": "6ZnHXdEGCP5VUuRaPqnWjVYCrvAKvr1UL6biaNdLo2mp",
     "amount": 384642.82151716,
-    "percentage": 0.6143766286171357,
+    "percentage": 0.614371934233915,
     "double_amount_for_100_apy": 769285.64303432,
     "sol_equivalent_for_100_apy": 1.0447676069397298,
     "daily_sol_for_100_apy": 0.002862377005314328
   },
   {
+    "owner": "GYfALc5YvW5tC6fokRoyiGL4jSCJDWn5aVk4QUE2Hc5m",
+    "amount": 54281.453148263,
+    "percentage": 0.08670121863235702,
+    "double_amount_for_100_apy": 108562.906296526,
+    "sol_equivalent_for_100_apy": 0.14743939242966408,
+    "daily_sol_for_100_apy": 0.0004039435409031893
+  },
+  {
+    "owner": "36to2vW2mmkovE9MVNyZ24CEueEW5TFgcS269DPMjfvD",
+    "amount": 88107.848946073,
+    "percentage": 0.14073053375772812,
+    "double_amount_for_100_apy": 176215.697892146,
+    "sol_equivalent_for_100_apy": 0.2393187168628576,
+    "daily_sol_for_100_apy": 0.0006556677174324865
+  },
+  {
+    "owner": "53cQzmcVtg55SUEHAtTC87emqZKfdAPGbz86PirMdcLZ",
+    "amount": 47082.425229522,
+    "percentage": 0.07520254906250638,
+    "double_amount_for_100_apy": 94164.850459044,
+    "sol_equivalent_for_100_apy": 0.12788537828924995,
+    "daily_sol_for_100_apy": 0.0003503708994226026
+  },
+  {
+    "owner": "HtEWNdyGkZxqQvND4vcEceSzJTjBkvjqsy2HBxx2sCC5",
+    "amount": 87803.100759244,
+    "percentage": 0.14024377377542058,
+    "double_amount_for_100_apy": 175606.201518488,
+    "sol_equivalent_for_100_apy": 0.23849095922366206,
+    "daily_sol_for_100_apy": 0.0006533998882840056
+  },
+  {
+    "owner": "FTchTFMP5w6y1ZL2PksHHNjPpprrsDq67MAEpNrKFYSc",
+    "amount": 77799.191619036,
+    "percentage": 0.12426499901465014,
+    "double_amount_for_100_apy": 155598.383238072,
+    "sol_equivalent_for_100_apy": 0.21131832105708362,
+    "daily_sol_for_100_apy": 0.0005789543042659825
+  },
+  {
+    "owner": "76QmSGCVUzk7YXmFWVCpaRKWVF1dW4PXTeVxiKnkJzDC",
+    "amount": 46922.791561603,
+    "percentage": 0.07494757369356174,
+    "double_amount_for_100_apy": 93845.583123206,
+    "sol_equivalent_for_100_apy": 0.1274517809987535,
+    "daily_sol_for_100_apy": 0.0003491829616404206
+  },
+  {
+    "owner": "BBTD1oGYpMj9eyusWAFMfzWZgEq9ujLPNvhP2xEMJm31",
+    "amount": 84965.593019073,
+    "percentage": 0.13571155577676808,
+    "double_amount_for_100_apy": 169931.186038146,
+    "sol_equivalent_for_100_apy": 0.23078371498164477,
+    "daily_sol_for_100_apy": 0.0006322841506346432
+  },
+  {
+    "owner": "BqhVUXVBtYeh4bdWwKJKfaffi1GstBR8hsBr9VTA2oAw",
+    "amount": 41685.775725598,
+    "percentage": 0.06658273398047614,
+    "double_amount_for_100_apy": 83371.551451196,
+    "sol_equivalent_for_100_apy": 0.11322698803132696,
+    "daily_sol_for_100_apy": 0.0003102109261132245
+  },
+  {
+    "owner": "H6bughJVtUV3emRGxpzScRGnqGJY15BFfvpfonPpQ3SE",
+    "amount": 147695.114403241,
+    "percentage": 0.23590647748191595,
+    "double_amount_for_100_apy": 295390.228806482,
+    "sol_equivalent_for_100_apy": 0.40116976737827836,
+    "daily_sol_for_100_apy": 0.0010990952530911737
+  },
+  {
+    "owner": "8wHNDU4WaLttQ3M6SgEXZGW9qFEMi9aoSTGtPvwJbMYa",
+    "amount": 40303.654272846,
+    "percentage": 0.06437513622283657,
+    "double_amount_for_100_apy": 80607.308545692,
+    "sol_equivalent_for_100_apy": 0.10947286695610144,
+    "daily_sol_for_100_apy": 0.0002999256628934286
+  },
+  {
+    "owner": "B2bdRh5atvnTRL8ELJLkbu8TM7nuEDLQ8Ud1rD9wX5vA",
+    "amount": 85447.78509178,
+    "percentage": 0.13648173855364343,
+    "double_amount_for_100_apy": 170895.57018356,
+    "sol_equivalent_for_100_apy": 0.23209344606124824,
+    "daily_sol_for_100_apy": 0.0006358724549623239
+  },
+  {
+    "owner": "B4hhtcJS2H6Kkn9iK87Q6ZjSK4hECXq17zGJqBxDnzeq",
+    "amount": 240089.070164203,
+    "percentage": 0.38348300858286777,
+    "double_amount_for_100_apy": 480178.140328406,
+    "sol_equivalent_for_100_apy": 0.6521304162091289,
+    "daily_sol_for_100_apy": 0.0017866586745455587
+  },
+  {
+    "owner": "3pwLmqsNcNMk7zhXNnkLwDNqdvgdRhQntZcn55C3gy9B",
+    "amount": 69431.727108675,
+    "percentage": 0.11090004049134441,
+    "double_amount_for_100_apy": 138863.45421735,
+    "sol_equivalent_for_100_apy": 0.1885905970918699,
+    "daily_sol_for_100_apy": 0.000516686567374986
+  },
+  {
+    "owner": "5gpRqRf375S1Rsz575cAbfnM9cT5dkC2EB5kjSodHxwL",
+    "amount": 594315.327999999,
+    "percentage": 0.9492719925670925,
+    "double_amount_for_100_apy": 1188630.655999998,
+    "sol_equivalent_for_100_apy": 1.6142804915818727,
+    "daily_sol_for_100_apy": 0.004422686278306501
+  },
+  {
+    "owner": "CXdzKKn2ZSaaapjgzUJpJsKcDD1ARVPbx52e8evSo4fp",
+    "amount": 44217.505251099,
+    "percentage": 0.07062654678167192,
+    "double_amount_for_100_apy": 88435.010502198,
+    "sol_equivalent_for_100_apy": 0.12010367687045125,
+    "daily_sol_for_100_apy": 0.0003290511695080856
+  },
+  {
+    "owner": "DnX5B6kqDDzpbq2B46duxJqrFNji7aP2kLBcDiGcXvbB",
+    "amount": 63100.617628846,
+    "percentage": 0.10078765632770109,
+    "double_amount_for_100_apy": 126201.235257692,
+    "sol_equivalent_for_100_apy": 0.17139402476426363,
+    "daily_sol_for_100_apy": 0.00046957267058702365
+  },
+  {
+    "owner": "DJoiju2i7qqJTi8fuUPYyycjE5zE99mPZwsHeKZ8z2fm",
+    "amount": 43578.528403956,
+    "percentage": 0.06960593903976345,
+    "double_amount_for_100_apy": 87157.056807912,
+    "sol_equivalent_for_100_apy": 0.11836808667057096,
+    "daily_sol_for_100_apy": 0.000324296127864578
+  },
+  {
+    "owner": "98n96p8o8RZVP22BFoMScaS3VXGMgQ5zGj7Dbvy9cGji",
+    "amount": 47815.61209021,
+    "percentage": 0.07637363403941835,
+    "double_amount_for_100_apy": 95631.22418042,
+    "sol_equivalent_for_100_apy": 0.12987686191777384,
+    "daily_sol_for_100_apy": 0.00035582701895280506
+  },
+  {
+    "owner": "3sE5HnfrktWSWdyQLLVjVVdoUsMk9QU1yN3FPS8PENzG",
+    "amount": 83798.957830615,
+    "percentage": 0.13384814412007526,
+    "double_amount_for_100_apy": 167597.91566123,
+    "sol_equivalent_for_100_apy": 0.22761489813174404,
+    "daily_sol_for_100_apy": 0.0006236024606349152
+  },
+  {
+    "owner": "z4YDgTE1LGe6N6qByLdBRmKc1Wym9DMSGry7vC7Xbtz",
+    "amount": 78249.05389943,
+    "percentage": 0.12498354293093693,
+    "double_amount_for_100_apy": 156498.10779886,
+    "sol_equivalent_for_100_apy": 0.21254023788965531,
+    "daily_sol_for_100_apy": 0.000582302021615494
+  },
+  {
+    "owner": "HaiL2iBjnCVEAnE5aaQQQPFiEkGUiXELUqKvp4ZFB5VH",
+    "amount": 84162.416215766,
+    "percentage": 0.13442867914791745,
+    "double_amount_for_100_apy": 168324.832431532,
+    "sol_equivalent_for_100_apy": 0.22860212452993497,
+    "daily_sol_for_100_apy": 0.0006263071904929725
+  },
+  {
+    "owner": "9FDj7xq89xw6XHQfLC46b547RpiqtsB2LNk346KmiUtZ",
+    "amount": 35554.923938311,
+    "percentage": 0.056790212034531204,
+    "double_amount_for_100_apy": 71109.847876622,
+    "sol_equivalent_for_100_apy": 0.09657435605176395,
+    "daily_sol_for_100_apy": 0.00026458727685414784
+  },
+  {
+    "owner": "2iMbbqGkfxoYutXnwbBikTSh1AWrZLFcWy2e9mqWaTei",
+    "amount": 83942.737319793,
+    "percentage": 0.13407779635307687,
+    "double_amount_for_100_apy": 167885.474639586,
+    "sol_equivalent_for_100_apy": 0.2280054322699947,
+    "daily_sol_for_100_apy": 0.0006246724171780676
+  },
+  {
+    "owner": "HdbfQg4wsYaM6J7jeP84CCvzqrsjgXJHoMerbhjdJxwt",
+    "amount": 82598.722222873,
+    "percentage": 0.13193106408994146,
+    "double_amount_for_100_apy": 165197.444445746,
+    "sol_equivalent_for_100_apy": 0.22435481575527225,
+    "daily_sol_for_100_apy": 0.0006146707280966363
+  },
+  {
+    "owner": "596PuCJq33Bn6J5ZRyVdTU9zD27K6rqfHUMGQVMPiKDi",
+    "amount": 1188274.722364975,
+    "percentage": 1.8979754690367172,
+    "double_amount_for_100_apy": 2376549.44472995,
+    "sol_equivalent_for_100_apy": 3.2275941955070158,
+    "daily_sol_for_100_apy": 0.008842723823306892
+  },
+  {
+    "owner": "2hKuLYRaiiBVa7eiiYLJiBPUVVT2qoBH7VEQjP3A2ayX",
+    "amount": 77380.546524465,
+    "percentage": 0.12359631684480064,
+    "double_amount_for_100_apy": 154761.09304893,
+    "sol_equivalent_for_100_apy": 0.21018119640755342,
+    "daily_sol_for_100_apy": 0.0005758388942672697
+  },
+  {
+    "owner": "S1n39sNU9YSwwviMVjgYk5ZLdyqoojDnFPvbxGxixqB",
+    "amount": 85513.049042052,
+    "percentage": 0.13658598159971458,
+    "double_amount_for_100_apy": 171026.098084104,
+    "sol_equivalent_for_100_apy": 0.2322707161344974,
+    "daily_sol_for_100_apy": 0.0006363581263958833
+  },
+  {
+    "owner": "7WRiimDiPyFvCmVnsdDSg5L9xEXhJxvVYaPCrJxehPAH",
+    "amount": 1229180.165233267,
+    "percentage": 1.9633118139516224,
+    "double_amount_for_100_apy": 2458360.330466534,
+    "sol_equivalent_for_100_apy": 3.3387016418587963,
+    "daily_sol_for_100_apy": 0.00914712778591451
+  },
+  {
+    "owner": "6wiDe9s5NbeVJSe4AjqWhrUFPVNAu7XyamLQAEok3Ejt",
+    "amount": 1236145.934860188,
+    "percentage": 1.9744379109946901,
+    "double_amount_for_100_apy": 2472291.869720376,
+    "sol_equivalent_for_100_apy": 3.3576220793569056,
+    "daily_sol_for_100_apy": 0.009198964600977824
+  },
+  {
+    "owner": "4tCukTai7QuXKkFbFHoiQDGnmETKEAbU2m8mutzD9NLZ",
+    "amount": 171392.062850298,
+    "percentage": 0.27375650155213066,
+    "double_amount_for_100_apy": 342784.125700596,
+    "sol_equivalent_for_100_apy": 0.4655354665044257,
+    "daily_sol_for_100_apy": 0.0012754396342587004
+  },
+  {
+    "owner": "47MD734cLCRpwic4wcYTTtXmrUy6Z1xUpP7CFH6PjcSt",
+    "amount": 83164.753580332,
+    "percentage": 0.13283515942323657,
+    "double_amount_for_100_apy": 166329.507160664,
+    "sol_equivalent_for_100_apy": 0.22589227126907263,
+    "daily_sol_for_100_apy": 0.0006188829349837606
+  },
+  {
+    "owner": "J9fPCLypwGiGr3ZMsuPr9zLov2UamdzxUicmDZURpuU2",
+    "amount": 84188.946736046,
+    "percentage": 0.1344710551033463,
+    "double_amount_for_100_apy": 168377.893472092,
+    "sol_equivalent_for_100_apy": 0.22867418678258397,
+    "daily_sol_for_100_apy": 0.0006265046213221479
+  },
+  {
+    "owner": "2ZfSrM6pVYE9LgDMhERr4irgBGEjm3ScnLEz5a6pXrCA",
+    "amount": 84252.346225959,
+    "percentage": 0.13457232013435264,
+    "double_amount_for_100_apy": 168504.692451918,
+    "sol_equivalent_for_100_apy": 0.22884639260484876,
+    "daily_sol_for_100_apy": 0.0006269764180954761
+  },
+  {
+    "owner": "FG4662UCtZFjqpe33s71sN2iyxqZAxpA27arf6bUD4AG",
+    "amount": 85445.698696365,
+    "percentage": 0.1364784060521252,
+    "double_amount_for_100_apy": 170891.39739273,
+    "sol_equivalent_for_100_apy": 0.2320877789898175,
+    "daily_sol_for_100_apy": 0.000635856928739226
+  },
+  {
+    "owner": "CqESndD3BioCn7EfJVTh2yi9NMAzoNz2dVDDr7eDEA59",
+    "amount": 85756.761214866,
+    "percentage": 0.136975251620191,
+    "double_amount_for_100_apy": 171513.522429732,
+    "sol_equivalent_for_100_apy": 0.2329326876294252,
+    "daily_sol_for_100_apy": 0.0006381717469299321
+  },
+  {
+    "owner": "6ecsPGq1GCM7wLUeBkzXuscfVoEwxuiTPopaRS5Eokki",
+    "amount": 84152.46932305,
+    "percentage": 0.13441279144281626,
+    "double_amount_for_100_apy": 168304.9386461,
+    "sol_equivalent_for_100_apy": 0.2285751067598947,
+    "daily_sol_for_100_apy": 0.000626233169205191
+  },
+  {
+    "owner": "8Veq3G65cAv88foMN4yWNwd8z1visrpkCpmhuu9iaSJP",
+    "amount": 84168.062578869,
+    "percentage": 0.13443769781881654,
+    "double_amount_for_100_apy": 168336.125157738,
+    "sol_equivalent_for_100_apy": 0.2286174611927739,
+    "daily_sol_for_100_apy": 0.0006263492087473257
+  },
+  {
+    "owner": "FAMmEYXoJNnK47n51ZvW1s5CTsWdFTDmCZZY2TdBBLgD",
+    "amount": 472569.614463104,
+    "percentage": 0.7548132757364356,
+    "double_amount_for_100_apy": 945139.228926208,
+    "sol_equivalent_for_100_apy": 1.2835945391301717,
+    "daily_sol_for_100_apy": 0.0035166973674799224
+  },
+  {
+    "owner": "3JeCh7isYjwsdRP5Vy4Cmn1fpHzuU2gcRoRPzWc7S4mc",
+    "amount": 59303.297571959,
+    "percentage": 0.09472237514280103,
+    "double_amount_for_100_apy": 118606.595143918,
+    "sol_equivalent_for_100_apy": 0.1610797363733621,
+    "daily_sol_for_100_apy": 0.00044131434622838927
+  },
+  {
+    "owner": "2uep9rqRhLqnoPa3QJHsx9r97VNzt9vmdWc2YNgo77aj",
+    "amount": 36872.181711014,
+    "percentage": 0.05889420607894909,
+    "double_amount_for_100_apy": 73744.363422028,
+    "sol_equivalent_for_100_apy": 0.1001522942685266,
+    "daily_sol_for_100_apy": 0.0002743898473110318
+  },
+  {
+    "owner": "3GL5LyxFbF7GXhnAKcNRkbUEJ3iXZduZYR96etnNrPx5",
+    "amount": 82469.141211957,
+    "percentage": 0.13172409042018093,
+    "double_amount_for_100_apy": 164938.282423914,
+    "sol_equivalent_for_100_apy": 0.2240028475522897,
+    "daily_sol_for_100_apy": 0.0006137064316501088
+  },
+  {
+    "owner": "ErkiFz9HFtVXG99EzdZ3cvXvHzHqKQYJnkpnQ8f3852f",
+    "amount": 30547.499385908,
+    "percentage": 0.04879208770803059,
+    "double_amount_for_100_apy": 61094.998771816,
+    "sol_equivalent_for_100_apy": 0.08297317939153102,
+    "daily_sol_for_100_apy": 0.0002273237791548795
+  },
+  {
+    "owner": "7ftDeYapdZ9xHQ2X8XX14x5gSdcacPeeBi23xDAozMct",
+    "amount": 84434.482286905,
+    "percentage": 0.13486323752003468,
+    "double_amount_for_100_apy": 168868.96457381,
+    "sol_equivalent_for_100_apy": 0.2293411109406321,
+    "daily_sol_for_100_apy": 0.0006283318107962523
+  },
+  {
+    "owner": "GK2RYjoxaEWU6Fw9wj4p9MZ8nE34xLPWowvpBY2LpzwG",
+    "amount": 288088.127735506,
+    "percentage": 0.4601496514833407,
+    "double_amount_for_100_apy": 576176.255471012,
+    "sol_equivalent_for_100_apy": 0.7825055531123282,
+    "daily_sol_for_100_apy": 0.0021438508304447348
+  },
+  {
+    "owner": "9S5oDjU1FkbX1GjR5wrvkD159CY6Q8JuPEjqotQtESLA",
+    "amount": 54781.572914615,
+    "percentage": 0.08750003647325773,
+    "double_amount_for_100_apy": 109563.14582923,
+    "sol_equivalent_for_100_apy": 0.14879781874687412,
+    "daily_sol_for_100_apy": 0.000407665256840751
+  },
+  {
+    "owner": "GhCfaPPdUjho2gLL2FCBAVbGtXxYWP97MgdYcXV8AbQt",
+    "amount": 586913.434690664,
+    "percentage": 0.9374492956257788,
+    "double_amount_for_100_apy": 1173826.869381328,
+    "sol_equivalent_for_100_apy": 1.5941754540587116,
+    "daily_sol_for_100_apy": 0.004367603983722498
+  },
+  {
+    "owner": "DAEWtrSrUieacgRDt46ZmWCs7kYtiGP7s4dYqCGyb8Gq",
+    "amount": 85044.940332172,
+    "percentage": 0.13583829351759633,
+    "double_amount_for_100_apy": 170089.880664344,
+    "sol_equivalent_for_100_apy": 0.2309992383133855,
+    "daily_sol_for_100_apy": 0.0006328746255161246
+  },
+  {
+    "owner": "5tZyijHeRDimLDRMLwh7TgRSCT4iVLa1RsXHMsD3N6ay",
+    "amount": 370585.919962814,
+    "percentage": 0.5919195048262496,
+    "double_amount_for_100_apy": 741171.839925628,
+    "sol_equivalent_for_100_apy": 1.006586222610252,
+    "daily_sol_for_100_apy": 0.0027577704729048
+  },
+  {
+    "owner": "ButcZhoUCaY8gbKRGcPkdgxTJS3tHpqUAMdaE5kGYzbF",
+    "amount": 87519.29887708,
+    "percentage": 0.13979047034290992,
+    "double_amount_for_100_apy": 175038.59775416,
+    "sol_equivalent_for_100_apy": 0.2377200959794087,
+    "daily_sol_for_100_apy": 0.0006512879341901608
+  },
+  {
+    "owner": "E4KTvsgSjLj3aCxLhRUyVzujNjx8VJieHjy3sDijN4hx",
+    "amount": 61080.000003585,
+    "percentage": 0.09756021858719628,
+    "double_amount_for_100_apy": 122160.00000717,
+    "sol_equivalent_for_100_apy": 0.1659056190985674,
+    "daily_sol_for_100_apy": 0.0004545359427358011
+  },
+  {
+    "owner": "45uHGcerR18ZqTVZGtZkxL8MZXMkLjsMqqdNUSGQaerZ",
+    "amount": 2172484.548879351,
+    "percentage": 3.4700076531358217,
+    "double_amount_for_100_apy": 4344969.097758702,
+    "sol_equivalent_for_100_apy": 5.900906909671674,
+    "daily_sol_for_100_apy": 0.016166868245675817
+  },
+  {
+    "owner": "DiZ7ojw72wLzoue5ZLAATiPVjwS5QRSSkLaa4LJFVqJU",
+    "amount": 29541.10637956,
+    "percentage": 0.047184623371452766,
+    "double_amount_for_100_apy": 59082.21275912,
+    "sol_equivalent_for_100_apy": 0.08023961267959859,
+    "daily_sol_for_100_apy": 0.00021983455528657147
+  },
+  {
+    "owner": "2S1kLZqWPFpa9bmJ5K9CFb8fHjRQ9t4XCskMp9AZodNi",
+    "amount": 42825.100663788,
+    "percentage": 0.06840252425560933,
+    "double_amount_for_100_apy": 85650.201327576,
+    "sol_equivalent_for_100_apy": 0.11632162472441396,
+    "daily_sol_for_100_apy": 0.0003186893828066136
+  },
+  {
+    "owner": "EjL7X5YvJVZmwjtbePR6BhFR59LF51w2PgUTHAs1MbN5",
+    "amount": 77905.775185198,
+    "percentage": 0.12443523994477386,
+    "double_amount_for_100_apy": 155811.550370396,
+    "sol_equivalent_for_100_apy": 0.21160782355428076,
+    "daily_sol_for_100_apy": 0.00057974746179255
+  },
+  {
+    "owner": "HEJ79d6rV6FMBgRXwDYmYHYUPEtnGBy5Zo9uAUAqntqS",
+    "amount": 823997.378522958,
+    "percentage": 1.3161323568968264,
+    "double_amount_for_100_apy": 1647994.757045916,
+    "sol_equivalent_for_100_apy": 2.238143340069158,
+    "daily_sol_for_100_apy": 0.0061318995618333105
+  },
+  {
+    "owner": "DoBGGtypSJvgmwVj1dVKARui52YdWHHEZUmXLjmnkdum",
+    "amount": 1237859.999999999,
+    "percentage": 1.9771757068313442,
+    "double_amount_for_100_apy": 2475719.999999998,
+    "sol_equivalent_for_100_apy": 3.3622778265438558,
+    "daily_sol_for_100_apy": 0.009211720072722893
+  },
+  {
+    "owner": "CQ5Av6vkg67ytBCK2xYS2wFJStUppcpW2jHC7Y1i7pdm",
+    "amount": 153043.901921715,
+    "percentage": 0.24444984485991472,
+    "double_amount_for_100_apy": 306087.80384343,
+    "sol_equivalent_for_100_apy": 0.4156981548148703,
+    "daily_sol_for_100_apy": 0.001138899054287316
+  },
+  {
+    "owner": "9ZjwoXzhvbRYnBAHs4ySrfmcXEkYNknZ7b5XXnLXdovR",
+    "amount": 346999.42673805,
+    "percentage": 0.5542459057008675,
+    "double_amount_for_100_apy": 693998.8534761,
+    "sol_equivalent_for_100_apy": 0.9425205421814871,
+    "daily_sol_for_100_apy": 0.0025822480607711976
+  },
+  {
+    "owner": "DXhK4NoqyG2NCh135JFQKaecq7wKebiJzRnCsES7jjth",
+    "amount": 82448.351295445,
+    "percentage": 0.13169088366184428,
+    "double_amount_for_100_apy": 164896.70259089,
+    "sol_equivalent_for_100_apy": 0.2239463779391638,
+    "daily_sol_for_100_apy": 0.0006135517203812707
+  },
+  {
+    "owner": "52JYwt7CpEuMvKbbUDHHE1UmDrpES9cnNGjSAi3d7sLk",
+    "amount": 87424.633516452,
+    "percentage": 0.13963926580337224,
+    "double_amount_for_100_apy": 174849.267032904,
+    "sol_equivalent_for_100_apy": 0.23746296573610068,
+    "daily_sol_for_100_apy": 0.0006505834677701389
+  },
+  {
+    "owner": "7xF7qq5uRE36oTecfMQqjt5mqLKXXcGZZJrPgwuihw5k",
+    "amount": 64523.207063367,
+    "percentage": 0.10305989169416406,
+    "double_amount_for_100_apy": 129046.414126734,
+    "sol_equivalent_for_100_apy": 0.17525806505312147,
+    "daily_sol_for_100_apy": 0.0004801590823373191
+  },
+  {
+    "owner": "3vCsgkAmHEipvdpW45AVyDG2s1erWhuftma1J7wMRmf2",
+    "amount": 85322.863589606,
+    "percentage": 0.13628220729860707,
+    "double_amount_for_100_apy": 170645.727179212,
+    "sol_equivalent_for_100_apy": 0.23175413402530057,
+    "daily_sol_for_100_apy": 0.000634942832946029
+  },
+  {
+    "owner": "ATvAMJwdvzSidrxdrcjYaQkGEFu2tLcaWjkFx6Wqf47f",
+    "amount": 85455.212311961,
+    "percentage": 0.13649360170400873,
+    "double_amount_for_100_apy": 170910.424623922,
+    "sol_equivalent_for_100_apy": 0.23211361989167129,
+    "daily_sol_for_100_apy": 0.0006359277257306063
+  },
+  {
+    "owner": "EpAa65hRE3X19e4mf82vA8rsfaZctAZTiaNFiyWbGfwc",
+    "amount": 444796.040543038,
+    "percentage": 0.7104518490430785,
+    "double_amount_for_100_apy": 889592.081086076,
+    "sol_equivalent_for_100_apy": 1.2081559016789942,
+    "daily_sol_for_100_apy": 0.0033100161689835457
+  },
+  {
+    "owner": "Z2x1gARyVRqmoqjTxUhyC13eupAXcHJWiQLxGzgW8R3",
+    "amount": 83680.93596734,
+    "percentage": 0.13365963333457262,
+    "double_amount_for_100_apy": 167361.87193468,
+    "sol_equivalent_for_100_apy": 0.227294326908878,
+    "daily_sol_for_100_apy": 0.0006227241833119944
+  },
+  {
+    "owner": "2cy8vkc7Es7yMNu5n7gnr2PM8ikfCRwweWPbUGyjzw66",
+    "amount": 83117.92971389,
+    "percentage": 0.13276036985799572,
+    "double_amount_for_100_apy": 166235.85942778,
+    "sol_equivalent_for_100_apy": 0.2257650881886831,
+    "daily_sol_for_100_apy": 0.0006185344881881728
+  },
+  {
+    "owner": "JDTybisdWYmqxsGAmX9Y4PgaFkN9oP5qrH1nsKfMQJta",
+    "amount": 284920.579,
+    "percentage": 0.45509027448590417,
+    "double_amount_for_100_apy": 569841.158,
+    "sol_equivalent_for_100_apy": 0.7739018508536811,
+    "daily_sol_for_100_apy": 0.002120279043434743
+  },
+  {
+    "owner": "muMRkJg6ENSB39nBn47oN1ZguAC6JwTsFvxDfMw1MYT",
+    "amount": 85118.374857301,
+    "percentage": 0.13595558703958407,
+    "double_amount_for_100_apy": 170236.749714602,
+    "sol_equivalent_for_100_apy": 0.23119870131852663,
+    "daily_sol_for_100_apy": 0.0006334210995028127
+  },
+  {
+    "owner": "3EwJnK4vR8LkwEz7T53cACNSnkJmchG7nM9JVeYwEA4L",
+    "amount": 84315.040036055,
+    "percentage": 0.1346724580160925,
+    "double_amount_for_100_apy": 168630.08007211,
+    "sol_equivalent_for_100_apy": 0.2290166816581725,
+    "daily_sol_for_100_apy": 0.0006274429634470479
+  },
+  {
+    "owner": "D7qLRacXg2H2Hg5xMjaqygfWdgeYrXf4TUmQcCf5T99s",
+    "amount": 1037150.599566623,
+    "percentage": 1.6565919973088168,
+    "double_amount_for_100_apy": 2074301.199133246,
+    "sol_equivalent_for_100_apy": 2.8171105486157764,
+    "daily_sol_for_100_apy": 0.007718111092098017
+  },
+  {
+    "owner": "BaX37KNmPPaj5AspazbvygAfkhKZ4PLiezrDYV6P5mL4",
+    "amount": 352826.449481898,
+    "percentage": 0.5635531357691224,
+    "double_amount_for_100_apy": 705652.898963796,
+    "sol_equivalent_for_100_apy": 0.9583479131009827,
+    "daily_sol_for_100_apy": 0.00262561072082461
+  },
+  {
+    "owner": "93SXE6KMNrXXZpovjha15yoJSfAc6YFgj8rRE38UMUBs",
+    "amount": 47176.61288574,
+    "percentage": 0.0753529905872003,
+    "double_amount_for_100_apy": 94353.22577148,
+    "sol_equivalent_for_100_apy": 0.1281412109908769,
+    "daily_sol_for_100_apy": 0.0003510718109339094
+  },
+  {
+    "owner": "A2S5cnnwcf8p6MQz7Y3WQc5Eok1fr8RLSBYd6YY1jmbj",
+    "amount": 75767.85864454,
+    "percentage": 0.1210204461494966,
+    "double_amount_for_100_apy": 151535.71728908,
+    "sol_equivalent_for_100_apy": 0.2058008103382016,
+    "daily_sol_for_100_apy": 0.0005638378365430181
+  },
+  {
+    "owner": "MXTEi69QBHmupFUjGNNyW5sc336ErrksbRHrhG4ypo1",
+    "amount": 70652.535035995,
+    "percentage": 0.1128499797224402,
+    "double_amount_for_100_apy": 141305.07007199,
+    "sol_equivalent_for_100_apy": 0.19190655804423687,
+    "daily_sol_for_100_apy": 0.0005257713919020188
+  },
+  {
+    "owner": "HvwnSN9PskkMHheJEwPAFT4Av4uNcw9Ychw8KaC1Wbbi",
+    "amount": 77733.945546824,
+    "percentage": 0.12416078452436553,
+    "double_amount_for_100_apy": 155467.891093648,
+    "sol_equivalent_for_100_apy": 0.21114109954425705,
+    "daily_sol_for_100_apy": 0.0005784687658746769
+  },
+  {
+    "owner": "Dn2w1i6ESwTM2SgdZ6H7GpSZhLn5LiMMPSVrBtoirNDt",
+    "amount": 284221.968601737,
+    "percentage": 0.45397441687035367,
+    "double_amount_for_100_apy": 568443.937203474,
+    "sol_equivalent_for_100_apy": 0.7720042838820748,
+    "daily_sol_for_100_apy": 0.0021150802298139032
+  },
+  {
+    "owner": "CzX9GsBrdBQXAyTfSJyi3eKF4N9JDwj5VSZ5B6pFFZ5B",
+    "amount": 1138827.999999999,
+    "percentage": 1.8189965390749567,
+    "double_amount_for_100_apy": 2277655.999999998,
+    "sol_equivalent_for_100_apy": 3.0932869085738983,
+    "daily_sol_for_100_apy": 0.008474758653627118
+  },
+  {
     "owner": "G91Jq6HUt4M3tZrKgrVZuemtkMp1ro5zynreT7CT98Ep",
     "amount": 358089.914020513,
-    "percentage": 0.5719645910716882,
+    "percentage": 0.5719602207541108,
     "double_amount_for_100_apy": 716179.828041026,
     "sol_equivalent_for_100_apy": 0.9726445460877382,
     "daily_sol_for_100_apy": 0.0026647795783225703
   },
   {
     "owner": "9kcdtMJQMvBDnMxDEGgAjZUaE7XahubFzmQJMjMX172P",
-    "amount": 83586.869233834,
-    "percentage": 0.13351040509215192,
-    "double_amount_for_100_apy": 167173.738467668,
-    "sol_equivalent_for_100_apy": 0.2270388226577651,
-    "daily_sol_for_100_apy": 0.0006220241716651099
-  },
-  {
-    "owner": "53cQzmcVtg55SUEHAtTC87emqZKfdAPGbz86PirMdcLZ",
-    "amount": 47082.425229522,
-    "percentage": 0.07520312368117758,
-    "double_amount_for_100_apy": 94164.850459044,
-    "sol_equivalent_for_100_apy": 0.12788537828924995,
-    "daily_sol_for_100_apy": 0.0003503708994226026
-  },
-  {
-    "owner": "627L8LHowp7qzshnQJSgpoenCpJfYpyHprf5UjQsu9FT",
-    "amount": 85383.756755449,
-    "percentage": 0.1363805111640126,
-    "double_amount_for_100_apy": 170767.513510898,
-    "sol_equivalent_for_100_apy": 0.23191953216507563,
-    "daily_sol_for_100_apy": 0.0006353959785344537
-  },
-  {
-    "owner": "4KBB2gLNU5563WvSJ3zWUSB6EkeqFcZD22414Ae8bsow",
-    "amount": 91573.562644283,
-    "percentage": 0.14626727327431668,
-    "double_amount_for_100_apy": 183147.125288566,
-    "sol_equivalent_for_100_apy": 0.2487322953940653,
-    "daily_sol_for_100_apy": 0.0006814583435453844
-  },
-  {
-    "owner": "7ftDeYapdZ9xHQ2X8XX14x5gSdcacPeeBi23xDAozMct",
-    "amount": 84434.482286905,
-    "percentage": 0.13486426800284815,
-    "double_amount_for_100_apy": 168868.96457381,
-    "sol_equivalent_for_100_apy": 0.2293411109406321,
-    "daily_sol_for_100_apy": 0.0006283318107962523
-  },
-  {
-    "owner": "CqESndD3BioCn7EfJVTh2yi9NMAzoNz2dVDDr7eDEA59",
-    "amount": 85756.761214866,
-    "percentage": 0.1369762982407917,
-    "double_amount_for_100_apy": 171513.522429732,
-    "sol_equivalent_for_100_apy": 0.2329326876294252,
-    "daily_sol_for_100_apy": 0.0006381717469299321
-  },
-  {
-    "owner": "QDZkCqMUkEcUB7JdCpAc3guZQieAJ5aiW8UkC7AZkHu",
-    "amount": 1188007.999999999,
-    "percentage": 1.8975639449899975,
-    "double_amount_for_100_apy": 2376015.999999998,
-    "sol_equivalent_for_100_apy": 3.2268697236817676,
-    "daily_sol_for_100_apy": 0.008840738968991143
-  },
-  {
-    "owner": "CzX9GsBrdBQXAyTfSJyi3eKF4N9JDwj5VSZ5B6pFFZ5B",
-    "amount": 1138827.999999999,
-    "percentage": 1.8190104379306102,
-    "double_amount_for_100_apy": 2277655.999999998,
-    "sol_equivalent_for_100_apy": 3.0932869085738983,
-    "daily_sol_for_100_apy": 0.008474758653627118
+    "amount": 83750.436067198,
+    "percentage": 0.1337706425836489,
+    "double_amount_for_100_apy": 167500.872134396,
+    "sol_equivalent_for_100_apy": 0.22748310322016935,
+    "daily_sol_for_100_apy": 0.0006232413786853955
   },
   {
     "owner": "3cQNE1dT2ea8rXMokAWfrQposyQjEGjUdCGaTfCcmK2j",
     "amount": 346767.949973854,
-    "percentage": 0.553880410862958,
+    "percentage": 0.5538761787245824,
     "double_amount_for_100_apy": 693535.899947708,
     "sol_equivalent_for_100_apy": 0.9418918045281044,
     "daily_sol_for_100_apy": 0.0025805254918578203
   },
   {
-    "owner": "9Q4SR95AR7arXXAMT4HG6kkmuwZjSXJZovhL2Yf4QCn6",
-    "amount": 160941.082138096,
-    "percentage": 0.257065604552263,
-    "double_amount_for_100_apy": 321882.164276192,
-    "sol_equivalent_for_100_apy": 0.43714849163305547,
-    "daily_sol_for_100_apy": 0.0011976671003645356
-  },
-  {
-    "owner": "B4hhtcJS2H6Kkn9iK87Q6ZjSK4hECXq17zGJqBxDnzeq",
-    "amount": 240089.070164203,
-    "percentage": 0.3834859387561074,
-    "double_amount_for_100_apy": 480178.140328406,
-    "sol_equivalent_for_100_apy": 0.6521304162091289,
-    "daily_sol_for_100_apy": 0.0017866586745455587
-  },
-  {
-    "owner": "AeJdTTxEVQPfyMuQmt5gbYbp26K6NPXG4Ha4Ybtop31L",
-    "amount": 85343.662483462,
-    "percentage": 0.1363164699749607,
-    "double_amount_for_100_apy": 170687.324966924,
-    "sol_equivalent_for_100_apy": 0.23181062802270633,
-    "daily_sol_for_100_apy": 0.0006350976110211132
-  },
-  {
-    "owner": "CQ5Av6vkg67ytBCK2xYS2wFJStUppcpW2jHC7Y1i7pdm",
-    "amount": 153043.901921715,
-    "percentage": 0.24445171268815696,
-    "double_amount_for_100_apy": 306087.80384343,
-    "sol_equivalent_for_100_apy": 0.4156981548148703,
-    "daily_sol_for_100_apy": 0.001138899054287316
-  },
-  {
-    "owner": "E9mNQqUicjt876kNYUivojW4pSwyDvsuQNXGxV79kqm3",
-    "amount": 2002718,
-    "percentage": 3.198871951015886,
-    "double_amount_for_100_apy": 4005436,
-    "sol_equivalent_for_100_apy": 5.439786667490882,
-    "daily_sol_for_100_apy": 0.014903525116413375
-  },
-  {
-    "owner": "D4j6HS8x8zXEwGpsuMcHaQEmKNbK98h4fy2ZGxzCu2ZJ",
-    "amount": 357096.847628522,
-    "percentage": 0.570378400591133,
-    "double_amount_for_100_apy": 714193.695257044,
-    "sol_equivalent_for_100_apy": 0.9699471771525782,
-    "daily_sol_for_100_apy": 0.00265738952644542
-  },
-  {
-    "owner": "CLaHgfzRzVfkEZESRjVg1yCxMR1Jpuu2P34jv9f58piR",
-    "amount": 79222.145189158,
-    "percentage": 0.1265387828665372,
-    "double_amount_for_100_apy": 158444.290378316,
-    "sol_equivalent_for_100_apy": 0.21518335041179468,
-    "daily_sol_for_100_apy": 0.0005895434257857388
-  },
-  {
-    "owner": "82sxBeYejDgAeLFATgTkR9cRMS5Hdm3jFVGZ5MbCnAXB",
-    "amount": 88002.338990808,
-    "percentage": 0.14056308168273682,
-    "double_amount_for_100_apy": 176004.677981616,
-    "sol_equivalent_for_100_apy": 0.23903213050974242,
-    "daily_sol_for_100_apy": 0.0006548825493417601
-  },
-  {
-    "owner": "2S1kLZqWPFpa9bmJ5K9CFb8fHjRQ9t4XCskMp9AZodNi",
-    "amount": 42825.100663788,
-    "percentage": 0.06840304691565324,
-    "double_amount_for_100_apy": 85650.201327576,
-    "sol_equivalent_for_100_apy": 0.11632162472441396,
-    "daily_sol_for_100_apy": 0.0003186893828066136
-  },
-  {
-    "owner": "A8wzugnC1Kgeyackjyddz784QTG7VBekzEAeMmuLyMiu",
-    "amount": 84633.632068869,
-    "percentage": 0.13518236303748388,
-    "double_amount_for_100_apy": 169267.264137738,
-    "sol_equivalent_for_100_apy": 0.22988204197973072,
-    "daily_sol_for_100_apy": 0.0006298138136430979
-  },
-  {
-    "owner": "AyvWC5qage5GVdUCregpEX67nRiJV9CVb3nrAMSP9aqR",
-    "amount": 120007.603477181,
-    "percentage": 0.1916839798073372,
-    "double_amount_for_100_apy": 240015.206954362,
-    "sol_equivalent_for_100_apy": 0.3259648944048546,
-    "daily_sol_for_100_apy": 0.0008930545052187797
-  },
-  {
-    "owner": "HFXKmrzmGt8UgYbYBisUEzpcNAETseCqAi5mQjHwNHQC",
-    "amount": 84442.012362422,
-    "percentage": 0.13487629553111743,
-    "double_amount_for_100_apy": 168884.024724844,
-    "sol_equivalent_for_100_apy": 0.22936156414692604,
-    "daily_sol_for_100_apy": 0.0006283878469778795
-  },
-  {
-    "owner": "HaiL2iBjnCVEAnE5aaQQQPFiEkGUiXELUqKvp4ZFB5VH",
-    "amount": 84162.416215766,
-    "percentage": 0.13442970631029352,
-    "double_amount_for_100_apy": 168324.832431532,
-    "sol_equivalent_for_100_apy": 0.22860212452993497,
-    "daily_sol_for_100_apy": 0.0006263071904929725
-  },
-  {
-    "owner": "J9fPCLypwGiGr3ZMsuPr9zLov2UamdzxUicmDZURpuU2",
-    "amount": 84188.946736046,
-    "percentage": 0.13447208258951482,
-    "double_amount_for_100_apy": 168377.893472092,
-    "sol_equivalent_for_100_apy": 0.22867418678258397,
-    "daily_sol_for_100_apy": 0.0006265046213221479
-  },
-  {
-    "owner": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
-    "amount": 35233.1012334,
-    "percentage": 0.056276609728791796,
-    "double_amount_for_100_apy": 70466.2024668,
-    "sol_equivalent_for_100_apy": 0.09570022057214538,
-    "daily_sol_for_100_apy": 0.0002621923851291654
-  },
-  {
-    "owner": "3AM6w3nzniZNt196FsDh7JKLXsEmAzCi8oL9agJaR9f4",
-    "amount": 84117.570711922,
-    "percentage": 0.13435807614350231,
-    "double_amount_for_100_apy": 168235.141423844,
-    "sol_equivalent_for_100_apy": 0.22848031508202093,
-    "daily_sol_for_100_apy": 0.0006259734659781396
-  },
-  {
-    "owner": "7m7TfFwKWuWtVuy4emWNChY8SJPwGjBZ6iLT2betFPJ5",
-    "amount": 1188342.328999999,
-    "percentage": 1.8980979570977983,
-    "double_amount_for_100_apy": 2376684.657999998,
-    "sol_equivalent_for_100_apy": 3.2277778287853094,
-    "daily_sol_for_100_apy": 0.00884322692817893
-  },
-  {
-    "owner": "9gTVfK8CZjdP3KfNLaWFMgGA1FkDdeviLXNtcAqBxDnP",
-    "amount": 83456.952583614,
-    "percentage": 0.1333028937359057,
-    "double_amount_for_100_apy": 166913.905167228,
-    "sol_equivalent_for_100_apy": 0.2266859427906286,
-    "daily_sol_for_100_apy": 0.0006210573775085714
-  },
-  {
-    "owner": "5gpRqRf375S1Rsz575cAbfnM9cT5dkC2EB5kjSodHxwL",
-    "amount": 594315.327999999,
-    "percentage": 0.9492792459038182,
-    "double_amount_for_100_apy": 1188630.655999998,
-    "sol_equivalent_for_100_apy": 1.6142804915818727,
-    "daily_sol_for_100_apy": 0.004422686278306501
-  },
-  {
-    "owner": "GhCfaPPdUjho2gLL2FCBAVbGtXxYWP97MgdYcXV8AbQt",
-    "amount": 586913.434690664,
-    "percentage": 0.9374564586259069,
-    "double_amount_for_100_apy": 1173826.869381328,
-    "sol_equivalent_for_100_apy": 1.5941754540587116,
-    "daily_sol_for_100_apy": 0.004367603983722498
-  },
-  {
-    "owner": "5auQXsuxhEpumHFTSaZ5QfiipWG6xGmrtELyjD8gYfTz",
-    "amount": 83984.039316494,
-    "percentage": 0.13414479108019603,
-    "double_amount_for_100_apy": 167968.078632988,
-    "sol_equivalent_for_100_apy": 0.228117616836666,
-    "daily_sol_for_100_apy": 0.0006249797721552494
-  },
-  {
-    "owner": "2ZfSrM6pVYE9LgDMhERr4irgBGEjm3ScnLEz5a6pXrCA",
-    "amount": 84252.346225959,
-    "percentage": 0.13457334839428187,
-    "double_amount_for_100_apy": 168504.692451918,
-    "sol_equivalent_for_100_apy": 0.22884639260484876,
-    "daily_sol_for_100_apy": 0.0006269764180954761
-  },
-  {
-    "owner": "ANtrL5Bo5bpyWy2ympjK9AgHshjwvf56fWsY2A6W7ZY5",
-    "amount": 67797.640058237,
-    "percentage": 0.10829081734291365,
-    "double_amount_for_100_apy": 135595.280116474,
-    "sol_equivalent_for_100_apy": 0.1841520865524469,
-    "daily_sol_for_100_apy": 0.0005045262645272517
-  },
-  {
-    "owner": "HEJ79d6rV6FMBgRXwDYmYHYUPEtnGBy5Zo9uAUAqntqS",
-    "amount": 823997.378522958,
-    "percentage": 1.3161424133940525,
-    "double_amount_for_100_apy": 1647994.757045916,
-    "sol_equivalent_for_100_apy": 2.238143340069158,
-    "daily_sol_for_100_apy": 0.0061318995618333105
-  },
-  {
-    "owner": "EHeVLBy8YqwgEjYcsE8ARvKjuwVqqVWVbgNLhpH3fyeB",
-    "amount": 66672.891425784,
-    "percentage": 0.10649429539009883,
-    "double_amount_for_100_apy": 133345.782851568,
-    "sol_equivalent_for_100_apy": 0.181097042050377,
-    "daily_sol_for_100_apy": 0.000496156279590074
-  },
-  {
-    "owner": "DA7iMX8acSwZGcu1PZ2KHWLpp943VQAyYxi67LqhzjCb",
-    "amount": 390493.618708431,
-    "percentage": 0.6237219039011443,
-    "double_amount_for_100_apy": 780987.237416862,
-    "sol_equivalent_for_100_apy": 1.0606595540612263,
-    "daily_sol_for_100_apy": 0.002905916586469113
-  },
-  {
-    "owner": "CXdzKKn2ZSaaapjgzUJpJsKcDD1ARVPbx52e8evSo4fp",
-    "amount": 44217.505251099,
-    "percentage": 0.07062708643535347,
-    "double_amount_for_100_apy": 88435.010502198,
-    "sol_equivalent_for_100_apy": 0.12010367687045125,
-    "daily_sol_for_100_apy": 0.0003290511695080856
-  },
-  {
-    "owner": "8evCNBNLc9tt5kw6N2BSrz25sQThBWFx6UqL6CDRpFwL",
-    "amount": 84059.571076381,
-    "percentage": 0.1342654353387054,
-    "double_amount_for_100_apy": 168119.142152762,
-    "sol_equivalent_for_100_apy": 0.22832277635508322,
-    "daily_sol_for_100_apy": 0.0006255418530276253
-  },
-  {
-    "owner": "Dn2w1i6ESwTM2SgdZ6H7GpSZhLn5LiMMPSVrBtoirNDt",
-    "amount": 284221.968601737,
-    "percentage": 0.45397788566468883,
-    "double_amount_for_100_apy": 568443.937203474,
-    "sol_equivalent_for_100_apy": 0.7720042838820748,
-    "daily_sol_for_100_apy": 0.0021150802298139032
-  },
-  {
-    "owner": "8b8Lm5n7deoZD9bNNcWqoRmpG1ZzoNfwA6Jbe3bNsBBx",
-    "amount": 129543.587843564,
-    "percentage": 0.20691547666058796,
-    "double_amount_for_100_apy": 259087.175687128,
-    "sol_equivalent_for_100_apy": 0.3518665543578044,
-    "daily_sol_for_100_apy": 0.0009640179571446696
-  },
-  {
     "owner": "Go4tyRttPra4z5Hx8vMeixBRrHtDs4DevgMuAK12jTDJ",
     "amount": 32615.582740502,
-    "percentage": 0.05209573828898012,
+    "percentage": 0.05209534023126063,
     "double_amount_for_100_apy": 65231.165481004,
     "sol_equivalent_for_100_apy": 0.08859051156689483,
     "daily_sol_for_100_apy": 0.0002427137303202598
   },
   {
-    "owner": "68AT5oxAdKtbRXa9Y9wacyJSwDw5s51EmuuRDrH6veB5",
-    "amount": 83869.521637597,
-    "percentage": 0.13396187596637618,
-    "double_amount_for_100_apy": 167739.043275194,
-    "sol_equivalent_for_100_apy": 0.2278065636864692,
-    "daily_sol_for_100_apy": 0.0006241275717437512
-  },
-  {
-    "owner": "GwGSoymm1cE4MkZjVj4faFcXhDWUqm1nP5CAVqT9QveA",
-    "amount": 220420.957319936,
-    "percentage": 0.35207074475128947,
-    "double_amount_for_100_apy": 440841.914639872,
-    "sol_equivalent_for_100_apy": 0.5987078484662166,
-    "daily_sol_for_100_apy": 0.0016402954752499086
-  },
-  {
-    "owner": "4cUyKneVRn7npmjLFigJvJUZwn6qr6x5Wm66UtNaiKoK",
-    "amount": 48088.328540426,
-    "percentage": 0.07680981812676844,
-    "double_amount_for_100_apy": 96176.657080852,
-    "sol_equivalent_for_100_apy": 0.13061761488943058,
-    "daily_sol_for_100_apy": 0.0003578564791491249
-  },
-  {
-    "owner": "9GReid1CpJaJuEto7jarjLDeGWASYDDAwZxBeWEbnKq1",
-    "amount": 1216979.733450482,
-    "percentage": 1.943839489278838,
-    "double_amount_for_100_apy": 2433959.466900964,
-    "sol_equivalent_for_100_apy": 3.3055628044640026,
-    "daily_sol_for_100_apy": 0.009056336450586308
-  },
-  {
-    "owner": "2JruZtz6cxBEDm45tT4h37tYZdjEq2yX7cY4F8BTQNBY",
-    "amount": 267829.647019959,
-    "percentage": 0.4277949993472033,
-    "double_amount_for_100_apy": 535659.294039918,
-    "sol_equivalent_for_100_apy": 0.7274794269677318,
-    "daily_sol_for_100_apy": 0.001993094320459539
-  },
-  {
-    "owner": "BJjpgZYnrdXpMoAE1chy16UNJoG1CLgTYag6pcTtj7dh",
-    "amount": 47168.750067444,
-    "percentage": 0.07534100734862585,
-    "double_amount_for_100_apy": 94337.500134888,
-    "sol_equivalent_for_100_apy": 0.1281198539879761,
-    "daily_sol_for_100_apy": 0.0003510132985971948
-  },
-  {
-    "owner": "C3gfPwiTcLPe9rSnPFJA4i8RYRUg1c3y1wwe9itCV9uD",
-    "amount": 85010.014873681,
-    "percentage": 0.13578354622810668,
-    "double_amount_for_100_apy": 170020.029747362,
-    "sol_equivalent_for_100_apy": 0.2309043737126502,
-    "daily_sol_for_100_apy": 0.0006326147225004116
-  },
-  {
-    "owner": "9y9HNKiqfRaUU3WHAooWfCvA15U7f8acS7LNZvcE8fvr",
-    "amount": 80843.203756665,
-    "percentage": 0.1291280434526767,
-    "double_amount_for_100_apy": 161686.40751333,
-    "sol_equivalent_for_100_apy": 0.21958647295962538,
-    "daily_sol_for_100_apy": 0.0006016067752318504
-  },
-  {
-    "owner": "DJoiju2i7qqJTi8fuUPYyycjE5zE99mPZwsHeKZ8z2fm",
-    "amount": 43578.528403956,
-    "percentage": 0.0696064708950356,
-    "double_amount_for_100_apy": 87157.056807912,
-    "sol_equivalent_for_100_apy": 0.11836808667057096,
-    "daily_sol_for_100_apy": 0.000324296127864578
-  },
-  {
-    "owner": "AJYhaQxosfrhQK4iaTqD8VsYNM5KQKJhQVfdYQmtuLfJ",
-    "amount": 93721.162317094,
-    "percentage": 0.14969755969275703,
-    "double_amount_for_100_apy": 187442.324634188,
-    "sol_equivalent_for_100_apy": 0.254565609953212,
-    "daily_sol_for_100_apy": 0.000697440027269074
-  },
-  {
-    "owner": "9r89sTj1CkHjzKL3A1M5cRKsLdMd4z2YRT5bkXPu65g7",
-    "amount": 1181148.789508687,
-    "percentage": 1.886607966141866,
-    "double_amount_for_100_apy": 2362297.579017374,
-    "sol_equivalent_for_100_apy": 3.208238722322539,
-    "daily_sol_for_100_apy": 0.008789695129650792
-  },
-  {
-    "owner": "5twSDrFqGfQ3RMEX1kXVweafMDiqQDhdDkhCyCrwXucp",
-    "amount": 83298.951935965,
-    "percentage": 0.13305052478530618,
-    "double_amount_for_100_apy": 166597.90387193,
-    "sol_equivalent_for_100_apy": 0.22625678111308042,
-    "daily_sol_for_100_apy": 0.0006198815920906313
-  },
-  {
-    "owner": "DS2mRtamRNUxzc66FPFLPYB5cUYd57tmSkJjDCR9bBdi",
-    "amount": 83144.936314749,
-    "percentage": 0.13280452097911571,
-    "double_amount_for_100_apy": 166289.872629498,
-    "sol_equivalent_for_100_apy": 0.22583844357236016,
-    "daily_sol_for_100_apy": 0.0006187354618420826
-  },
-  {
-    "owner": "6wiDe9s5NbeVJSe4AjqWhrUFPVNAu7XyamLQAEok3Ejt",
-    "amount": 1236145.934860188,
-    "percentage": 1.9744529975695857,
-    "double_amount_for_100_apy": 2472291.869720376,
-    "sol_equivalent_for_100_apy": 3.3576220793569056,
-    "daily_sol_for_100_apy": 0.009198964600977824
-  },
-  {
-    "owner": "G8WCFY8HUGywg6PcW8ayfJh1xG9sB1YBuhRcGK8yRJEk",
-    "amount": 47337.870046209,
-    "percentage": 0.07561113682088692,
-    "double_amount_for_100_apy": 94675.740092418,
-    "sol_equivalent_for_100_apy": 0.1285792180151093,
-    "daily_sol_for_100_apy": 0.00035227183017838163
-  },
-  {
-    "owner": "8RknfWhm9Cw4WDeL9Z8oh3uvRYj3ZEvb6hFESFKa3PB1",
-    "amount": 82743.558610767,
-    "percentage": 0.1321634143035722,
-    "double_amount_for_100_apy": 165487.117221534,
-    "sol_equivalent_for_100_apy": 0.2247482206439452,
-    "daily_sol_for_100_apy": 0.0006157485497094389
-  },
-  {
-    "owner": "8Veq3G65cAv88foMN4yWNwd8z1visrpkCpmhuu9iaSJP",
-    "amount": 84168.062578869,
-    "percentage": 0.13443872505010382,
-    "double_amount_for_100_apy": 168336.125157738,
-    "sol_equivalent_for_100_apy": 0.2286174611927739,
-    "daily_sol_for_100_apy": 0.0006263492087473257
-  },
-  {
-    "owner": "3t35yLb3PmKYVwEULLnQSgpwGrr9P2K5MbSGVj6LzDvt",
-    "amount": 84197.510373695,
-    "percentage": 0.1344857609907046,
-    "double_amount_for_100_apy": 168395.02074739,
-    "sol_equivalent_for_100_apy": 0.22869744735242367,
-    "daily_sol_for_100_apy": 0.0006265683489107498
-  },
-  {
-    "owner": "EuedL84fVmM5FL7FWmWV9u5TMgf5nL9V9vd4jtyu9k1r",
-    "amount": 83533.981107152,
-    "percentage": 0.1334259287230451,
-    "double_amount_for_100_apy": 167067.962214304,
-    "sol_equivalent_for_100_apy": 0.2268951678214909,
-    "daily_sol_for_100_apy": 0.0006216305967712079
-  },
-  {
-    "owner": "9ZjwoXzhvbRYnBAHs4ySrfmcXEkYNknZ7b5XXnLXdovR",
-    "amount": 346999.42673805,
-    "percentage": 0.5542501406643072,
-    "double_amount_for_100_apy": 693998.8534761,
-    "sol_equivalent_for_100_apy": 0.9425205421814871,
-    "daily_sol_for_100_apy": 0.0025822480607711976
-  },
-  {
-    "owner": "4RXTm8McowoyoQ5F2VvsgY9kJMqFhbany8XTiPFQ2Pdw",
-    "amount": 164834.286065357,
-    "percentage": 0.26328408405986226,
-    "double_amount_for_100_apy": 329668.572130714,
-    "sol_equivalent_for_100_apy": 0.4477232199858927,
-    "daily_sol_for_100_apy": 0.0012266389588654594
-  },
-  {
-    "owner": "BaX37KNmPPaj5AspazbvygAfkhKZ4PLiezrDYV6P5mL4",
-    "amount": 352826.449481898,
-    "percentage": 0.5635574418486112,
-    "double_amount_for_100_apy": 705652.898963796,
-    "sol_equivalent_for_100_apy": 0.9583479131009827,
-    "daily_sol_for_100_apy": 0.00262561072082461
-  },
-  {
-    "owner": "EY9ksz8A7wPaHLipbdvyRNoBUGeMUbiEKoXdVd3GL6iX",
-    "amount": 590175.212317861,
-    "percentage": 0.942666382819973,
-    "double_amount_for_100_apy": 1180350.424635722,
-    "sol_equivalent_for_100_apy": 1.6030351010228603,
-    "daily_sol_for_100_apy": 0.004391876989103727
-  },
-  {
-    "owner": "4mVoMoUcwW48mpUNVSomjbAEopxBiKEHK5kB8xQT5ooh",
-    "amount": 20347.287,
-    "percentage": 0.032500015310977466,
-    "double_amount_for_100_apy": 40694.574,
-    "sol_equivalent_for_100_apy": 0.055267341953390614,
-    "daily_sol_for_100_apy": 0.0001514173752147688
-  },
-  {
-    "owner": "AEy1bDga7DXu5rXGemtXch9ZBw6hXeJhjzhm5ymNjgtV",
-    "amount": 84787.256226878,
-    "percentage": 0.1354277415730807,
-    "double_amount_for_100_apy": 169574.512453756,
-    "sol_equivalent_for_100_apy": 0.2302993162272992,
-    "daily_sol_for_100_apy": 0.0006309570307597239
+    "owner": "8NtZ91dXwb1RpRK6kLpb29xPkscCvjgrsWYZJJQGPFuw",
+    "amount": 91426.866816473,
+    "percentage": 0.14603184529852756,
+    "double_amount_for_100_apy": 182853.733632946,
+    "sol_equivalent_for_100_apy": 0.24833383989094537,
+    "daily_sol_for_100_apy": 0.0006803666846327271
   },
   {
     "owner": "4dUQNcV61gN9Geh5y2wQuwu4sxkdiQxixx4DCVSbos7T",
     "amount": 82755.008201568,
-    "percentage": 0.13218170233756596,
+    "percentage": 0.13218069235193725,
     "double_amount_for_100_apy": 165510.016403136,
     "sol_equivalent_for_100_apy": 0.22477932004555218,
     "daily_sol_for_100_apy": 0.0006158337535494581
   },
   {
-    "owner": "7WRiimDiPyFvCmVnsdDSg5L9xEXhJxvVYaPCrJxehPAH",
-    "amount": 1229180.165233267,
-    "percentage": 1.9633268155126031,
-    "double_amount_for_100_apy": 2458360.330466534,
-    "sol_equivalent_for_100_apy": 3.3387016418587963,
-    "daily_sol_for_100_apy": 0.00914712778591451
+    "owner": "CCK7AxcYxJe65Y1yLcsVYUmaJA38HXWeEDfyWTz7KbS3",
+    "amount": 33203.341498095,
+    "percentage": 0.05303413972150206,
+    "double_amount_for_100_apy": 66406.68299619,
+    "sol_equivalent_for_100_apy": 0.09018698308872436,
+    "daily_sol_for_100_apy": 0.0002470876249006147
   },
   {
-    "owner": "BBTD1oGYpMj9eyusWAFMfzWZgEq9ujLPNvhP2xEMJm31",
-    "amount": 84965.593019073,
-    "percentage": 0.13571259274153613,
-    "double_amount_for_100_apy": 169931.186038146,
-    "sol_equivalent_for_100_apy": 0.23078371498164477,
-    "daily_sol_for_100_apy": 0.0006322841506346432
+    "owner": "ABFh3exo6T5PAa84egnFuh9sb3ZEukb64gF9BTr4fYQN",
+    "amount": 77452.172427827,
+    "percentage": 0.12371072154008703,
+    "double_amount_for_100_apy": 154904.344855654,
+    "sol_equivalent_for_100_apy": 0.2103757468306063,
+    "daily_sol_for_100_apy": 0.0005763719091249488
   },
   {
-    "owner": "3EwJnK4vR8LkwEz7T53cACNSnkJmchG7nM9JVeYwEA4L",
-    "amount": 84315.040036055,
-    "percentage": 0.13467348704116994,
-    "double_amount_for_100_apy": 168630.08007211,
-    "sol_equivalent_for_100_apy": 0.2290166816581725,
-    "daily_sol_for_100_apy": 0.0006274429634470479
+    "owner": "9J7zDLKnaRWK9LtZuyGzikJAVzABj1kcn5eMNp5Xmiah",
+    "amount": 221487.217422955,
+    "percentage": 0.3537711418596118,
+    "double_amount_for_100_apy": 442974.43484591,
+    "sol_equivalent_for_100_apy": 0.6016040263067715,
+    "daily_sol_for_100_apy": 0.0016482302090596477
   },
   {
-    "owner": "9MtzuLnCJortLxLnEEeEWEZB9tVSefJocc1DqLchQQ4f",
-    "amount": 160343.878669745,
-    "percentage": 0.25611171218001816,
-    "double_amount_for_100_apy": 320687.75733949,
-    "sol_equivalent_for_100_apy": 0.43552636636883196,
-    "daily_sol_for_100_apy": 0.0011932229215584438
+    "owner": "9gTVfK8CZjdP3KfNLaWFMgGA1FkDdeviLXNtcAqBxDnP",
+    "amount": 83456.952583614,
+    "percentage": 0.13330187518337866,
+    "double_amount_for_100_apy": 166913.905167228,
+    "sol_equivalent_for_100_apy": 0.2266859427906286,
+    "daily_sol_for_100_apy": 0.0006210573775085714
   },
   {
-    "owner": "J6Pay6vWQKcLNkHKfKnyHLvADz7hbMXMiK3Z6aazmr6t",
-    "amount": 84241.124566268,
-    "percentage": 0.13455542442673904,
-    "double_amount_for_100_apy": 168482.249132536,
-    "sol_equivalent_for_100_apy": 0.22881591231018208,
-    "daily_sol_for_100_apy": 0.000626892910438855
+    "owner": "H5iSDfqA1hj3GykihjWkLHMZdzCmCJrhLDW2cvV6d1JV",
+    "amount": 40493.340641635,
+    "percentage": 0.06467811336103205,
+    "double_amount_for_100_apy": 80986.68128327,
+    "sol_equivalent_for_100_apy": 0.10998809345326338,
+    "daily_sol_for_100_apy": 0.0003013372423377079
   },
   {
-    "owner": "ZY7KnsopGG7TwkU8Km5QkhyU6Xwn46qGuWU6HV3wUQc",
-    "amount": 82970.719987445,
-    "percentage": 0.1325262512862175,
-    "double_amount_for_100_apy": 165941.43997489,
-    "sol_equivalent_for_100_apy": 0.22536523683305515,
-    "daily_sol_for_100_apy": 0.0006174390050220689
+    "owner": "GLkp8nGJQunvEqPkkQodw8EQAVwQJNBuUUmGi7VKm9ye",
+    "amount": 84264.27652336,
+    "percentage": 0.1345913758387106,
+    "double_amount_for_100_apy": 168528.55304672,
+    "sol_equivalent_for_100_apy": 0.22887879770269134,
+    "daily_sol_for_100_apy": 0.0006270651991854558
   },
   {
-    "owner": "2cy8vkc7Es7yMNu5n7gnr2PM8ikfCRwweWPbUGyjzw66",
-    "amount": 83117.92971389,
-    "percentage": 0.1327613842729094,
-    "double_amount_for_100_apy": 166235.85942778,
-    "sol_equivalent_for_100_apy": 0.2257650881886831,
-    "daily_sol_for_100_apy": 0.0006185344881881728
+    "owner": "DCM312seeKsTPWGiZsxoPKX6KnnNVmZvdVMnbiup7AT2",
+    "amount": 56386.035921556,
+    "percentage": 0.0900627699647942,
+    "double_amount_for_100_apy": 112772.071843112,
+    "sol_equivalent_for_100_apy": 0.153155864399652,
+    "daily_sol_for_100_apy": 0.0004196051079442521
   },
   {
-    "owner": "3GL5LyxFbF7GXhnAKcNRkbUEJ3iXZduZYR96etnNrPx5",
-    "amount": 82469.141211957,
-    "percentage": 0.13172509691693862,
-    "double_amount_for_100_apy": 164938.282423914,
-    "sol_equivalent_for_100_apy": 0.2240028475522897,
-    "daily_sol_for_100_apy": 0.0006137064316501088
+    "owner": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+    "amount": 35233.1012334,
+    "percentage": 0.05627617972550046,
+    "double_amount_for_100_apy": 70466.2024668,
+    "sol_equivalent_for_100_apy": 0.09570022057214538,
+    "daily_sol_for_100_apy": 0.0002621923851291654
   },
   {
-    "owner": "DoBGGtypSJvgmwVj1dVKARui52YdWHHEZUmXLjmnkdum",
-    "amount": 1237859.999999999,
-    "percentage": 1.9771908143255923,
-    "double_amount_for_100_apy": 2475719.999999998,
-    "sol_equivalent_for_100_apy": 3.3622778265438558,
-    "daily_sol_for_100_apy": 0.009211720072722893
+    "owner": "57CJEn2p9VR9DGZGvyz5wvxQBdLJbhaSrDVjPKoDQCZ9",
+    "amount": 69650.242718988,
+    "percentage": 0.11124906522457297,
+    "double_amount_for_100_apy": 139300.485437976,
+    "sol_equivalent_for_100_apy": 0.1891841296329562,
+    "daily_sol_for_100_apy": 0.0005183126839259074
   },
   {
-    "owner": "3HhWTLVug55hpRWU6FsxDGCHDKBmmYSXaySUbMoDoYqD",
-    "amount": 84158.881231809,
-    "percentage": 0.1344240600031113,
-    "double_amount_for_100_apy": 168317.762463618,
-    "sol_equivalent_for_100_apy": 0.22859252279938724,
-    "daily_sol_for_100_apy": 0.0006262808843818828
+    "owner": "7m7TfFwKWuWtVuy4emWNChY8SJPwGjBZ6iLT2betFPJ5",
+    "amount": 1188342.328999999,
+    "percentage": 1.8980834539432414,
+    "double_amount_for_100_apy": 2376684.657999998,
+    "sol_equivalent_for_100_apy": 3.2277778287853094,
+    "daily_sol_for_100_apy": 0.00884322692817893
   },
   {
-    "owner": "5LmkWykmDykfjZEQwCiTNUzhJwMaNx9Zqtw5k7MYi3KG",
-    "amount": 249185.879592311,
-    "percentage": 0.39801595672334567,
-    "double_amount_for_100_apy": 498371.759184622,
-    "sol_equivalent_for_100_apy": 0.6768391883097079,
-    "daily_sol_for_100_apy": 0.0018543539405745423
+    "owner": "9Gxdt1xEUutWEMsckvKxsR4iqJ53fnMLfE5RHLjyjrH2",
+    "amount": 82561.676269595,
+    "percentage": 0.13187189232669064,
+    "double_amount_for_100_apy": 165123.35253919,
+    "sol_equivalent_for_100_apy": 0.2242541914623233,
+    "daily_sol_for_100_apy": 0.0006143950451022556
   },
   {
-    "owner": "4mtzamBuW9nQ7NBk15QhaKXUpvS2tVZXA4kzU4kwvmYg",
-    "amount": 990039.273999999,
-    "percentage": 1.5813553700534615,
-    "double_amount_for_100_apy": 1980078.547999998,
-    "sol_equivalent_for_100_apy": 2.68914667117265,
-    "daily_sol_for_100_apy": 0.007367525126500411
+    "owner": "6hwDekJfomsimdKQbkdZrDAnV34ygazMHQ4uzDrPsACo",
+    "amount": 102024.028,
+    "percentage": 0.16295819371712555,
+    "double_amount_for_100_apy": 204048.056,
+    "sol_equivalent_for_100_apy": 0.2771178704531124,
+    "daily_sol_for_100_apy": 0.0007592270423372943
   },
   {
-    "owner": "3fM5cdu7uDHkqGEDTBzJs3gECu6wyBNTXKpFYZwZ1TZ8",
-    "amount": 1138225.999999999,
-    "percentage": 1.8180488842248408,
-    "double_amount_for_100_apy": 2276451.999999998,
-    "sol_equivalent_for_100_apy": 3.091651754960744,
-    "daily_sol_for_100_apy": 0.008470278780714366
+    "owner": "4aYHhiJYGibcN28cpVL24SNRCRtsHrexwKiU1pynM5pc",
+    "amount": 424743.402364457,
+    "percentage": 0.6784227108008144,
+    "double_amount_for_100_apy": 849486.804728914,
+    "sol_equivalent_for_100_apy": 1.1536888854481202,
+    "daily_sol_for_100_apy": 0.0031607914669811513
   },
   {
-    "owner": "4v91uQbk67t28xULRseArTsHJ8aMeSx5UUNpzuD5GQRe",
-    "amount": 81580.61685267,
-    "percentage": 0.13030588779677416,
-    "double_amount_for_100_apy": 163161.23370534,
-    "sol_equivalent_for_100_apy": 0.22158943589703406,
-    "daily_sol_for_100_apy": 0.000607094344923381
+    "owner": "7hs4RpVKnaw4BnR69izpBuMgMzyNzVePGN3rMNRgHTRX",
+    "amount": 32772.591886205,
+    "percentage": 0.05234612357399271,
+    "double_amount_for_100_apy": 65545.18377241,
+    "sol_equivalent_for_100_apy": 0.08901698012485923,
+    "daily_sol_for_100_apy": 0.00024388213732838145
   },
   {
-    "owner": "DAEWtrSrUieacgRDt46ZmWCs7kYtiGP7s4dYqCGyb8Gq",
-    "amount": 85044.940332172,
-    "percentage": 0.13583933145076074,
-    "double_amount_for_100_apy": 170089.880664344,
-    "sol_equivalent_for_100_apy": 0.2309992383133855,
-    "daily_sol_for_100_apy": 0.0006328746255161246
+    "owner": "2qN1GwmgbsGb3Rsb3PAtLaLdXpMjwakgDjFJwCwHbdHd",
+    "amount": 83213.908529493,
+    "percentage": 0.13291367231754744,
+    "double_amount_for_100_apy": 166427.817058986,
+    "sol_equivalent_for_100_apy": 0.22602578604104112,
+    "daily_sol_for_100_apy": 0.0006192487288795648
   },
   {
-    "owner": "BRRr9HZxnBABesPepcTQXMXuWCt5aFEMUuhrJ4y8uEEL",
-    "amount": 255677.803962953,
-    "percentage": 0.40838528219870623,
-    "double_amount_for_100_apy": 511355.607925906,
-    "sol_equivalent_for_100_apy": 0.6944725663678157,
-    "daily_sol_for_100_apy": 0.001902664565391276
+    "owner": "HFXKmrzmGt8UgYbYBisUEzpcNAETseCqAi5mQjHwNHQC",
+    "amount": 84442.012362422,
+    "percentage": 0.13487526495640295,
+    "double_amount_for_100_apy": 168884.024724844,
+    "sol_equivalent_for_100_apy": 0.22936156414692604,
+    "daily_sol_for_100_apy": 0.0006283878469778795
   },
   {
-    "owner": "AtKYpjYmNPwC2uBsPEHbVNUXoE2nftfUSTRiwWcjcdb5",
-    "amount": 333066.862042196,
-    "percentage": 0.5319961386474072,
-    "double_amount_for_100_apy": 666133.724084392,
-    "sol_equivalent_for_100_apy": 0.9046768818776096,
-    "daily_sol_for_100_apy": 0.002478566799664684
+    "owner": "EemYx31Vm5LqLQDdLKsL2KFYmkpRwjaKx1JfvUG3Foyg",
+    "amount": 140497.919692611,
+    "percentage": 0.22441073600938055,
+    "double_amount_for_100_apy": 280995.839385222,
+    "sol_equivalent_for_100_apy": 0.38162073260142965,
+    "daily_sol_for_100_apy": 0.001045536253702547
   },
   {
-    "owner": "FTchTFMP5w6y1ZL2PksHHNjPpprrsDq67MAEpNrKFYSc",
-    "amount": 77799.191619036,
-    "percentage": 0.12426594851688778,
-    "double_amount_for_100_apy": 155598.383238072,
-    "sol_equivalent_for_100_apy": 0.21131832105708362,
-    "daily_sol_for_100_apy": 0.0005789543042659825
+    "owner": "EaGj7kx632FuRU26mtb6UjUvQjLTsnHHME8Yf5dAyg7e",
+    "amount": 1188007.999999999,
+    "percentage": 1.8975494459157674,
+    "double_amount_for_100_apy": 2376015.999999998,
+    "sol_equivalent_for_100_apy": 3.2268697236817676,
+    "daily_sol_for_100_apy": 0.008840738968991143
   },
   {
-    "owner": "8ccAjDpyEv5CiEBV8YUJYVzMQ9NGWdNR7sYWSPPa3Air",
-    "amount": 93665.98253752,
-    "percentage": 0.1496094229460246,
-    "double_amount_for_100_apy": 187331.96507504,
-    "sol_equivalent_for_100_apy": 0.25441573052473443,
-    "daily_sol_for_100_apy": 0.0006970293986979025
+    "owner": "H9818nzG9mSndrCX5SR4ZRzEK9x1NjFmeYDbDVUijW1x",
+    "amount": 756814.302820522,
+    "percentage": 1.2088239818066968,
+    "double_amount_for_100_apy": 1513628.605641044,
+    "sol_equivalent_for_100_apy": 2.0556605344584122,
+    "daily_sol_for_100_apy": 0.005631946669749074
   },
   {
-    "owner": "DXhK4NoqyG2NCh135JFQKaecq7wKebiJzRnCsES7jjth",
-    "amount": 82448.351295445,
-    "percentage": 0.13169188990487093,
-    "double_amount_for_100_apy": 164896.70259089,
-    "sol_equivalent_for_100_apy": 0.2239463779391638,
-    "daily_sol_for_100_apy": 0.0006135517203812707
+    "owner": "5mxsR8Bt4DqsYxVkkdyaurXAJ9T94xnXTjbtPPmJ74bq",
+    "amount": 47649.487018857,
+    "percentage": 0.07610829025629685,
+    "double_amount_for_100_apy": 95298.974037714,
+    "sol_equivalent_for_100_apy": 0.12942563266418844,
+    "daily_sol_for_100_apy": 0.00035459077442243406
   },
   {
-    "owner": "CQv7EXrj7N9g9ciKeQeJDkPC7SyXawTPV3T6vGEAmpLp",
-    "amount": 83459.56750893,
-    "percentage": 0.13330707046535406,
-    "double_amount_for_100_apy": 166919.13501786,
-    "sol_equivalent_for_100_apy": 0.22669304545604155,
-    "daily_sol_for_100_apy": 0.0006210768368658672
+    "owner": "AeJdTTxEVQPfyMuQmt5gbYbp26K6NPXG4Ha4Ybtop31L",
+    "amount": 85343.662483462,
+    "percentage": 0.1363154283960341,
+    "double_amount_for_100_apy": 170687.324966924,
+    "sol_equivalent_for_100_apy": 0.23181062802270633,
+    "daily_sol_for_100_apy": 0.0006350976110211132
   },
   {
-    "owner": "DKiqtUZBQrKWep7vVifxcS38BE9r3V7Uh7ogvXZznp3Z",
-    "amount": 375298.690595826,
-    "percentage": 0.5994515726128078,
-    "double_amount_for_100_apy": 750597.381191652,
-    "sol_equivalent_for_100_apy": 1.0193870597008465,
-    "daily_sol_for_100_apy": 0.002792841259454374
+    "owner": "ABj7j2dJao3sQp7t73PnMvgztVfUbPfpyQfpykFYvnDZ",
+    "amount": 354164.355432197,
+    "percentage": 0.5656901101789557,
+    "double_amount_for_100_apy": 708328.710864394,
+    "sol_equivalent_for_100_apy": 0.9619819359393419,
+    "daily_sol_for_100_apy": 0.0026355669477790187
   },
   {
-    "owner": "FzKviPkXJD3cmu9FNjaC5QWUXJqKPrzkcGDXKBoFvH5d",
-    "amount": 3617712.904252713,
-    "percentage": 5.778447258297086,
-    "double_amount_for_100_apy": 7235425.808505426,
-    "sol_equivalent_for_100_apy": 9.826439080970774,
-    "daily_sol_for_100_apy": 0.026921750906769244
+    "owner": "B3bBT3W4r8MfvcanKw7QQ17GYrXKT6qXRbmkjrojbyCy",
+    "amount": 32980.489534776,
+    "percentage": 0.052678188735046406,
+    "double_amount_for_100_apy": 65960.979069552,
+    "sol_equivalent_for_100_apy": 0.08958167213686453,
+    "daily_sol_for_100_apy": 0.0002454292387311357
   },
   {
-    "owner": "A2S5cnnwcf8p6MQz7Y3WQc5Eok1fr8RLSBYd6YY1jmbj",
-    "amount": 75767.85864454,
-    "percentage": 0.12102137086027864,
-    "double_amount_for_100_apy": 151535.71728908,
-    "sol_equivalent_for_100_apy": 0.2058008103382016,
-    "daily_sol_for_100_apy": 0.0005638378365430181
+    "owner": "5auQXsuxhEpumHFTSaZ5QfiipWG6xGmrtELyjD8gYfTz",
+    "amount": 83984.039316494,
+    "percentage": 0.1341437660948254,
+    "double_amount_for_100_apy": 167968.078632988,
+    "sol_equivalent_for_100_apy": 0.228117616836666,
+    "daily_sol_for_100_apy": 0.0006249797721552494
+  },
+  {
+    "owner": "HdTyU6wjJAxP3Xqq5EbSobHbREvuGbVu5NL55dGcY4qY",
+    "amount": 49558.750160154,
+    "percentage": 0.07915786670348873,
+    "double_amount_for_100_apy": 99117.500320308,
+    "sol_equivalent_for_100_apy": 0.13461157705613938,
+    "daily_sol_for_100_apy": 0.00036879884124969695
+  },
+  {
+    "owner": "DzMgK5k9t2vnAHctiojF3wZRp1euZEveJAcyKYZgkjxs",
+    "amount": 117905.615952422,
+    "percentage": 0.18832510910774658,
+    "double_amount_for_100_apy": 235811.231904844,
+    "sol_equivalent_for_100_apy": 0.3202554716541647,
+    "daily_sol_for_100_apy": 0.0008774122511073005
   }
 ]
