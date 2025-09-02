@@ -14,7 +14,7 @@ const connection = new Connection(RPC, "confirmed");
 // === USER SETTINGS ===
 const wallet = keypair;
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
-const AMOUNT_TO_BURN = 166666.67 * 1e9;
+const AMOUNT_TO_BURN = 2000000 * 1e9;
 const burnLogPath = path.join(__dirname, "data", "burn-log.json");
 
 async function main() {
