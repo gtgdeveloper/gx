@@ -1,80 +1,101 @@
-
-const { getOrCreateAssociatedTokenAccount, burn } = require("@solana/spl-token");
 const fs = require("fs");
 const path = require("path");
+const {
+  getOrCreateAssociatedTokenAccount,
+  burnChecked,
+  getMint,
+  TOKEN_PROGRAM_ID,
+  TOKEN_2022_PROGRAM_ID,
+} = require("@solana/spl-token");
 const { Connection, Keypair, PublicKey } = require("@solana/web3.js");
 
-// Load from environment
-const secretArray = JSON.parse(process.env.BURNER_KEY);
-const keypair = Keypair.fromSecretKey(new Uint8Array(secretArray));
+// --- ENV ---
+const secretArray = JSON.parse(process.env.BURNER_KEY || "[]");
+if (!secretArray.length) {
+  console.error("❌ BURNER_KEY missing (cron env)."); process.exit(1);
+}
+const wallet = Keypair.fromSecretKey(new Uint8Array(secretArray));
 
+// --- RPC ---
 const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
-const connection = new Connection(RPC, "confirmed");
+const connection = new Connection(RPC, { commitment: "finalized" });
 
-// === USER SETTINGS ===
-const wallet = keypair;
+// --- SETTINGS ---
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
-const AMOUNT_TO_BURN = 166666.67 * 1e9;
-const burnLogPath = path.join(__dirname, "data", "burn-log.json");
+// Use a STRING to avoid float math:
+const HUMAN_AMOUNT = "166666.67"; // tokens
+const logDir = path.join(__dirname, "data");
+const logPath = path.join(logDir, "burn-log.json");
 
-async function main() {
-  try {
-    console.log("\n📡 Connecting to Solana...");
-    const ata = await getOrCreateAssociatedTokenAccount(connection, wallet, GTG_MINT, wallet.publicKey);
-
-    const balanceInfoBefore = await connection.getTokenAccountBalance(ata.address);
-    const balanceBefore = parseFloat(balanceInfoBefore.value.amount);
-
-    if (balanceBefore < AMOUNT_TO_BURN) {
-      console.error(`❌ Not enough GTG to burn. Available: ${balanceBefore / 1e9}, Required: ${AMOUNT_TO_BURN / 1e9}`);
-      return;
-    }
-
-    console.log(`🔥 Burning ${AMOUNT_TO_BURN / 1e9} GTG from ${ata.address.toBase58()}`);
-
-    const sig = await burn(
-      connection,
-      wallet,
-      ata.address,
-      GTG_MINT,
-      wallet,
-      AMOUNT_TO_BURN
-    );
-
-    console.log("✅ Burn transaction sent:", sig);
-
-    await new Promise(r => setTimeout(r, 3000)); // Wait for Solana to update supply
-
-    const supplyInfo = await connection.getTokenSupply(GTG_MINT);
-    const newOutstanding = parseFloat(supplyInfo.value.amount) / 1e9;
-
-    console.log(`📦 GTG Token Supply after burn: ${newOutstanding.toLocaleString("en-US", { maximumFractionDigits: 9 })}`);
-
-    const newEntry = {
-      time: new Date().toISOString(),
-      amount: AMOUNT_TO_BURN / 1e9,
-      tx: sig,
-      outstanding: newOutstanding
-    };
-
-    let existingLog = [];
-    if (fs.existsSync(burnLogPath)) {
-      try {
-        existingLog = JSON.parse(fs.readFileSync(burnLogPath));
-        if (!Array.isArray(existingLog)) existingLog = [];
-      } catch {
-        existingLog = [];
-      }
-    }
-
-    existingLog.push(newEntry);
-    fs.writeFileSync(burnLogPath, JSON.stringify(existingLog, null, 2));
-    console.log("📝 Burn logged to /data/burn-log.json");
-  } catch (err) {
-    console.error("🔥 Burn failed:", err);
-  }
+// Helpers
+function toBaseUnits(amountStr, decimals) {
+  const [i, f = ""] = amountStr.split(".");
+  const fpad = (f + "0".repeat(decimals)).slice(0, decimals);
+  return BigInt(i || "0") * (10n ** BigInt(decimals)) + BigInt(fpad || "0");
 }
 
-// Run immediately, then every 4 hours
-//main();
+(async () => {
+  try {
+    // Detect mint program & decimals
+    let programId = TOKEN_PROGRAM_ID;
+    let mintInfo;
+    try {
+      mintInfo = await getMint(connection, GTG_MINT, "finalized", TOKEN_PROGRAM_ID);
+    } catch {
+      mintInfo = await getMint(connection, GTG_MINT, "finalized", TOKEN_2022_PROGRAM_ID);
+      programId = TOKEN_2022_PROGRAM_ID;
+    }
+    const DECIMALS = mintInfo.decimals;
 
+    // Get ATA and balances
+    const ata = await getOrCreateAssociatedTokenAccount(
+      connection, wallet, GTG_MINT, wallet.publicKey, {}, "finalized", programId
+    );
+    const beforeBal = await connection.getTokenAccountBalance(ata.address, "finalized");
+    const beforeUnits = BigInt(beforeBal.value.amount);
+
+    const amt = toBaseUnits(HUMAN_AMOUNT, DECIMALS);
+    if (beforeUnits < amt) {
+      console.error(`❌ Not enough balance. Have ${Number(beforeUnits)/10**DECIMALS}, need ${HUMAN_AMOUNT}`);
+      process.exit(1);
+    }
+
+    console.log(`🔥 Burning ${HUMAN_AMOUNT} (program: ${programId.toBase58()}, decimals: ${DECIMALS})`);
+    const sig = await burnChecked(
+      connection,
+      wallet,           // payer
+      ata.address,      // token account
+      GTG_MINT,         // mint
+      wallet,           // owner
+      amt,              // bigint
+      DECIMALS,
+      undefined,        // multiSigners
+      undefined,        // confirmOptions
+      programId
+    );
+    console.log("✅ Sent:", sig);
+    await connection.confirmTransaction(sig, "finalized");
+    console.log("✅ Finalized:", sig);
+
+    // Verify by reading ATA & supply AFTER finalization
+    const afterBal = await connection.getTokenAccountBalance(ata.address, "finalized");
+    const supply = await connection.getTokenSupply(GTG_MINT, "finalized");
+    const afterUnits = BigInt(afterBal.value.amount);
+    const outstanding = Number(supply.value.amount) / 10 ** DECIMALS;
+
+    console.log(`📉 Account delta: ${(Number(beforeUnits-afterUnits)/10**DECIMALS).toString()} tokens`);
+    console.log(`📦 Supply now: ${outstanding}`);
+
+    if (!fs.existsSync(logDir)) fs.mkdirSync(logDir, { recursive: true });
+    const entry = { time: new Date().toISOString(), amount: Number(HUMAN_AMOUNT), tx: sig, outstanding, programId: programId.toBase58(), decimals: DECIMALS };
+    let log = [];
+    if (fs.existsSync(logPath)) { try { log = JSON.parse(fs.readFileSync(logPath, "utf8")) || []; } catch {} }
+    log.push(entry);
+    fs.writeFileSync(logPath, JSON.stringify(log, null, 2));
+    console.log("📝 Logged to", logPath);
+  } catch (err) {
+    console.error("🔥 Burn failed:", err?.message || err);
+    if (err?.logs) console.error("🔎 Program logs:\n" + err.logs.join("\n"));
+    process.exit(1);
+  }
+})();
