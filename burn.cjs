@@ -23,7 +23,7 @@ const connection = new Connection(RPC, { commitment: "finalized" });
 // --- SETTINGS ---
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 // Use a STRING to avoid float math:
-const HUMAN_AMOUNT = "166666.67"; // tokens
+const HUMAN_AMOUNT = "1000000"; // tokens
 const logDir = path.join(__dirname, "data");
 const logPath = path.join(logDir, "burn-log.json");
 
