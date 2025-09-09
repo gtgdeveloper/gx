@@ -50,7 +50,7 @@ const { Connection, Keypair, PublicKey } = require("@solana/web3.js");
 const { getOrCreateAssociatedTokenAccount, transfer } = require("@solana/spl-token");
 
 // Constants
-const AIRDROP_TOTAL = 166_667;
+const AIRDROP_TOTAL = 1_000_000;
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
 const RPC_URL = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
 
