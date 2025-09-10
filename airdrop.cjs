@@ -15,6 +15,7 @@ async function uploadToGitHub(filename, content) {
     "User-Agent": "gtg-airdrop-uploader"
   };
 //
+  //
   // Try to get SHA if file already exists
   let sha;
   try {
