@@ -107,7 +107,7 @@ try {
   const eligibleHolders = holders.filter(h => h.amount <= 80_000_000);
   const totalSupply = eligibleHolders.reduce((sum, h) => sum + h.amount, 0);
 
-  console.log(`📊 Eligible holders: ${eligibleHolders.length}`);
+  console.log(`📊 Eligible holders : ${eligibleHolders.length}`);
   console.log(`📈 Total eligible supply: ${totalSupply}`);
 
   const fromTokenAccount = await getOrCreateAssociatedTokenAccount(
