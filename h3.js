@@ -160,7 +160,7 @@ const excludedWallets = new Set([
   }
 
   fs.writeFileSync("gtgsol-5-full.json", JSON.stringify(holders, null, 2));
-  console.log("✅ Exported gtgsol-5-full.json");
+  console.log("✅ Exported  gtgsol-5-full.json");
 
   console.log(`📊 Total qualifying GTG tokens: ${totalGTG.toLocaleString(undefined, { maximumFractionDigits: 2 })}`);
   console.log(`💸 Total SOL required for 100% APY: ${totalSOL.toFixed(4)} SOL`);
