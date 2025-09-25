@@ -17,7 +17,7 @@ if (!secretArray.length) {
 const wallet = Keypair.fromSecretKey(new Uint8Array(secretArray));
 
 // --- RPC ---
-const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
+const RPC = "https://stylish-omniscient-ensemble.solana-mainnet.quiknode.pro/51986126f61b01a87be498e475f7e53502ff8661/";
 const connection = new Connection(RPC, { commitment: "finalized" });
 
 // --- SETTINGS ---
