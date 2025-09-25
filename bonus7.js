@@ -5,7 +5,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 const https = require("https");
 
-const RPC = "https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4";
+const RPC = "https://stylish-omniscient-ensemble.solana-mainnet.quiknode.pro/51986126f61b01a87be498e475f7e53502ff8661/";
 const connection = new Connection(RPC, "confirmed");
 const MINT = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
 
