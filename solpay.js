@@ -8,7 +8,7 @@ const secretKey = bs58.decode(process.env.WALLETKEY);
 const fromKeypair = web3.Keypair.fromSecretKey(secretKey);
 
 // Custom RPC URL
-const rpcUrl = 'https://bold-powerful-film.solana-mainnet.quiknode.pro/3e3c22206acbd0918412343760560cbb96a4e9e4';
+const rpcUrl = 'https://stylish-omniscient-ensemble.solana-mainnet.quiknode.pro/51986126f61b01a87be498e475f7e53502ff8661/';
 const connection = new web3.Connection(rpcUrl, 'confirmed');
 
 // GitHub raw JSON
