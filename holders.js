@@ -62,7 +62,7 @@ const gtgData = {
 await uploadToGitHub(gtgData, "gtgdata.json");
 
 
-  console.log("✅ Holder data uploaded to GitHub.");
+  console.log("✅ Holder data uploaded to GitHub...");
 })();
 
 async function uploadToGitHub(data, path = "gtg-holders.json") {
