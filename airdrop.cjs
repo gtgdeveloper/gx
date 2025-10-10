@@ -53,7 +53,7 @@ const { getOrCreateAssociatedTokenAccount, transfer } = require("@solana/spl-tok
 // Constants
 const AIRDROP_TOTAL =166_666;
 const GTG_MINT = new PublicKey("4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon");
-const RPC_URL = "https://stylish-omniscient-ensemble.solana-mainnet.quiknode.pro/51986126f61b01a87be498e475f7e53502ff8661/";
+const RPC_URL = "https://withered-wider-dust.solana-mainnet.quiknode.pro/b6074a76cc2f86fcac667d7646f2de49096709f8/";
 
 // Setup connection
 const connection = new Connection(RPC_URL, "confirmed");
