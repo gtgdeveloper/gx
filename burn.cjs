@@ -17,7 +17,7 @@ if (!secretArray.length) {
 const wallet = Keypair.fromSecretKey(new Uint8Array(secretArray));
 
 // --- RPC ---
-const RPC = "https://warmhearted-cold-log.solana-mainnet.quiknode.pro/53a086ac9192edaca7a3a127b5724abef936e6aa/https://warmhearted-cold-log.solana-mainnet.quiknode.pro/"
+const RPC = "https://warmhearted-cold-log.solana-mainnet.quiknode.pro/53a086ac9192edaca7a3a127b5724abef936e6aa/"
 
 ";
 const connection = new Connection(RPC, { commitment: "finalized" });
