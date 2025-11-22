@@ -274,14 +274,30 @@ const logPath = path.join(logDir, "burn-akio.json");
     let afterUiStr = supplyAfterBase !== null ? formatAmount(supplyAfterBase, DECIMALS) : "unknown";
     const burnUiStr = BURN_AMOUNT_UI.toLocaleString("en-US");
 
-    const tgText =
-      `📉 *AKIO Burn Update*\n\n` +
-      `${whenStr} (Toronto)\n\n` +
-      `Tokens outstanding *before* burn: \`${beforeUiStr}\`\n` +
-      `We are now burning *${burnUiStr}* AKIO.\n\n` +
-      `✅ Burning complete.\n` +
-      `[View on Solscan](${solscanUrl})\n\n` +
-      `New tokens outstanding: \`${afterUiStr}\``;
+    const ORIGINAL_SUPPLY_UI = 1_000_000_000;  // 1 billion original supply
+
+// Calculate total burned so far based on original supply
+const totalBurnedUi =
+  ORIGINAL_SUPPLY_UI -
+  (supplyAfterBase !== null
+    ? Number(formatAmount(supplyAfterBase, DECIMALS))
+    : 0);
+
+const totalBurnedFormatted = totalBurnedUi.toLocaleString("en-US");
+const goalTarget = "200,000,000";  // 200 million target
+
+const tgText =
+  `📉 *AKIO Burn Update*\n\n` +
+  `${whenStr} (Toronto)\n\n` +
+  `Tokens outstanding *before* burn: \`${beforeUiStr}\`\n` +
+  `We are now burning *${burnUiStr}* AKIO.\n\n` +
+  `✅ Burning complete.\n` +
+  `[View on Solscan](${solscanUrl})\n\n` +
+  `New tokens outstanding: \`${afterUiStr}\`\n\n` +
+  `📊 *Supply Tracker*\n` +
+  `• Original token count: *1,000,000,000*\n` +
+  `• Total burned so far: *${totalBurnedFormatted}*\n` +
+  `• Goal: *Burn ${goalTarget}+ tokens by December 31, 2025* 🔥`;
 
     await sendTelegramMessage(tgText);
 
