@@ -233,7 +233,7 @@ const logPath = path.join(logDir, "burn-akio.json");
       programId
     );
 
-    console.log("✅ Burn successful!");
+    console.log("✅ Burn successful all done!");
     console.log("🧾 Tx signature:", txSig);
 
     // --- Compute/Fetch mint supply AFTER burn ---
