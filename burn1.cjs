@@ -273,21 +273,26 @@ const logPath = path.join(logDir, "burn-akio.json");
     let beforeUiStr = supplyBeforeBase !== null ? formatAmount(supplyBeforeBase, DECIMALS) : "unknown";
     let afterUiStr = supplyAfterBase !== null ? formatAmount(supplyAfterBase, DECIMALS) : "unknown";
     const burnUiStr = BURN_AMOUNT_UI.toLocaleString("en-US");
+const ORIGINAL_SUPPLY_UI = 1_000_000_000;
 
-    const ORIGINAL_SUPPLY_UI = 1_000_000_000;  // 1 billion original supply
+// Compute total burned so far
+let totalBurnedUiText = "unknown";
+if (supplyAfterBase !== null) {
+  const originalBase = BigInt(ORIGINAL_SUPPLY_UI) * (10n ** BigInt(DECIMALS));
+  let burnedBase = originalBase - supplyAfterBase;
+  if (burnedBase < 0n) burnedBase = 0n;
+  const burnedUi = Number(burnedBase) / 10 ** DECIMALS;
+  totalBurnedUiText = burnedUi.toLocaleString("en-US");
+}
 
-// Calculate total burned so far based on original supply
-const totalBurnedUi =
-  ORIGINAL_SUPPLY_UI -
-  (supplyAfterBase !== null
-    ? Number(formatAmount(supplyAfterBase, DECIMALS))
-    : 0);
-
-const totalBurnedFormatted = totalBurnedUi.toLocaleString("en-US");
 const goalTarget = "200,000,000"; // burn goal
 
+// Links
 const burnHistoryUrl =
   "https://solscan.io/token/Akiox1GAxohWdggSLaFpChxLyS54vz7P7YaF1tckWEQu?activity_type=ACTIVITY_SPL_BURN&exclude_amount_zero=false&remove_spam=false&page_size=10";
+
+const websiteUrl = "https://www.akio.one";
+const twitterUrl = "https://x.com/Akio_EW";
 
 const tgText =
   `📉 *AKIO Burn Update*\n\n` +
@@ -301,7 +306,9 @@ const tgText =
   `• Original token count was *1,000,000,000*.\n` +
   `• So far we have burned *${totalBurnedUiText}* AKIO.\n` +
   `• Our goal is to burn *${goalTarget}+* tokens by December 31, 2025 🔥\n\n` +
-  `🔗 [*To see all burns click here*](${burnHistoryUrl})`;
+  `🔗 [*See all burns on Solscan*](${burnHistoryUrl})\n` +
+  `🌐 [*Visit our website*](${websiteUrl})\n` +
+  `🐦 [*Join us on X (Twitter)*](${twitterUrl})`;
     await sendTelegramMessage(tgText);
 
     // --- Log to JSON file ---
