@@ -114,6 +114,41 @@ async function sendTelegramMessage(text) {
   }
 }
 
+
+// X (Twitter) posting
+const X_BEARER_TOKEN = process.env.X_BEARER_TOKEN || "";
+const X_ENABLE = process.env.X_ENABLE === "1" || process.env.X_ENABLE === "true";
+
+async function sendXPost(text) {
+  if (!X_ENABLE || !X_BEARER_TOKEN) {
+    console.log("ℹ️ X posting disabled or not configured (X_ENABLE / X_BEARER_TOKEN).");
+    return;
+  }
+
+  try {
+    const res = await fetch("https://api.x.com/2/tweets", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${X_BEARER_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ text }),
+    });
+
+    const data = await res.json();
+    if (!res.ok || data.errors) {
+      console.error("⚠️ X post error:", data);
+    } else {
+      console.log("🐦 X post sent. Tweet ID:", data.data?.id);
+    }
+  } catch (err) {
+    console.error("⚠️ X post failed:", err?.message || err);
+  }
+}
+
+
+
+
 // --- Setup ---
 const connection = new Connection(RPC_URL, "confirmed");
 const wallet = Keypair.fromSecretKey(Uint8Array.from(secretArray));
@@ -296,7 +331,7 @@ const twitterUrl = "https://x.com/Akio_EW";
 
 const tgText =
   `📉 *AKIO Burn Update*\n\n` +
-  `${whenStr} (Toronto)\n\n` +
+  `${whenStr} ()\n\n` +
   `Tokens outstanding *before* burn: \`${beforeUiStr}\`\n` +
   `We are now burning *${burnUiStr}* AKIO.\n\n` +
   `✅ Burning complete.\n` +
@@ -310,6 +345,18 @@ const tgText =
   `🌐 [*Visit our website*](${websiteUrl})\n` +
   `🐦 [*Join us on X (Twitter)*](${twitterUrl})`;
     await sendTelegramMessage(tgText);
+//const xText =
+ // `AKIO burn update (${whenStr} Toronto)\n` +
+ // `Before: ${beforeUiStr}\n` +
+ // `Burn: ${burnUiStr} AKIO\n` +
+ // `After: ${afterUiStr}\n` +
+//  `Burned so far: ${totalBurnedUiText} (goal ${goalTarget}+ by Dec 31, 2025)\n` +
+//  `Tx: ${solscanUrl}\n` +
+//  `All burns: ${burnHistoryUrl}\n` +
+//  `Site: ${websiteUrl}`;
+//	await sendXPost(xText);
+
+
 
     // --- Log to JSON file ---
     if (!fs.existsSync(logDir)) fs.mkdirSync(logDir, { recursive: true });
