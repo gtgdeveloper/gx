@@ -284,7 +284,10 @@ const totalBurnedUi =
     : 0);
 
 const totalBurnedFormatted = totalBurnedUi.toLocaleString("en-US");
-const goalTarget = "200,000,000";  // 200 million target
+const goalTarget = "200,000,000"; // burn goal
+
+const burnHistoryUrl =
+  "https://solscan.io/token/Akiox1GAxohWdggSLaFpChxLyS54vz7P7YaF1tckWEQu?activity_type=ACTIVITY_SPL_BURN&exclude_amount_zero=false&remove_spam=false&page_size=10";
 
 const tgText =
   `📉 *AKIO Burn Update*\n\n` +
@@ -292,13 +295,13 @@ const tgText =
   `Tokens outstanding *before* burn: \`${beforeUiStr}\`\n` +
   `We are now burning *${burnUiStr}* AKIO.\n\n` +
   `✅ Burning complete.\n` +
-  `[View on Solscan](${solscanUrl})\n\n` +
+  `[View this burn on Solscan](${solscanUrl})\n\n` +
   `New tokens outstanding: \`${afterUiStr}\`\n\n` +
   `📊 *Supply Tracker*\n` +
-  `• Original token count: *1,000,000,000*\n` +
-  `• Total burned so far: *${totalBurnedFormatted}*\n` +
-  `• Goal: *Burn ${goalTarget}+ tokens by December 31, 2025* 🔥`;
-
+  `• Original token count was *1,000,000,000*.\n` +
+  `• So far we have burned *${totalBurnedUiText}* AKIO.\n` +
+  `• Our goal is to burn *${goalTarget}+* tokens by December 31, 2025 🔥\n\n` +
+  `🔗 [*To see all burns click here*](${burnHistoryUrl})`;
     await sendTelegramMessage(tgText);
 
     // --- Log to JSON file ---
