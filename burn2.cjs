@@ -5,6 +5,10 @@
 // - Sends two Telegram messages:
 //   1) Burn update + supply tracker
 //   2) Airdrop summary + per-account distribution + promo footer
+console.log("🔧 RAW AIRDROP_DELAY_MS:", process.env.AIRDROP_DELAY_MS);
+
+const AIRDROP_DELAY_MS = Number(process.env.AIRDROP_DELAY_MS ?? "500");
+console.log("🔧 PARSED AIRDROP_DELAY_MS:", AIRDROP_DELAY_MS);
 
 const fs = require("fs");
 const path = require("path");
