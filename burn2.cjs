@@ -9,7 +9,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const BURN_SCHEDULE_TEXT = `Day   Date        Burn Amount (AKIO)
+const BURN_SCHEDULE_TEXT = `Day   Date        Burn Amount/ Airdrop Amount (AKIO)
 ----  ----------  --------------------
  1    Nov 24      2,000,000
  2    Nov 25      2,000,000
@@ -171,7 +171,7 @@ async function sendBurnScheduleFileToTelegram() {
     const form = new FormData();
     form.append("chat_id", TG_CHAT_ID);
     form.append("parse_mode", "Markdown");
-    form.append("caption", "📄 *AKIO DAILY BURN SCHEDULE*\n\nDownload the full burn plan.");
+    form.append("caption", "📄 *AKIO DAILY BURN AND AIRDROP SCHEDULE*\n\nDownload the full burn plan.");
     form.append("document", filePath);  // ChatGPT will convert this to a real URL
 
     const res = await fetch(`https://api.telegram.org/bot${TG_BOT_TOKEN}/sendDocument`, {
@@ -683,7 +683,7 @@ console.log("📨 Telegram message sent.");
 const scheduleUrl = "https://raw.githubusercontent.com/gtgdeveloper/gx/main/akio-burn/akio_burn_schedule.txt";
 
 const scheduleMsg =
-  "📄 *AKIO DAILY BURN SCHEDULE*\n" +
+  "📄 *AKIO DAILY BURN AND AIRDROP SCHEDULE*\n" +
   `[Tap here to view the full schedule](${scheduleUrl})`;
 
 await sendTelegramMessage(scheduleMsg);
