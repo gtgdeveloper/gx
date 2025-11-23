@@ -5,10 +5,6 @@
 // - Sends two Telegram messages:
 //   1) Burn update + supply tracker
 //   2) Airdrop summary + per-account distribution + promo footer
-console.log("🔧 RAW AIRDROP_DELAY_MS:", process.env.AIRDROP_DELAY_MS);
-
-const AIRDROP_DELAY_MS = Number(process.env.AIRDROP_DELAY_MS ?? "500");
-console.log("🔧 PARSED AIRDROP_DELAY_MS:", AIRDROP_DELAY_MS);
 
 const fs = require("fs");
 const path = require("path");
@@ -97,7 +93,18 @@ const TG_CHAT_ID = process.env.TG_CHAT_ID || "";
 const AIRDROP_TOTAL_UI = Number(process.env.AIRDROP_TOTAL_UI || "0"); // e.g. 50000
 const MIN_HOLD_UI = Number(process.env.MIN_HOLD_UI || "0");           // e.g. 10000
 const MAX_HOLD_UI = Number(process.env.MAX_HOLD_UI || "0");           // e.g. 20000 (0 = no max)
-const AIRDROP_DELAY_MS = Number(process.env.AIRDROP_DELAY_MS || "1500"); // throttle between recipients
+//const AIRDROP_DELAY_MS = Number(process.env.AIRDROP_DELAY_MS || "1500"); // throttle between recipients
+const rawDelay = process.env.AIRDROP_DELAY_MS;
+const parsedDelay = Number(rawDelay);
+
+// If env var is missing OR invalid → default to 2500 ms
+const AIRDROP_DELAY_MS =
+  Number.isFinite(parsedDelay) && parsedDelay > 0 ? parsedDelay : 2500;
+
+console.log("⏱ Using AIRDROP_DELAY_MS:", AIRDROP_DELAY_MS, "ms");
+	
+
+
 const AIRDROP_SECOND_MSG_DELAY_MS = 120000; // 2 minutes
 
 if (!TOKEN_MINT_STR) {
