@@ -1,0 +1,11 @@
+{
+  "name": "akio-burn",
+  "version": "1.0.0",
+  "main": "burn1.cjs",
+  "type": "commonjs",
+  "dependencies": {
+    "@solana/web3.js": "^1.95.4",
+    "@solana/spl-token": "^0.4.6",
+    "dotenv": "^16.4.1"
+  }
+}
