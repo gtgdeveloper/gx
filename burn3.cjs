@@ -661,7 +661,7 @@ for (const [index, h] of perHolderShares.entries()) {
 
     // First message: burn + supply tracker
   const burnTgText =
-`📉 *AKIO Burn Update*\n\n` +
+`📉 *GTG Burn Update*\n\n` +
 `${whenStr} ()\n\n` +
 `Before burn tokens outstanding: \`${beforeUiStr}\`\n` +
 `Burned: *${burnUiStr}* GTG\n` +
@@ -672,7 +672,7 @@ for (const [index, h] of perHolderShares.entries()) {
 `• Goal: *${goalTarget}+* by Jan 31, 2026 🔥\n\n` +
 `[View this burn](${solscanUrl}) | [All burns](${burnHistoryUrl})\n` +
 `[Website](${websiteUrl}) | [X/Twitter](${twitterUrl})\n\n` +
-`🚀 Buy AKIO on [Dexscreener](https://dexscreener.com/solana/c9wcbqrepm4axbnrc4j1rjjn5zxjjbydb2rw9inajli5)\n` +
+`🚀 Buy GTG on [Dexscreener](https://dexscreener.com/solana/c9wcbqrepm4axbnrc4j1rjjn5zxjjbydb2rw9inajli5)\n` +
 `🟡 Listed on [CoinGecko](https://www.coingecko.com/en/coins/getthegirl)`;
 
 
