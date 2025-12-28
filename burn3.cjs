@@ -768,7 +768,7 @@ if (TG_BOT_TOKEN && TG_CHAT_ID) {
       if (airdropFileText) {
         const safeDate = new Date().toISOString().split("T")[0];
         const filename = `gtg-airdrop-${safeDate}.txt`;
-        await sendTelegramDocument(filename, airdropFileText);
+        //await sendTelegramDocument(filename, airdropFileText);
       }
 
       await sendTelegramVideo("video1b.mp4", "This airdrop was brought you by Avvenire.com");
