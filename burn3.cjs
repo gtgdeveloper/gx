@@ -11,8 +11,8 @@ const path = require("path");
 
 const BURN_SCHEDULE_TEXT = `Day   Date        Burn Amount/ Airdrop Amount (Gtg)
 ----  ----------  --------------------
- 1    Nov 24      2,000,000
- 2    Nov 25      2,000,000
+ 1    Dec 28      1,000,000
+ 2    Nov 25      1,000,000
  3    Nov 26      2,000,000
  4    Nov 27      2,000,000
  5    Nov 28      2,000,000
@@ -558,8 +558,8 @@ if (TG_BOT_TOKEN && TG_CHAT_ID) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         chat_id: TG_CHAT_ID,
-        photo: "https://raw.githubusercontent.com/gtgdeveloper/gx/main/akio1.png",   // ← CHANGE THIS
-        caption: "🔥 *AKIO WARRIOR BURN EVENT AND AIR DROP IN PROGRESS* 🔥",
+        photo: "https://raw.githubusercontent.com/gtgdeveloper/gx/main/gtg1.png",   // ← CHANGE THIS
+        caption: "🔥 *GTG BURN EVENT AND AIR DROP IN PROGRESS* 🔥",
         parse_mode: "Markdown"
       })
     })
@@ -583,7 +583,7 @@ for (const [index, h] of perHolderShares.entries()) {
 
               const ownerPubkey = new PublicKey(h.owner);
               console.log(
-                `➡️ [${index + 1}/${perHolderShares.length}] Airdropping ~${h.shareUi} AKIO to ${ownerPubkey.toBase58()}`
+                `➡️ [${index + 1}/${perHolderShares.length}] Airdropping ~${h.shareUi} GTG to ${ownerPubkey.toBase58()}`
               );
               try {
                 const recipientAta = await getOrCreateAssociatedTokenAccount(
@@ -655,26 +655,25 @@ for (const [index, h] of perHolderShares.entries()) {
     const goalTarget = "200,000,000";
 
     const burnHistoryUrl =
-      "https://solscan.io/token/Akiox1GAxohWdggSLaFpChxLyS54vz7P7YaF1tckWEQu?activity_type=ACTIVITY_SPL_BURN&exclude_amount_zero=false&remove_spam=false&page_size=10";
-    const websiteUrl = "https://www.akio.one";
-    const twitterUrl = "https://x.com/Akio_EW";
+      "https://solscan.io/token/4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon?activity_type=ACTIVITY_SPL_BURN&exclude_amount_zero=true&remove_spam=false&page_size=10";
+    const websiteUrl = "https://www.getthegirl.io";
+    const twitterUrl = "https://x.com/GetheGirlAi";
 
     // First message: burn + supply tracker
   const burnTgText =
 `📉 *AKIO Burn Update*\n\n` +
 `${whenStr} ()\n\n` +
 `Before burn tokens outstanding: \`${beforeUiStr}\`\n` +
-`Burned: *${burnUiStr}* AKIO\n` +
+`Burned: *${burnUiStr}* GTG\n` +
 `New supply: \`${afterUiStr}\`\n\n` +
 `📊 *Supply Tracker*\n` +
 `• Original: 1,000,000,000\n` +
-`• Burned: *${totalBurnedUiText}* AKIO\n` +
-`• Goal: *${goalTarget}+* by Dec 31, 2025 🔥\n\n` +
+`• Burned: *${totalBurnedUiText}* GTG\n` +
+`• Goal: *${goalTarget}+* by Jan 31, 2026 🔥\n\n` +
 `[View this burn](${solscanUrl}) | [All burns](${burnHistoryUrl})\n` +
 `[Website](${websiteUrl}) | [X/Twitter](${twitterUrl})\n\n` +
 `🚀 Buy AKIO on [Dexscreener](https://dexscreener.com/solana/c9wcbqrepm4axbnrc4j1rjjn5zxjjbydb2rw9inajli5)\n` +
-`📈 Or on [Ascendex](https://ascendex.com/en/cashtrade-spottrading/usdt/akio)\n` +
-`🟡 Listed on [CoinGecko](https://www.coingecko.com/en/coins/Gtg)`;
+`🟡 Listed on [CoinGecko](https://www.coingecko.com/en/coins/getthegirl)`;
 
 
     await sendTelegramMessage(burnTgText);
@@ -730,8 +729,8 @@ const burnVideos = [
   `Millions of tokens will be distributed daily until December 31 in 24 payments a day. ` +
   `Only from *Gtg!!* The best tokenomics ever. Reducing the supply daily and increasing the tokens for their long term holders. No staking required. This is a real coin with value.\n\n` +
   `⚠️ This will not work in Ascendex. Use Solflare or Phantom!\n\n` +
-  `🚀 *Dexscreener*\nhttps://dexscreener.com/solana/8dmbh2rrvgpmjzbrdu5kegphq3qagf95eh16ypsmswyo\n\n` +
-  `🟡 *CoinGecko*\nhttps://www.coingecko.com/en/coins/akio\n\n` +
+  `🚀 *Dexscreener*\nhttps://dexscreener.com/solana/c9wcbqrepm4axbnrc4j1rjjn5zxjjbydb2rw9inajli5\n\n` +
+  `🟡 *CoinGecko*\nhttps://www.coingecko.com/en/coins/getthegirl\n\n` +
   `💼 *Sponsor: Avvenire Technologies*\nhttps://avvenire.com`;
 
 //      const airdropTgText = header + footer;
@@ -745,7 +744,7 @@ if (TG_BOT_TOKEN && TG_CHAT_ID) {
       body: JSON.stringify({
         chat_id: TG_CHAT_ID,
         // use the raw GitHub URL (or whatever you prefer) for akio2.jpg:
-        photo: "https://raw.githubusercontent.com/gtgdeveloper/gx/main/akio1.png",
+        photo: "https://raw.githubusercontent.com/gtgdeveloper/gx/main/gtg1.png",
         caption,
         parse_mode: "Markdown"
       })
@@ -768,7 +767,7 @@ if (TG_BOT_TOKEN && TG_CHAT_ID) {
 
       if (airdropFileText) {
         const safeDate = new Date().toISOString().split("T")[0];
-        const filename = `akio-airdrop-${safeDate}.txt`;
+        const filename = `gtg-airdrop-${safeDate}.txt`;
         await sendTelegramDocument(filename, airdropFileText);
       }
 
