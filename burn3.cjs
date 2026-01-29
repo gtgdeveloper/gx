@@ -11,49 +11,8 @@ const path = require("path");
 
 const BURN_SCHEDULE_TEXT = `Day   Date        Burn Amount/ Airdrop Amount (Gtg)
 ----  ----------  --------------------
- 1    Dec 28      1,000,000
- 2    Nov 25      1,000,000
- 3    Nov 26      2,000,000
- 4    Nov 27      2,000,000
- 5    Nov 28      2,000,000
- 6    Nov 29      2,000,000
- 7    Nov 30      2,000,000
-
- 8    Dec 01      3,000,000
- 9    Dec 02      3,000,000
-10    Dec 03      3,000,000
-11    Dec 04      3,000,000
-12    Dec 05      3,000,000
-13    Dec 06      3,000,000
-14    Dec 07      3,000,000
-
-15    Dec 08      4,000,000
-16    Dec 09      4,000,000
-17    Dec 10      4,000,000
-18    Dec 11      4,000,000
-19    Dec 12      4,000,000
-20    Dec 13      4,000,000
-21    Dec 14      4,000,000
-
-22    Dec 15      6,000,000
-23    Dec 16      6,000,000
-24    Dec 17      6,000,000
-25    Dec 18      6,000,000
-26    Dec 19      6,000,000
-27    Dec 20      6,000,000
-28    Dec 21      6,000,000
-
-29    Dec 22      8,000,000
-30    Dec 23      8,000,000
-31    Dec 24      8,000,000
-32    Dec 25      8,000,000
-33    Dec 26      8,000,000
-34    Dec 27      8,000,000
-35    Dec 28      8,000,000
-
-36    Dec 29      13,000,000
-37    Dec 30      13,000,000
-38    Dec 31      13,000,000
+20,000 an hour or  480,000 a day every day!
+Until we reach a supply of 500,000,000!!!
 `;
 
 const {
@@ -652,7 +611,7 @@ for (const [index, h] of perHolderShares.entries()) {
       totalBurnedUiText = burnedUi.toLocaleString("en-US");
     }
 
-    const goalTarget = "200,000,000";
+    const goalTarget = "500,000,000";
 
     const burnHistoryUrl =
       "https://solscan.io/token/4nm1ksSbynirCJoZcisGTzQ7c3XBEdxQUpN9EPpemoon?activity_type=ACTIVITY_SPL_BURN&exclude_amount_zero=true&remove_spam=false&page_size=10";
@@ -669,7 +628,7 @@ for (const [index, h] of perHolderShares.entries()) {
 `📊 *Supply Tracker*\n` +
 `• Original: 1,000,000,000\n` +
 `• Burned: *${totalBurnedUiText}* GTG\n` +
-`• Goal: *${goalTarget}+* by Jan 31, 2026 🔥\n\n` +
+`• Goal: *${goalTarget}+* by Mar 31, 2026 🔥\n\n` +
 `[View this burn](${solscanUrl}) | [All burns](${burnHistoryUrl})\n` +
 `[Website](${websiteUrl}) | [X/Twitter](${twitterUrl})\n\n` +
 `🚀 Buy GTG on [Dexscreener](https://dexscreener.com/solana/c9wcbqrepm4axbnrc4j1rjjn5zxjjbydb2rw9inajli5)\n` +
