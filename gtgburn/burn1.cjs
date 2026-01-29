@@ -284,7 +284,7 @@ const totalBurnedUi =
     : 0);
 
 const totalBurnedFormatted = totalBurnedUi.toLocaleString("en-US");
-const goalTarget = "200,000,000";  // 200 million target
+const goalTarget = "500,000,000";  // 200 million target
 
 const tgText =
   `📉 *GTG Burn Update*\n\n` +
@@ -297,7 +297,7 @@ const tgText =
   `📊 *Supply Tracker*\n` +
   `• Original token count: *1,000,000,000*\n` +
   `• Total burned so far: *${totalBurnedFormatted}*\n` +
-  `• Goal: *Burn ${goalTarget}+ tokens by January 31, 2026* 🔥`;
+  `• Goal: *Burn ${goalTarget}+ tokens by March 31, 2026* 🔥`;
 
     await sendTelegramMessage(tgText);
 
